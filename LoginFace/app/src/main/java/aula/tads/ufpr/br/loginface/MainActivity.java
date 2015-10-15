@@ -68,7 +68,7 @@ public class MainActivity extends Activity {
                 parameters.putString("fields", "id,name,link,email");
                 request.setParameters(parameters);
                 request.executeAsync();
-                email.setText("v1:" + parameters.getString("name") + ":"+parameters.getString("email"));
+                email.setText("v1:" + parameters.toString());
             }
 
             @Override
