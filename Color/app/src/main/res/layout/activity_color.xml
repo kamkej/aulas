@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Color">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Vermelho"
+        android:id="@+id/TVRed"/>
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:id="@+id/SBRed"
+        android:layout_below="@+id/TVRed"
+        android:paddingBottom="5dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Verde"
+        android:id="@+id/TVGreen"
+        android:layout_below="@+id/SBRed"
+        />
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:id="@+id/SBGreen"
+        android:layout_below="@+id/TVGreen"
+        android:paddingBottom="5dp" />
+   <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Azul"
+        android:id="@+id/TVBlue"
+       android:layout_below="@+id/SBGreen"
+        />
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:id="@+id/SBBlue"
+        android:layout_below="@+id/TVBlue"
+        android:paddingBottom="5dp" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TVSelectColor"
+        android:layout_below="@+id/SBBlue"
+        android:paddingTop="10dp"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/color"
+        android:layout_below="@+id/TVSelectColor"
+        />
+
+
+
+</RelativeLayout>
