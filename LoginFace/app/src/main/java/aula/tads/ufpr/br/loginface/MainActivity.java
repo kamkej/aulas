@@ -2,7 +2,6 @@ package aula.tads.ufpr.br.loginface;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageInstaller;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -16,14 +15,10 @@ import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 import com.facebook.appevents.AppEventsLogger;
-import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
 import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 
 
 public class MainActivity extends Activity {
