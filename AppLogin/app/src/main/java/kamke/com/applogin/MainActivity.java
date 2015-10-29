@@ -35,7 +35,6 @@ public class MainActivity extends Activity {
     private ProfilePictureView profilePictureView;
     private AccessToken Session;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,33 +48,11 @@ public class MainActivity extends Activity {
         loginButton.setReadPermissions("user_friends","email","public_profile");
         profilePictureView = (ProfilePictureView) findViewById(R.id.profileId);
 
-        if(AccessToken.getCurrentAccessToken() != null){
-            Toast.makeText(MainActivity.this, "Logado ", Toast.LENGTH_SHORT).show();
-
-            Session = AccessToken.getCurrentAccessToken();
-
-
-
-           perfil(Session);
-
-        }else {
-            id.setText(null);
-            profilePictureView.setProfileId(null);
-            nome.setText(null);
-            email.setText(null);
-        }
-
-
-
-
             loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
                 @Override
                 public void onSuccess(LoginResult loginResult) {
                     id.setText(loginResult.getAccessToken().getUserId());
-
                     perfil(loginResult.getAccessToken());
-
-
                 }
 
                 @Override
@@ -94,6 +71,20 @@ public class MainActivity extends Activity {
 
 
             });
+    }
+
+    private  void login(){
+        if(AccessToken.getCurrentAccessToken() != null){
+            Toast.makeText(MainActivity.this, "Logado ", Toast.LENGTH_SHORT).show();
+            Session = AccessToken.getCurrentAccessToken();
+            perfil(Session);
+        }else {
+            id.setText(null);
+            profilePictureView.setProfileId(null);
+            nome.setText(null);
+            email.setText(null);
+        }
+
     }
 
     private void perfil(AccessToken accessToken){
