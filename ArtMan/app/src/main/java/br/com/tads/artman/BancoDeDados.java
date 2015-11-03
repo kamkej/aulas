@@ -16,7 +16,7 @@ public class BancoDeDados {
     static String KEY_REVISTA= "revista";
     static String KEY_EDICAO = "edicao";
     static String KEY_STATUS = "status";
-    static String KEY_PAGO = "status";
+    static String KEY_PAGO = "pago";
 
     static String NOME_BANCO = "db_Revista";
     static String NOME_TABELA = "artigo";
@@ -24,11 +24,10 @@ public class BancoDeDados {
 
     static String SQL_CREATE_TABLE = "create table " + NOME_TABELA +
             "("+KEY_ID+" integer primary key autoincrement, "
-            + KEY_NOME + "text not null, "
+            + KEY_NOME + " text not null, "
             + KEY_REVISTA + " text, "
             + KEY_EDICAO + " text, "
             + KEY_STATUS + " integer, "
-            + KEY_STATUS + " integer,"
             + KEY_PAGO + " integer);";
     final Context context;
     MeuOpenHelper openHelper;
