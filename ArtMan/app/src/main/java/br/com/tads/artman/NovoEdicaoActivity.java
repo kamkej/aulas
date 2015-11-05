@@ -11,7 +11,7 @@ import android.widget.Spinner;
 
 import java.sql.SQLException;
 
-public class NovoEdicaoActivity extends Activity {
+public class NovoEdicaoActivity extends AppCompatActivity {
 
     private EditText edtNome;
     private EditText edtRevista;

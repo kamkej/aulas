@@ -61,7 +61,7 @@ public class BancoDeDados {
     }
     public Cursor retornaTodosArtigos(){
         return  db.query(NOME_TABELA,new String[]{
-            KEY_ID,KEY_NOME,KEY_REVISTA,KEY_EDICAO,KEY_PAGO},null,null,null,null,null);
+            KEY_ID,KEY_NOME,KEY_REVISTA,KEY_EDICAO,KEY_STATUS,KEY_PAGO},null,null,null,null,null,null);
     }
     public boolean atualizarArtigo(long id, String nome , String revista,
                                    String edicao, int status, int pago) {
