@@ -58,7 +58,11 @@ public abstract class ArtigosAdapter extends BaseAdapter {
 
             @Override
             public void onClick(View v) {
-                deleta(artigos.get(position));
+                try {
+                    deleta(artigos.get(position));
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
