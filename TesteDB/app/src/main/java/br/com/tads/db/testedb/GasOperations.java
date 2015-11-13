@@ -38,7 +38,7 @@ public class GasOperations {
         cursor.close();
         return  gas;
     }
-    
+
 
     private Gas parseStudent(Cursor cursor) {
         Gas gas = new Gas();
