@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CassOrganizer</string>
+    <string name="title_activity_cadastro">CadastroActivity</string>
+    
+    <string-array name="turma">
+        <item>Turma 1</item>
+        <item>Turma 2</item>
+    </string-array>
+</resources>

@@ -4,22 +4,31 @@ import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+import static br.com.tads.artman.BancoDeDados.SQL_CREATE_TABLE;
 
 /**
  * Created by julio on 10/29/15.
  */
 public class MeuOpenHelper extends SQLiteOpenHelper {
+
     public MeuOpenHelper(Context context){
+
         super(context,BancoDeDados.NOME_BANCO,null,BancoDeDados.VERSAO_BANCO);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+
         try {
-            db.execSQL(BancoDeDados.SQL_CREATE_TABLE);
+
+
+            db.execSQL(SQL_CREATE_TABLE);
         }catch (SQLException e){
             e.printStackTrace();
         }
+
     }
 
     @Override

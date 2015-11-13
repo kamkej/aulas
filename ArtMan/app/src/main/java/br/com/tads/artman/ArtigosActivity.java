@@ -14,7 +14,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArtigosActivity extends Activity {
+public class ArtigosActivity extends AppCompatActivity {
 
     private BancoDeDados db;
     private List<Artigo> artigos = new ArrayList<Artigo>();
@@ -91,5 +91,15 @@ public class ArtigosActivity extends Activity {
         }else {
             return super.onOptionsItemSelected(item);
         }
+    }
+    public static final int  REQUEST_SALVOU = 1;
+    protected   void onActivityResult (int requestCode, int resultCode, Intent date ){
+        if(requestCode == REQUEST_EDICAO)
+            if (resultCode ==REQUEST_SALVOU)
+                try {
+                    lerdados();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
     }
 }

@@ -16,7 +16,7 @@ public class BancoDeDados {
     static String KEY_REVISTA= "revista";
     static String KEY_EDICAO = "edicao";
     static String KEY_STATUS = "status";
-    static String KEY_PAGO = "status";
+    static String KEY_PAGO = "pago";
 
     static String NOME_BANCO = "db_Revista";
     static String NOME_TABELA = "artigo";
@@ -24,11 +24,10 @@ public class BancoDeDados {
 
     static String SQL_CREATE_TABLE = "create table " + NOME_TABELA +
             "("+KEY_ID+" integer primary key autoincrement, "
-            + KEY_NOME + "text not null, "
+            + KEY_NOME + " text not null, "
             + KEY_REVISTA + " text, "
             + KEY_EDICAO + " text, "
             + KEY_STATUS + " integer, "
-            + KEY_STATUS + " integer,"
             + KEY_PAGO + " integer);";
     final Context context;
     MeuOpenHelper openHelper;
@@ -62,7 +61,7 @@ public class BancoDeDados {
     }
     public Cursor retornaTodosArtigos(){
         return  db.query(NOME_TABELA,new String[]{
-            KEY_ID,KEY_NOME,KEY_REVISTA,KEY_EDICAO,KEY_PAGO},null,null,null,null,null);
+            KEY_ID,KEY_NOME,KEY_REVISTA,KEY_EDICAO,KEY_STATUS,KEY_PAGO},null,null,null,null,null,null);
     }
     public boolean atualizarArtigo(long id, String nome , String revista,
                                    String edicao, int status, int pago) {
