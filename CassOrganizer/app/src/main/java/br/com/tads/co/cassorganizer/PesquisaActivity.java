@@ -31,14 +31,9 @@ public class PesquisaActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        turmas.setOnItemClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        
 
-            }
-        }) {
 
-        });
 
     }
 }
