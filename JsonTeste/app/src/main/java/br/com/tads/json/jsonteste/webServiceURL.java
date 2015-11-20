@@ -19,29 +19,29 @@ import java.net.URL;
 /**
  * Created by julio on 11/17/15.
  */
-public class AsyncHttpTask extends AsyncTask<String, Void ,Integer>{
+public class webServiceURL {
     String[] blogTitles;
 
-    @Override
-    protected Integer doInBackground(String... params) {
+    protected String[]  Connect(String endpoint) {
         InputStream inputStream = null;
         HttpURLConnection urlConnection = null;
-        Integer result = 0;
+        String[] result = new String[0];
         try {
-            URL url = new URL(params[0]);
+            URL url = new URL(endpoint);
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestProperty("Content-Type", "application/json");
             urlConnection.setRequestProperty("Accept", "application/json");
             urlConnection.setRequestMethod("GET");
+
             int statusCode = urlConnection.getResponseCode();
 
             if (statusCode ==  200) {
                 inputStream = new BufferedInputStream(urlConnection.getInputStream());
                 String response = convertInputStreamToString(inputStream);
-                parseResult(response);
-                result = 1; // Successful
+                return  parseResult(response);
+                //result = "Successful"; // Successful
             }else{
-                result = 0; //"Failed to fetch data!";
+                result[0] = "Failed"; //"Failed to fetch data!";
             }
 
 
@@ -67,7 +67,7 @@ public class AsyncHttpTask extends AsyncTask<String, Void ,Integer>{
         return result;
 
     }
-    private void parseResult(String result) {
+    private String[] parseResult(String result) {
         try{
             JSONObject response = new JSONObject(result);
             JSONArray posts = response.optJSONArray("posts");
@@ -81,5 +81,6 @@ public class AsyncHttpTask extends AsyncTask<String, Void ,Integer>{
         }catch (JSONException e){
             e.printStackTrace();
         }
+        return blogTitles;
     }
 }
