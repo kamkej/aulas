@@ -2,10 +2,9 @@ package br.com.tads.json.jsonteste;
 
 import android.app.Activity;
 import android.os.AsyncTask;
-<<<<<<< HEAD
-=======
+
 import android.support.v7.app.AppCompatActivity;
->>>>>>> a6dc64b4cf704922db9dec7124cd55dfc704c2f9
+
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
@@ -35,7 +34,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         listView = (ListView)findViewById(R.id.listview);
-<<<<<<< HEAD
+
         final String url = "http://javatechig.com/api/get_category_posts/?dev=1&slug=android";
 
         new ListPost().execute(url);
@@ -60,15 +59,7 @@ public class MainActivity extends Activity {
 
         }
 
-        @Override
-        protected void onPostExecute(String[] strings) {
 
-            arrayAdapter = new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1, response);
-            listView.setAdapter(arrayAdapter);
-=======
-        final String url = "http://10.100.100.5:8080/FoodService/webresources/user/julio/kamke";
-        new AsyncHttpTask().execute(url);
-    }
     public class AsyncHttpTask extends AsyncTask<String, Void ,Integer> {
         String[] blogTitles;
 
@@ -151,7 +142,7 @@ public class MainActivity extends Activity {
             } else {
                 Log.e("fail", "Failed to fetch data!");
             }
->>>>>>> a6dc64b4cf704922db9dec7124cd55dfc704c2f9
+
         }
     }
 

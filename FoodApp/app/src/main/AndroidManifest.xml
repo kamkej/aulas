@@ -29,6 +29,10 @@
         </activity>
         <activity android:name=".Pagamento" >
         </activity>
+        <activity android:name=".ListCell" >
+        </activity>
+        <activity android:name=".ConfirmaPedido" >
+        </activity>
     </application>
 
 </manifest>

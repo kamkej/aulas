@@ -37,7 +37,7 @@ public class LoginActivity extends Activity {
         String loginid=login.getText().toString();
         String password=senha.getText().toString();
 
-        String url = "http://10.100.100.6:8080/FoodService/webresources/user/"+loginid+"/"+password;
+        String url = "http://192.168.56.1:8080/FoodService/webresources/user/"+loginid+"/"+password;
 
         new AsyncHttpTask().execute(url);
     }
