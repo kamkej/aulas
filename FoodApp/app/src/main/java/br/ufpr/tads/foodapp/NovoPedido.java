@@ -139,7 +139,10 @@ public class NovoPedido extends Activity {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         Intent intent = new Intent();
                         intent.setClass(NovoPedido.this, ConfirmaPedido.class);
-                        intent.putExtra("Item", nome[position]);
+                        Bundle bundle = new Bundle();
+                        bundle.putString("Item", nome[position]);
+                        bundle.putFloat("Valor", valor[position]);
+                        intent.putExtras(bundle);
                         startActivity(intent);
 
                     }

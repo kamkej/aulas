@@ -36,9 +36,9 @@ public class PayorderFacadeREST extends AbstractFacade<Payorder> {
     @POST
     @Override
     @Consumes({"application/json"})
-    public void create(Payorder entity) {
-       
+    public void create(Payorder entity) {     
         super.create(entity);
+
     }
 
     @PUT

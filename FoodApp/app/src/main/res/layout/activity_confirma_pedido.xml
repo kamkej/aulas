@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="5"
-        android:id="@+id/editText"
+        android:id="@+id/edtqtd"
         android:layout_alignTop="@+id/txtItem"
         android:layout_centerHorizontal="true"
         android:layout_alignBottom="@+id/textView5"
@@ -63,8 +63,8 @@
         android:text="Confirmar"
         android:id="@+id/button2"
         android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/editText"
-        android:layout_alignEnd="@+id/editText"
+        android:layout_alignRight="@+id/edtqtd"
+        android:layout_alignEnd="@+id/edtqtd"
         android:onClick="send"/>
 
 </RelativeLayout>

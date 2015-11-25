@@ -3,6 +3,7 @@ package br.ufpr.tads.foodapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 public class Dashboard extends AppCompatActivity {
@@ -11,6 +12,8 @@ public class Dashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+
     }
     public void pedidos(View view){
         Intent intent = new Intent();
@@ -18,8 +21,9 @@ public class Dashboard extends AppCompatActivity {
         startActivity(intent);
     }
     public void pagamento(View view){
+
         Intent intent = new Intent();
-        intent.setClass(Dashboard.this, Pagamento.class);
+        intent.setClass(Dashboard.this, PayOrder.class);
         startActivity(intent);
     }
 

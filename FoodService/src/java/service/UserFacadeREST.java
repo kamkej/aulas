@@ -55,16 +55,18 @@ public class UserFacadeREST extends AbstractFacade<User> {
 
     @GET
     @Path("{login}/{senha}")
-      @Produces({"application/json"})
-    public String find(@PathParam("login") String login,@PathParam("senha") String senha) {
+    @Produces({"application/json"})
+    public User find(@PathParam("login") String login,@PathParam("senha") String senha) {
        
         try{
           
            User i =super.findUser("User.findByloingandSenha",login,senha);
+           return i;
         }catch(Exception e){
-            return"0";
+            User user = new  User(0,"Erro");
+            return user;
         }
-        return"1";
+    
     }
 
     @GET

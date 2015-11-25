@@ -9,7 +9,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,24 +31,46 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 public class ConfirmaPedido extends AppCompatActivity {
-
+    TextView nome;
+    EditText qtd;
+    Float valor;
+    int id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirma_pedido);
-        TextView nome = (TextView)findViewById(R.id.txtItem);
+        nome = (TextView)findViewById(R.id.txtItem);
+        qtd = (EditText)findViewById(R.id.edtqtd);
         Intent intent = getIntent();
-        nome.setText(intent.getStringExtra("Item"));
+        Bundle bundle = intent.getExtras();
+        nome.setText(bundle.getString("Item"));
+        valor = bundle.getFloat("Valor");
+        final UserAuth _userAuth=  (UserAuth)getApplicationContext();
+        id = _userAuth.getId();
 
     }
-    public void send(View view){
+    public void send(View view)  {
 
-        //finish();
-       // Intent intent = new Intent(this,NovoPedido.class);
-       // startActivity(intent);
-       // String url = "http://192.168.56.1:8080/FoodService/webresources/payorder";
+        String url = "http://192.168.56.1:8080/FoodService/webresources/payorder";
 
-        new AsyncHttpTask().execute();
+
+        try {
+        JSONObject jsonParam = new JSONObject();
+            jsonParam.put("item",nome.getText().toString());
+            jsonParam.put("satus",0);
+            //jsonParam.put("tipo","dinheiro");
+            jsonParam.put("userid", id);
+            jsonParam.put("qtd", Integer.parseInt(qtd.getText().toString()));
+            jsonParam.put("valor", valor);
+        String message = jsonParam.toString();
+
+            new AsyncHttpTask().execute(url,message);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
 
     }
     public class AsyncHttpTask extends AsyncTask<String, Void ,Integer> {
@@ -60,34 +84,21 @@ public class ConfirmaPedido extends AppCompatActivity {
             StringBuilder sb = new StringBuilder();
             Integer result = 0;
             try {
-                URL url = new URL("http://192.168.56.1:8080/FoodService/webresources/payorder");
+                URL url = new URL(params[0]);
                 urlConnection = (HttpURLConnection) url.openConnection();
-             //   urlConnection.setDoOutput(true);
                 urlConnection.setRequestMethod("POST");
-              //  urlConnection.setUseCaches(false);
-              //  urlConnection.setConnectTimeout(10000);
-              //  urlConnection.setReadTimeout(10000);
-                urlConnection.setRequestProperty("Content-Type","application/json");
-
-                //urlConnection.setRequestProperty("Host", "android.schoolportal.gr");
+                urlConnection.setRequestProperty("Content-Type", "application/json");
                 urlConnection.connect();
 
-                JSONObject jsonParam = new JSONObject();
-                jsonParam.put("item","cocacola");
-                jsonParam.put("satus",0);
-                jsonParam.put("tipo","dinheiro");
-                jsonParam.put("userid", 1);
-                jsonParam.put("qtd", 1);
-                jsonParam.put("valor", 23.5);
-                String message = jsonParam.toString();
-                System.out.println(jsonParam.toString());
                 os = new BufferedOutputStream(urlConnection.getOutputStream());
-                os.write(message.getBytes());
+                os.write(params[1].getBytes());
                 //clean up
                 os.flush();
 
                 int HttpResult =urlConnection.getResponseCode();
-                if(HttpResult ==HttpURLConnection.HTTP_OK){
+                if(HttpResult ==HttpURLConnection.HTTP_NO_CONTENT){
+
+                    result = 1;
                     BufferedReader br = new BufferedReader(new InputStreamReader(
                             urlConnection.getInputStream(),"UTF-8"));
                     String line = null;
@@ -99,19 +110,9 @@ public class ConfirmaPedido extends AppCompatActivity {
                     System.out.println(""+sb.toString());
 
                 }else{
+                    result=0;
                     System.out.println("task1"+urlConnection.getResponseMessage()+HttpResult);
                 }
-
-
-              //  if (statusCode == 200) {
-                    //inputStream = new BufferedInputStream(urlConnection.getInputStream());
-                    //String response = convertInputStreamToString(inputStream);
-
-                  //  parseResult(response);
-               //     result = 1; // Successful
-             //   } else {
-            //        result = 0; //"Failed to fetch data!";
-            //    }
 
 
             } catch (Exception e) {
@@ -121,59 +122,15 @@ public class ConfirmaPedido extends AppCompatActivity {
             return result;
         }
 
-        private String convertInputStreamToString(InputStream inputStream) throws IOException {
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-            String line = "";
-            String result = "";
-            while ((line = bufferedReader.readLine()) != null) {
-                result += line;
-            }
 
-            /* Close Stream */
-            if (null != inputStream) {
-                inputStream.close();
-            }
-
-            return result;
-
-        }
-
-     /*   private void parseResult(String result) {
-            try {
-                //   JSONObject response = new JSONObject(result);
-                JSONArray posts = new JSONArray(result);
-                //  JSONArray posts = response.optJSONArray("");
-                nome = new String[posts.length()];
-                image = new Bitmap[posts.length()];
-                valor = new Float[posts.length()];
-
-                for (int i = 0; i < posts.length(); i++) {
-                    JSONObject post = posts.optJSONObject(i);
-                    nome[i] = post.optString("nome");
-                    valor[i] = Float.parseFloat(post.optString("valor"));
-                    String imageUrl = "http://192.168.56.1:8080/FoodService/images/"+post.optString("img");
-
-                    image[i] = BitmapFactory.decodeStream((InputStream) new URL(imageUrl).getContent());
-
-
-                }
-                //  Log.d("json",foods[1]);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }*/
 
         @Override
         protected void onPostExecute(Integer result) {
             /* Download complete. Lets update UI */
 
             if (result == 1) {
-
-
+                Toast.makeText(ConfirmaPedido.this,"Dados Inserido com sucesso!",Toast.LENGTH_LONG).show();
+            finish();
 
 
 
