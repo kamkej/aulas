@@ -25,12 +25,12 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author julio
  * 
  * create table neworder( orderID int not null auto_increment, img text not null, nome varchar(30) not null,valor real ,primary key(orderID));
- * mysql> insert into neworder(img,nome,valor)values('coca.jpg','Coca-cola',2.25);
- * mysql> insert into neworder(img,nome,valor)values('fanta.jpg','Fanta',2.25);
-   mysql> insert into neworder(img,nome,valor)values('chocolate.jpg','Bolo de Chocolate',5.35);
-   mysql> insert into neworder(img,nome,valor)values('sorvete.jpg','Sorvete',8.50); 
-   mysql> insert into neworder(img,nome,valor)values('pasta.jpg','Macarrao',12.89); 
-   mysql> insert into neworder(img,nome,valor)values('lasanha.jpg','Lazanha Bolonhesa',17.39);
+  insert into neworder(img,nome,valor)values('coca.jpg','Coca-cola',2.25);
+  insert into neworder(img,nome,valor)values('fanta.jpg','Fanta',2.25);
+   insert into neworder(img,nome,valor)values('chocolate.jpg','Bolo de Chocolate',5.35);
+   insert into neworder(img,nome,valor)values('sorvete.jpg','Sorvete',8.50); 
+   insert into neworder(img,nome,valor)values('pasta.jpg','Macarrao',12.89); 
+   insert into neworder(img,nome,valor)values('lasanha.jpg','Lazanha Bolonhesa',17.39);
 
  */
 @Entity
