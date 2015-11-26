@@ -4,4 +4,12 @@
         android:id="@+id/dinheiro"
         android:title="Dinheiro"
         android:orderInCategory="100"/>
+    <item
+        android:id="@+id/debito"
+        android:title="Débito"
+        android:orderInCategory="100"/>
+    <item
+        android:id="@+id/credito"
+        android:title="Crédito"
+        android:orderInCategory="100"/>
 </menu>
