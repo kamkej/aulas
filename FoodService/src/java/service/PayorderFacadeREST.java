@@ -55,10 +55,10 @@ public class PayorderFacadeREST extends AbstractFacade<Payorder> {
     }
 
     @GET
-    @Path("{id}")
+    @Path("{userid}")
     @Consumes({"application/json"})
-    public Payorder find(@PathParam("id") Integer id) {
-        return super.find(id);
+    public List<Payorder> find(@PathParam("userid") Integer userid) {
+        return super.findbyuser("Payorder.findByUserid",userid,0);
     }
 
     @GET

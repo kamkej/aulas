@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Payorder.findByItem", query = "SELECT p FROM Payorder p WHERE p.item = :item"),
     @NamedQuery(name = "Payorder.findByStatus", query = "SELECT p FROM Payorder p WHERE p.status = :status"),
     @NamedQuery(name = "Payorder.findByTipo", query = "SELECT p FROM Payorder p WHERE p.tipo = :tipo"),
-    @NamedQuery(name = "Payorder.findByUserid", query = "SELECT p FROM Payorder p WHERE p.userid = :userid"),
+    @NamedQuery(name = "Payorder.findByUserid", query = "SELECT p FROM Payorder p WHERE p.userid = :userid and p.status = :status"),
     @NamedQuery(name = "Payorder.findByQtd", query = "SELECT p FROM Payorder p WHERE p.qtd = :qtd"),
     @NamedQuery(name = "Payorder.findByValor", query = "SELECT p FROM Payorder p WHERE p.valor = :valor")})
 public class Payorder implements Serializable {

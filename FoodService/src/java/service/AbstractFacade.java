@@ -36,6 +36,9 @@ public abstract class AbstractFacade<T> {
     public T find(Object id) {
         return getEntityManager().find(entityClass, id);
     }
+    public List<T> findbyuser(Object...params) {
+        return   getEntityManager().createNamedQuery(params[0].toString()).setParameter("userid", params[1]).setParameter("status", params[2]).getResultList();
+    }
    /* public T findWithNamedQuery(String namedQueryName,String login,String senha) {
         return (T) getEntityManager().createNamedQuery(namedQueryName).setParameter("login", login).setParameter("senha", senha).getSingleResult();
     }*/
@@ -46,7 +49,7 @@ public abstract class AbstractFacade<T> {
 
     public List<T> findAll() {
         javax.persistence.criteria.CriteriaQuery cq = getEntityManager().getCriteriaBuilder().createQuery();
-        cq.select(cq.from(entityClass));
+        cq.select(cq.from(entityClass)).where();
         return getEntityManager().createQuery(cq).getResultList();
     }
 

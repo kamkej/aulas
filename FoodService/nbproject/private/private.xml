@@ -3,12 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/julio/NetBeansProjects/FoodService/nbproject/build-impl.xml</file>
-            <file>file:/home/julio/NetBeansProjects/FoodService/src/java/service/AbstractFacade.java</file>
             <file>file:/home/julio/NetBeansProjects/FoodService/src/java/service/ApplicationConfig.java</file>
+            <file>file:/home/julio/NetBeansProjects/FoodService/setup/glassfish-resources.xml</file>
+            <file>file:/home/julio/NetBeansProjects/FoodService/src/java/service/AbstractFacade.java</file>
+            <file>file:/home/julio/NetBeansProjects/FoodService/src/java/com/tads/foodservice/User.java</file>
             <file>file:/home/julio/NetBeansProjects/FoodService/src/java/service/UserFacadeREST.java</file>
-            <file>file:/home/julio/NetBeansProjects/FoodService/src/java/com/tads/foodservice/Neworder.java</file>
             <file>file:/home/julio/NetBeansProjects/FoodService/src/java/service/NeworderFacadeREST.java</file>
+            <file>file:/home/julio/NetBeansProjects/FoodService/web/index.html</file>
+            <file>file:/home/julio/NetBeansProjects/FoodService/src/java/com/tads/foodservice/Payorder.java</file>
+            <file>file:/home/julio/NetBeansProjects/FoodService/src/java/com/tads/foodservice/Neworder.java</file>
+            <file>file:/home/julio/NetBeansProjects/FoodService/src/java/service/PayorderFacadeREST.java</file>
         </group>
     </open-files>
 </project-private>
