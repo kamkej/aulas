@@ -31,6 +31,7 @@ public class PayOrder extends AppCompatActivity {
     ListView listView;
     ArrayAdapter arrayAdapter;
     String json;
+    int l,c;
 
 
     @Override
@@ -77,7 +78,7 @@ public class PayOrder extends AppCompatActivity {
         try {
             JSONArray posts = new JSONArray(json);
             JSONObject jsonObject = new JSONObject();
-
+            l = posts.length();
             for (int i = 0; i < posts.length(); i++) {
                 JSONObject post = posts.optJSONObject(i);
 
@@ -237,12 +238,13 @@ public class PayOrder extends AppCompatActivity {
         @Override
         protected void onPostExecute(Integer result) {
             /* Download complete. Lets update UI */
-
+        c++;
             if (result == 1) {
-                Toast.makeText(PayOrder.this, "Conta Paga Consucesso!", Toast.LENGTH_LONG).show();
-               // finish();
-
-
+              if(c==l) {
+                  Log.d("var",String.valueOf(c));
+                  Toast.makeText(PayOrder.this, "Conta Paga Consucesso!", Toast.LENGTH_LONG).show();
+                  finish();
+              }
             } else {
                 Log.e("fail", "Failed to fetch data!");
             }
