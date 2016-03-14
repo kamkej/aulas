@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">WasteNot</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+    <string-array name="nav_drawer_items">
+        <item>Home</item>
+        <item>Find People</item>
+        <item>Photos</item>
+        <item>Communities</item>
+        <item>Pages</item>
+        <item>What\'s hot</item>
+    </string-array>
+    <array name="nav_drawer_icon">
+        <item></item>
+    </array>
+    <string name="desc_list_item_icon">Item Icon</string>
 </resources>
