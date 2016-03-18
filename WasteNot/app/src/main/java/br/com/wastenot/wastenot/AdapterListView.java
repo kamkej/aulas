@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -36,8 +38,24 @@ public class AdapterListView extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View view, ViewGroup parent) {
         ItemSuporte itemHolder;
-        return null;
+        if(view == null){
+            view= mInflater.inflate(R.layout.item_list,null);
+            itemHolder = new ItemSuporte();
+            itemHolder.txtTitle = ((TextView) view.findViewById(R.id.itemtext));
+            itemHolder.imgIcon = ((ImageView) view.findViewById(R.id.itemimgview));
+            view.setTag(itemHolder);
+        }else {
+            itemHolder = (ItemSuporte) view.getTag();
+        }
+        ItemListView item = itens.get(position);
+        itemHolder.txtTitle.setText(item.getTexto());
+        itemHolder.imgIcon.setImageResource(item.getIconeRid());
+        return view;
+    }
+    private class ItemSuporte{
+        ImageView imgIcon;
+        TextView txtTitle;
     }
 }
