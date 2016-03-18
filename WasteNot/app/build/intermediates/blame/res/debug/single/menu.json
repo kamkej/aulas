@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/menu/activity_main_drawer.xml",
+        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/menu/activity_main_drawer.xml"
+    },
+    {
+        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/menu/main.xml"
+    }
+]
