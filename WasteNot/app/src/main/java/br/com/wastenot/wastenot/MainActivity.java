@@ -16,6 +16,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -35,11 +37,25 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //Teste db
+
+        BDWrapper db = new BDWrapper(this);
+
+        db.addCards(new Cards("normal","Sen Triplets","{2}{W}{U}{B}","5","White,blue,black","Legendary Artifact Creature — Human Wizard","Legendary","Artifact,Creature","Human Wizard","Mythic Rare","At the beginning of your upkeep, choose target opponent This turn, that player can't cast spells or activate abilities and plays with his or her hand revealed You may play cards from that player's hand this turn.","They are the masters of your mind","Greg Staples","109","3","3","","",""));
+
+        List<Cards> cardsList = db.getAllCard();
+
+        for (Cards cd : cardsList){
+            Toast.makeText(getApplicationContext(), cd.getName(), Toast.LENGTH_SHORT).show();
+        }
+
+
     }
 
 
     public void search(View view){
-        Toast.makeText(getApplicationContext(), "ok", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "list", Toast.LENGTH_SHORT).show();
     }
 
     @Override
