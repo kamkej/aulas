@@ -51,7 +51,7 @@ public class AdapterListView extends BaseAdapter {
         }
         ItemListView item = itens.get(position);
         itemHolder.txtTitle.setText(item.getTexto());
-        itemHolder.imgIcon.setImageResource(item.getIconeRid());
+       itemHolder.imgIcon.setImageResource(item.getIconeRid());
         return view;
     }
     private class ItemSuporte{

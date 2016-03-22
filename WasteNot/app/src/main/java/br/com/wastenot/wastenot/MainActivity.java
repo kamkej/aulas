@@ -14,7 +14,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,11 +39,24 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+
+
+
     }
 
 
     public void search(View view){
-        Toast.makeText(getApplicationContext(), "ok", Toast.LENGTH_SHORT).show();
+
+        ListView list = (ListView) findViewById(R.id.list);
+
+        List<ItemListView> itens = new ArrayList<ItemListView>();
+
+        itens.add(new ItemListView("item 1",R.drawable.whish));
+        itens.add(new ItemListView("item 2",R.drawable.havelist));
+        AdapterListView adapter = new AdapterListView(this,itens);
+        list.setAdapter(adapter);
     }
 
     @Override
