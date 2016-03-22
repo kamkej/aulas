@@ -14,18 +14,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-<<<<<<< HEAD
+
 import java.util.ArrayList;
-=======
->>>>>>> refs/remotes/origin/master
+
 import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    BDWrapper db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,41 +44,44 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-<<<<<<< HEAD
 
-
-=======
         //Teste db
 
-        BDWrapper db = new BDWrapper(this);
+        db = new BDWrapper(this);
 
         db.addCards(new Cards("normal","Sen Triplets","{2}{W}{U}{B}","5","White,blue,black","Legendary Artifact Creature — Human Wizard","Legendary","Artifact,Creature","Human Wizard","Mythic Rare","At the beginning of your upkeep, choose target opponent This turn, that player can't cast spells or activate abilities and plays with his or her hand revealed You may play cards from that player's hand this turn.","They are the masters of your mind","Greg Staples","109","3","3","","",""));
-
-        List<Cards> cardsList = db.getAllCard();
-
-        for (Cards cd : cardsList){
-            Toast.makeText(getApplicationContext(), cd.getName(), Toast.LENGTH_SHORT).show();
-        }
->>>>>>> refs/remotes/origin/master
-
+        db.addCards(new Cards("normal","Air Elemental","{2}{W}{U}{B}","5","White,blue,black","Legendary Artifact Creature — Human Wizard","Legendary","Artifact,Creature","Human Wizard","Mythic Rare","At the beginning of your upkeep, choose target opponent This turn, that player can't cast spells or activate abilities and plays with his or her hand revealed You may play cards from that player's hand this turn.","They are the masters of your mind","Greg Staples","109","3","3","","",""));
+        db.addCards(new Cards("normal","Zombie","{2}{W}{U}{B}","5","White,blue,black","Legendary Artifact Creature — Human Wizard","Legendary","Artifact,Creature","Human Wizard","Mythic Rare","At the beginning of your upkeep, choose target opponent This turn, that player can't cast spells or activate abilities and plays with his or her hand revealed You may play cards from that player's hand this turn.","They are the masters of your mind","Greg Staples","109","3","3","","",""));
 
     }
 
 
     public void search(View view){
-<<<<<<< HEAD
+
 
         ListView list = (ListView) findViewById(R.id.list);
 
         List<ItemListView> itens = new ArrayList<ItemListView>();
+        List<Cards> cardsList = db.getAllCard();
 
-        itens.add(new ItemListView("item 1",R.drawable.whish));
-        itens.add(new ItemListView("item 2",R.drawable.havelist));
+        for (Cards cd : cardsList){
+            itens.add(new ItemListView(cd.getName(), R.drawable.whish));
+        }
+
         AdapterListView adapter = new AdapterListView(this,itens);
         list.setAdapter(adapter);
-=======
-        Toast.makeText(getApplicationContext(), "list", Toast.LENGTH_SHORT).show();
->>>>>>> refs/remotes/origin/master
+
+        //Toast.makeText(getApplicationContext(), "list", Toast.LENGTH_SHORT).show();
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent intent = (new Intent(getApplicationContext(),CardDetail.class));
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override

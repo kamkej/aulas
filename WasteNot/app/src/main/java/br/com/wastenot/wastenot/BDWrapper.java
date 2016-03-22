@@ -41,12 +41,13 @@ public class BDWrapper extends SQLiteOpenHelper {
 
 
     public BDWrapper(Context context) {
+
         super(context, DATABASE_NAME,null,DATABASE_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_CARDS_TABLE= "CREATE TABLE"+ TABLE+"("
+        String CREATE_CARDS_TABLE= "CREATE TABLE "+ TABLE+"("
                 + KEY_ID +" INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + KEY_NAME+" VARCHAR(50) NOT NULL,"
                 + KEY_M_C+" VARCHAR(50) NOT NULL,"
@@ -66,13 +67,13 @@ public class BDWrapper extends SQLiteOpenHelper {
                 + KEY_LAYOUT+" VARCHAR(50) NOT NULL,"
                 + KEY_M_S_ID+" VARCHAR(50) NOT NULL,"
                 + KEY_IMG_NAME+" VARCHAR(50) NOT NULL,"
-                + KEY_CARD_ID+" VARCHAR(50) NOT NULL,)";
+                + KEY_CARD_ID+" VARCHAR(50) NOT NULL)";
         db.execSQL(CREATE_CARDS_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS"+TABLE);
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE);
         onCreate(db);
     }
 
