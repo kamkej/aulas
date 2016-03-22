@@ -17,7 +17,10 @@ import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
+=======
+>>>>>>> refs/remotes/origin/master
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity
@@ -40,14 +43,29 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+<<<<<<< HEAD
 
 
+=======
+        //Teste db
+
+        BDWrapper db = new BDWrapper(this);
+
+        db.addCards(new Cards("normal","Sen Triplets","{2}{W}{U}{B}","5","White,blue,black","Legendary Artifact Creature — Human Wizard","Legendary","Artifact,Creature","Human Wizard","Mythic Rare","At the beginning of your upkeep, choose target opponent This turn, that player can't cast spells or activate abilities and plays with his or her hand revealed You may play cards from that player's hand this turn.","They are the masters of your mind","Greg Staples","109","3","3","","",""));
+
+        List<Cards> cardsList = db.getAllCard();
+
+        for (Cards cd : cardsList){
+            Toast.makeText(getApplicationContext(), cd.getName(), Toast.LENGTH_SHORT).show();
+        }
+>>>>>>> refs/remotes/origin/master
 
 
     }
 
 
     public void search(View view){
+<<<<<<< HEAD
 
         ListView list = (ListView) findViewById(R.id.list);
 
@@ -57,6 +75,9 @@ public class MainActivity extends AppCompatActivity
         itens.add(new ItemListView("item 2",R.drawable.havelist));
         AdapterListView adapter = new AdapterListView(this,itens);
         list.setAdapter(adapter);
+=======
+        Toast.makeText(getApplicationContext(), "list", Toast.LENGTH_SHORT).show();
+>>>>>>> refs/remotes/origin/master
     }
 
     @Override
