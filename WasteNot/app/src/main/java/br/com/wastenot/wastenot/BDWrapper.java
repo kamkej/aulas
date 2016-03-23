@@ -69,6 +69,10 @@ public class BDWrapper extends SQLiteOpenHelper {
                 + KEY_IMG_NAME+" VARCHAR(50) NOT NULL,"
                 + KEY_CARD_ID+" VARCHAR(50) NOT NULL)";
         db.execSQL(CREATE_CARDS_TABLE);
+
+
+
+
     }
 
     @Override
@@ -97,6 +101,7 @@ public class BDWrapper extends SQLiteOpenHelper {
                 Cards cards = new Cards();
                 cards.setId(Integer.parseInt(cursor.getString(0)));
                 cards.setName(cursor.getString(1));
+                cards.setText(cursor.getString(10));
                 cardsList.add(cards);
 
             }while (cursor.moveToNext());
