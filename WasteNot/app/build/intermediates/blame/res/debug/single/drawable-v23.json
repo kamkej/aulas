@@ -1,10 +1,14 @@
 [
     {
-        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-v23/abc_control_background_material.xml",
-        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-v23/abc_control_background_material.xml"
+        "merged": "C:\\home\\ssl\\AndroidStudioProjects\\aulas\\WasteNot\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23\\abc_control_background_material.xml",
+        "source": "C:\\home\\ssl\\AndroidStudioProjects\\aulas\\WasteNot\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable-v23\\abc_control_background_material.xml"
     },
     {
-        "merged": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-v23/abc_control_background_material.xml",
-        "source": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-v23/abc_control_background_material.xml"
+        "merged": "C:\\home\\julio\\AndroidProject\\aulas\\WasteNot\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23\\abc_control_background_material.xml",
+        "source": "C:\\home\\julio\\AndroidProject\\aulas\\WasteNot\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable-v23\\abc_control_background_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\g0006185\\AndroidStudioProjects\\aulas\\WasteNot\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23\\abc_control_background_material.xml",
+        "source": "C:\\Users\\g0006185\\AndroidStudioProjects\\aulas\\WasteNot\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable-v23\\abc_control_background_material.xml"
     }
 ]
