@@ -4,8 +4,14 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.sql.SQLDataException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,9 +20,14 @@ import java.util.List;
  */
 public class BDWrapper extends SQLiteOpenHelper {
     //Database
-    public static final String DATABASE_NAME= "wastenote";
+    public static final String DB_PATH = "/data/data/br.com.wastenot.wastenot/databases/";
+    public static final String DATABASE_NAME= "wastenot.db";
     public static final int DATABASE_VERSION=  1;
     public static final String TABLE = "Cards";
+    private SQLiteDatabase myDatabase;
+    private final Context myContext;
+
+
 // Table columns names
     public static final String KEY_ID =         "id";
     public static final String KEY_LAYOUT =     "layout";
@@ -43,38 +54,80 @@ public class BDWrapper extends SQLiteOpenHelper {
     public BDWrapper(Context context) {
 
         super(context, DATABASE_NAME,null,DATABASE_VERSION);
+        this.myContext = context;
+        this.createDatabase();
+    }
+
+    public void createDatabase(){
+        try {
+            boolean dbExit= checkDatabase();
+            if(dbExit){
+                Log.d("msg", "exists");
+            }else {
+                this.getReadableDatabase();
+                copyDatabase();
+                Log.d("msg", "copy");
+            }
+        }catch (Exception e){
+
+        }
+    }
+    private boolean checkDatabase(){
+        SQLiteDatabase checkDB = null;
+        try {
+            String myPath  = DB_PATH + DATABASE_NAME;
+            checkDB = SQLiteDatabase.openDatabase(myPath,null,SQLiteDatabase.OPEN_READONLY);
+        }catch (SQLiteException e){
+
+        }
+        if(checkDB != null){
+            checkDB.close();
+        }
+        return checkDB != null ? true:false;
+    }
+    private void copyDatabase(){
+       // Log.d("dbi", ');
+
+        try{
+            InputStream myInput = myContext.getAssets().open(DATABASE_NAME);
+            String outFileName = DB_PATH + DATABASE_NAME;
+            OutputStream myOutput = new FileOutputStream(outFileName);
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = myInput.read(buffer))>0){
+                myOutput.write(buffer, 0, length);
+            }
+
+            //Close the streams
+            myOutput.flush();
+            myOutput.close();
+            myInput.close();
+        }
+        catch (Exception e) {
+            //catch exception
+        }
+    }
+    public SQLiteDatabase openDatabase() throws  SQLDataException{
+        String myPath = DB_PATH + DATABASE_NAME;
+        myDatabase = SQLiteDatabase.openDatabase(myPath,null,SQLiteDatabase.OPEN_READONLY);
+        return myDatabase;
+    }
+    public synchronized  void close(){
+        if(myDatabase != null){
+            myDatabase.close();
+            super.close();
+        }
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_CARDS_TABLE= "CREATE TABLE "+ TABLE+"("
-                + KEY_ID +" INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + KEY_NAME+" VARCHAR(50) NOT NULL,"
-                + KEY_M_C+" VARCHAR(50) NOT NULL,"
-                + KEY_CMC+" VARCHAR(50) NOT NULL,"
-                + KEY_COLOR+" VARCHAR(50)NOT NULL,"
-                + KEY_TYPE+" VARCHAR(50) NOT NULL,"
-                + KEY_SUPER_TYPE+" VARCHAR(50) NOT NULL,"
-                + KEY_TYPES+" VARCHAR(50) NOT NULL,"
-                + KEY_SUB_TYPE+" VARCHAR(50) NOT NULL,"
-                + KEY_RARITY+" VARCHAR(50) NOT NULL,"
-                + KEY_TEXT+" VARCHAR(300) NOT NULL,"
-                + KEY_FLAVOR+" VARCHAR(50) NOT NULL,"
-                + KEY_ARTIST+" VARCHAR(50) NOT NULL,"
-                + KEY_NUNBER+" VARCHAR(50) NOT NULL,"
-                + KEY_POWER+" VARCHAR(50) NOT NULL,"
-                + KEY_TOUGHNESS+" VARCHAR(50) NOT NULL,"
-                + KEY_LAYOUT+" VARCHAR(50) NOT NULL,"
-                + KEY_M_S_ID+" VARCHAR(50) NOT NULL,"
-                + KEY_IMG_NAME+" VARCHAR(50) NOT NULL,"
-                + KEY_CARD_ID+" VARCHAR(50) NOT NULL)";
-        db.execSQL(CREATE_CARDS_TABLE);
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS "+TABLE);
-        onCreate(db);
+    //    db.execSQL("DROP TABLE IF EXISTS "+TABLE);
+      //  onCreate(db);
     }
 
     public Cards getCard(int id){

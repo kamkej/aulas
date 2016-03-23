@@ -49,9 +49,6 @@ public class MainActivity extends AppCompatActivity
 
         db = new BDWrapper(this);
 
-        db.addCards(new Cards("normal","Sen Triplets","{2}{W}{U}{B}","5","White,blue,black","Legendary Artifact Creature — Human Wizard","Legendary","Artifact,Creature","Human Wizard","Mythic Rare","At the beginning of your upkeep, choose target opponent This turn, that player can't cast spells or activate abilities and plays with his or her hand revealed You may play cards from that player's hand this turn.","They are the masters of your mind","Greg Staples","109","3","3","","",""));
-        db.addCards(new Cards("normal","Air Elemental","{2}{W}{U}{B}","5","White,blue,black","Legendary Artifact Creature — Human Wizard","Legendary","Artifact,Creature","Human Wizard","Mythic Rare","At the beginning of your upkeep, choose target opponent This turn, that player can't cast spells or activate abilities and plays with his or her hand revealed You may play cards from that player's hand this turn.","They are the masters of your mind","Greg Staples","109","3","3","","",""));
-        db.addCards(new Cards("normal","Zombie","{2}{W}{U}{B}","5","White,blue,black","Legendary Artifact Creature — Human Wizard","Legendary","Artifact,Creature","Human Wizard","Mythic Rare","At the beginning of your upkeep, choose target opponent This turn, that player can't cast spells or activate abilities and plays with his or her hand revealed You may play cards from that player's hand this turn.","They are the masters of your mind","Greg Staples","109","3","3","","",""));
 
     }
 
@@ -62,7 +59,7 @@ public class MainActivity extends AppCompatActivity
         ListView list = (ListView) findViewById(R.id.list);
 
         List<ItemListView> itens = new ArrayList<ItemListView>();
-        List<Cards> cardsList = db.getAllCard();
+        final List<Cards> cardsList = db.getAllCard();
 
         for (Cards cd : cardsList){
             itens.add(new ItemListView(cd.getName(), R.drawable.whish));
@@ -77,7 +74,11 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+                Cards card = cardsList.get(position);
+
                 Intent intent = (new Intent(getApplicationContext(),CardDetail.class));
+                intent.putExtra("cards",card);
+
                 startActivity(intent);
             }
         });

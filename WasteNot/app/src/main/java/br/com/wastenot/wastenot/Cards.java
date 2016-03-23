@@ -1,9 +1,11 @@
 package br.com.wastenot.wastenot;
 
+import java.io.Serializable;
+
 /**
  * Created by ssl on 3/21/16.
  */
-public class Cards {
+public class Cards implements Serializable {
 
     private int id;
     private String layout;
