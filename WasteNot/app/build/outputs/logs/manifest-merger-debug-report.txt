@@ -1,6 +1,10 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< HEAD
 ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:2:1-31:12
+=======
+ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml:2:1-32:12
+>>>>>>> 9cc8e11f8b7fbaef1400c53f27961eefffab2ea8
 	package
 		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:3:5-39
 		INJECTED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml
@@ -14,6 +18,7 @@ ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidMa
 		INJECTED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml
 		INJECTED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml
 application
+<<<<<<< HEAD
 ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:5:5-29:19
 MERGED from [com.android.support:appcompat-v7:23.2.0] /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:23.2.0] /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
@@ -32,6 +37,26 @@ MERGED from [com.android.support:support-v4:23.2.0] /home/ssl/AndroidStudioProje
 MERGED from [com.android.support:support-vector-drawable:23.2.0] /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-v4:23.2.0] /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.2.0] /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
+=======
+ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml:5:5-30:19
+MERGED from [com.android.support:appcompat-v7:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
+>>>>>>> 9cc8e11f8b7fbaef1400c53f27961eefffab2ea8
 	android:label
 		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:8:9-41
 	android:supportsRtl
@@ -69,13 +94,25 @@ ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidMa
 	android:name
 		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:22:13-45
 activity#br.com.wastenot.wastenot.MyDeckActivity
+<<<<<<< HEAD
 ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:25:9-28:68
+=======
+ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml:25:9-28:59
+>>>>>>> 9cc8e11f8b7fbaef1400c53f27961eefffab2ea8
 	android:label
 		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:27:13-59
 	android:theme
 		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:28:13-56
 	android:name
+<<<<<<< HEAD
 		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:26:13-43
+=======
+		ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml:26:13-43
+activity#br.com.wastenot.wastenot.CardDetail
+ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml:29:9-57
+	android:name
+		ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml:29:19-45
+>>>>>>> 9cc8e11f8b7fbaef1400c53f27961eefffab2ea8
 uses-sdk
 INJECTED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.2.0] /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:21:5-23:78

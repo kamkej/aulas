@@ -41,13 +41,15 @@ public class BDWrapper extends SQLiteOpenHelper {
 
 
     public BDWrapper(Context context) {
+
         super(context, DATABASE_NAME,null,DATABASE_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_CARDS_TABLE= "CREATE TABLE"+ TABLE+"("
+        String CREATE_CARDS_TABLE= "CREATE TABLE "+ TABLE+"("
                 + KEY_ID +" INTEGER PRIMARY KEY AUTOINCREMENT,"
+<<<<<<< HEAD
                 + KEY_NAME+" VARCHAR(50),"
                 + KEY_M_C+" VARCHAR(50) ,"
                 + KEY_CMC+" VARCHAR(50) ,"
@@ -67,12 +69,37 @@ public class BDWrapper extends SQLiteOpenHelper {
                 + KEY_M_S_ID+" VARCHAR(50),"
                 + KEY_IMG_NAME+" VARCHAR(50),"
                 + KEY_CARD_ID+" VARCHAR(50),)";
+=======
+                + KEY_NAME+" VARCHAR(50) NOT NULL,"
+                + KEY_M_C+" VARCHAR(50) NOT NULL,"
+                + KEY_CMC+" VARCHAR(50) NOT NULL,"
+                + KEY_COLOR+" VARCHAR(50)NOT NULL,"
+                + KEY_TYPE+" VARCHAR(50) NOT NULL,"
+                + KEY_SUPER_TYPE+" VARCHAR(50) NOT NULL,"
+                + KEY_TYPES+" VARCHAR(50) NOT NULL,"
+                + KEY_SUB_TYPE+" VARCHAR(50) NOT NULL,"
+                + KEY_RARITY+" VARCHAR(50) NOT NULL,"
+                + KEY_TEXT+" VARCHAR(300) NOT NULL,"
+                + KEY_FLAVOR+" VARCHAR(50) NOT NULL,"
+                + KEY_ARTIST+" VARCHAR(50) NOT NULL,"
+                + KEY_NUNBER+" VARCHAR(50) NOT NULL,"
+                + KEY_POWER+" VARCHAR(50) NOT NULL,"
+                + KEY_TOUGHNESS+" VARCHAR(50) NOT NULL,"
+                + KEY_LAYOUT+" VARCHAR(50) NOT NULL,"
+                + KEY_M_S_ID+" VARCHAR(50) NOT NULL,"
+                + KEY_IMG_NAME+" VARCHAR(50) NOT NULL,"
+                + KEY_CARD_ID+" VARCHAR(50) NOT NULL)";
+>>>>>>> 9cc8e11f8b7fbaef1400c53f27961eefffab2ea8
         db.execSQL(CREATE_CARDS_TABLE);
+
+
+
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS"+TABLE);
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE);
         onCreate(db);
     }
 
@@ -96,6 +123,7 @@ public class BDWrapper extends SQLiteOpenHelper {
                 Cards cards = new Cards();
                 cards.setId(Integer.parseInt(cursor.getString(0)));
                 cards.setName(cursor.getString(1));
+                cards.setText(cursor.getString(10));
                 cardsList.add(cards);
 
             }while (cursor.moveToNext());

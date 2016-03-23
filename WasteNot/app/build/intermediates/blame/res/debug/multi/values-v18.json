@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/values-v18/values-v18.xml",
+        "outputFile": "/home/julio/AndroidProject/aulas/WasteNot/C:\\home\\ssl\\AndroidStudioProjects\\aulas\\WasteNot\\app\\build\\intermediates\\res\\merged\\debug\\values-v18\\values-v18.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 99
                 },
                 "from": {
-                    "file": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-v18/values-v18.xml",
+                    "file": "/home/julio/AndroidProject/aulas/WasteNot/C:\\home\\ssl\\AndroidStudioProjects\\aulas\\WasteNot\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-v18\\values-v18.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -22,5 +22,80 @@
                 }
             }
         ]
+    },
+    {
+        "outputFile": "/home/julio/AndroidProject/aulas/WasteNot/C:\\Users\\g0006185\\AndroidStudioProjects\\aulas\\WasteNot\\app\\build\\intermediates\\res\\merged\\debug\\values-v18\\values-v18.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 48,
+                    "endOffset": 99
+                },
+                "from": {
+                    "file": "/home/julio/AndroidProject/aulas/WasteNot/C:\\Users\\g0006185\\AndroidStudioProjects\\aulas\\WasteNot\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-v18\\values-v18.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 48,
+                        "endOffset": 99
+                    }
+                }
+            }
+        ]
+<<<<<<< HEAD
+=======
+    },
+    {
+        "outputFile": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/res/merged/debug/values-v18/values-v18.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 48,
+                    "endOffset": 99
+                },
+                "from": {
+                    "file": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/values-v18/values-v18.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 48,
+                        "endOffset": 99
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/home/julio/AndroidProject/aulas/WasteNot/C:\\home\\julio\\AndroidProject\\aulas\\WasteNot\\app\\build\\intermediates\\res\\merged\\debug\\values-v18\\values-v18.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 48,
+                    "endOffset": 99
+                },
+                "from": {
+                    "file": "/home/julio/AndroidProject/aulas/WasteNot/C:\\home\\julio\\AndroidProject\\aulas\\WasteNot\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-v18\\values-v18.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 48,
+                        "endOffset": 99
+                    }
+                }
+            }
+        ]
+>>>>>>> 9cc8e11f8b7fbaef1400c53f27961eefffab2ea8
     }
 ]
