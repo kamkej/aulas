@@ -17,10 +17,9 @@ import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Toast;
 
-<<<<<<< HEAD
+
 import java.util.ArrayList;
-=======
->>>>>>> refs/remotes/origin/master
+
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity
@@ -43,10 +42,6 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-<<<<<<< HEAD
-
-
-=======
         //Teste db
 
         BDWrapper db = new BDWrapper(this);
@@ -58,14 +53,14 @@ public class MainActivity extends AppCompatActivity
         for (Cards cd : cardsList){
             Toast.makeText(getApplicationContext(), cd.getName(), Toast.LENGTH_SHORT).show();
         }
->>>>>>> refs/remotes/origin/master
+
 
 
     }
 
 
     public void search(View view){
-<<<<<<< HEAD
+
 
         ListView list = (ListView) findViewById(R.id.list);
 
@@ -75,9 +70,9 @@ public class MainActivity extends AppCompatActivity
         itens.add(new ItemListView("item 2",R.drawable.havelist));
         AdapterListView adapter = new AdapterListView(this,itens);
         list.setAdapter(adapter);
-=======
+
         Toast.makeText(getApplicationContext(), "list", Toast.LENGTH_SHORT).show();
->>>>>>> refs/remotes/origin/master
+
     }
 
     @Override
