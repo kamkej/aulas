@@ -1,23 +1,10 @@
 [
     {
-<<<<<<< HEAD
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/mipmap-mdpi-v4/ic_launcher.png",
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/mipmap-mdpi/ic_launcher.png"
-=======
-        "merged": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/res/merged/debug/mipmap-mdpi-v4/ic_launcher.png",
-        "source": "/home/julio/AndroidProject/aulas/WasteNot/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "/home/julio/AndroidProject/aulas/WasteNot/C:\\home\\ssl\\AndroidStudioProjects\\aulas\\WasteNot\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
-        "source": "/home/julio/AndroidProject/aulas/WasteNot/C:\\home\\ssl\\AndroidStudioProjects\\aulas\\WasteNot\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "/home/julio/AndroidProject/aulas/WasteNot/C:\\home\\julio\\AndroidProject\\aulas\\WasteNot\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
-        "source": "/home/julio/AndroidProject/aulas/WasteNot/C:\\home\\julio\\AndroidProject\\aulas\\WasteNot\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "/home/julio/AndroidProject/aulas/WasteNot/C:\\Users\\g0006185\\AndroidStudioProjects\\aulas\\WasteNot\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
-        "source": "/home/julio/AndroidProject/aulas/WasteNot/C:\\Users\\g0006185\\AndroidStudioProjects\\aulas\\WasteNot\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
->>>>>>> 9cc8e11f8b7fbaef1400c53f27961eefffab2ea8
+        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/C:\\Users\\g0006185\\AndroidStudioProjects\\aulas\\WasteNot\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
+        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/C:\\Users\\g0006185\\AndroidStudioProjects\\aulas\\WasteNot\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     }
 ]

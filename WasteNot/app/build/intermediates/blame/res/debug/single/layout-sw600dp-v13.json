@@ -1,23 +1,10 @@
 [
     {
-<<<<<<< HEAD
+        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/C:\\Users\\g0006185\\AndroidStudioProjects\\aulas\\WasteNot\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
+        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/C:\\Users\\g0006185\\AndroidStudioProjects\\aulas\\WasteNot\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
+    },
+    {
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/layout-sw600dp-v13/design_layout_snackbar.xml"
-=======
-        "merged": "/home/julio/AndroidProject/aulas/WasteNot/C:\\home\\ssl\\AndroidStudioProjects\\aulas\\WasteNot\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
-        "source": "/home/julio/AndroidProject/aulas/WasteNot/C:\\home\\ssl\\AndroidStudioProjects\\aulas\\WasteNot\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
-    },
-    {
-        "merged": "/home/julio/AndroidProject/aulas/WasteNot/C:\\home\\julio\\AndroidProject\\aulas\\WasteNot\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
-        "source": "/home/julio/AndroidProject/aulas/WasteNot/C:\\home\\julio\\AndroidProject\\aulas\\WasteNot\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
-    },
-    {
-        "merged": "/home/julio/AndroidProject/aulas/WasteNot/C:\\Users\\g0006185\\AndroidStudioProjects\\aulas\\WasteNot\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
-        "source": "/home/julio/AndroidProject/aulas/WasteNot/C:\\Users\\g0006185\\AndroidStudioProjects\\aulas\\WasteNot\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
-    },
-    {
-        "merged": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
-        "source": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/layout-sw600dp-v13/design_layout_snackbar.xml"
->>>>>>> 9cc8e11f8b7fbaef1400c53f27961eefffab2ea8
     }
 ]

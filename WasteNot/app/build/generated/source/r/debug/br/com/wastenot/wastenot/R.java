@@ -2361,7 +2361,7 @@ containing a value of this type.
         public static final int image=0x7f0d003f;
         public static final int imageButton=0x7f0d0071;
         public static final int imageView=0x7f0d007d;
-        public static final int imgCard=0x7f0d006a;
+        public static final int imageView2=0x7f0d0069;
         public static final int info=0x7f0d008a;
         public static final int item_touch_helper_previous_elevation=0x7f0d0005;
         public static final int itemimgview=0x7f0d007b;
@@ -2427,15 +2427,15 @@ containing a value of this type.
         public static final int text=0x7f0d0089;
         public static final int text2=0x7f0d0087;
         public static final int textSpacerNoButtons=0x7f0d004d;
-        public static final int textTitle=0x7f0d0069;
         public static final int textView=0x7f0d007e;
-        public static final int texttext=0x7f0d006b;
         public static final int time=0x7f0d0085;
         public static final int title=0x7f0d0043;
         public static final int title_template=0x7f0d0048;
         public static final int toolbar=0x7f0d006c;
         public static final int top=0x7f0d0026;
         public static final int topPanel=0x7f0d0047;
+        public static final int txtText=0x7f0d006b;
+        public static final int txtTitle=0x7f0d006a;
         public static final int up=0x7f0d0009;
         public static final int useLogo=0x7f0d0014;
         public static final int view_offset_helper=0x7f0d000a;
