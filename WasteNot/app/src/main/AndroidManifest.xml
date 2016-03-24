@@ -26,7 +26,8 @@
             android:name=".MyDeckActivity"
             android:label="@string/title_activity_my_deck"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".CardDetail"></activity>
+        <activity android:name=".CardDetail" />
+        <activity android:name=".SettingActivity"></activity>
     </application>
 
 </manifest>
