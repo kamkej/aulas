@@ -150,6 +150,24 @@ public class BDWrapper extends SQLiteOpenHelper {
                 Cards cards = new Cards();
                 cards.setId(Integer.parseInt(cursor.getString(0)));
                 cards.setName(cursor.getString(1));
+                cards.setManaCost(cursor.getString(2));
+                cards.setCmc(cursor.getString(3));
+                cards.setColors(cursor.getString(4));
+                cards.setType(cursor.getString(5));
+                cards.setSupertype(cursor.getString(6));
+                cards.setTypes(cursor.getString(7));
+                cards.setSubtypes(cursor.getString(8));
+                cards.setRarity(cursor.getString(9));
+                cards.setText(cursor.getString(10));
+                cards.setFlavor(cursor.getString(11));
+                cards.setArtist(cursor.getString(12));
+                cards.setNumber(cursor.getString(13));
+                cards.setPower(cursor.getString(14));
+                cards.setToughness(cursor.getString(15));
+                cards.setLayout(cursor.getString(16));
+                cards.setMultiverseid(cursor.getString(17));
+                cards.setImageName(cursor.getString(18));
+                cards.setCard_id(cursor.getString(19));
                 cardsList.add(cards);
 
             }while (cursor.moveToNext());

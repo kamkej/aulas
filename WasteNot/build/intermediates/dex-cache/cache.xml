@@ -2,60 +2,60 @@
 <items version="2" >
 
     <item
-        jar="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
-        <dex dex="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.0_6b0fc8829aebc7e94df77f27ae2564ecf71e8317.jar" />
-    </item>
-    <item
-        jar="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/jars/classes.jar"
+        jar="/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="1aa5b025efe97f5006f5be16d6ca67c6c3c0c0d8">
-        <dex dex="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.2.0_950afee4eda679400dd5708ad4596f6f65372fb2.jar" />
+        <dex dex="/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.2.0_1195183b3a142b7213a418bc0fe73b5bb4786249.jar" />
     </item>
     <item
-        jar="/home/ssl/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.0/support-annotations-23.2.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c5bf571bb10462bd90e5419ade67793f71acbc87">
-        <dex dex="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.0_7685317cfc09bc986440a554bc03635372314d25.jar" />
-    </item>
-    <item
-        jar="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="292a9fa091757208efa65e77eef63088247e51f3">
-        <dex dex="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.2.0_5ae1dff4669ee7277d7f7954c06c6d41b6f09298.jar" />
-    </item>
-    <item
-        jar="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="6e3578f92f7462d1a935a1d36173e3bdd1234976">
-        <dex dex="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.2.0_e64058b736909263a484a0f2df5ff5970fb56d2a.jar" />
-    </item>
-    <item
-        jar="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.0/jars/classes.jar"
+        jar="/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="d4c936aa8c7d2522c82e3f1829c791d9e367f009">
-        <dex dex="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.2.0_84f0625b3ab098f0a776d62414542bba51786c60.jar" />
+        <dex dex="/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.2.0_3d53ea2d3d1f892949930c5e74a7349dd6c2a5ec.jar" />
     </item>
     <item
-        jar="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e5f32fa48a3eb2de0c987025c11b6e3864b634d9">
-        <dex dex="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.0_61193b57963ccbf5226bd595d3c47a3782860fe7.jar" />
-    </item>
-    <item
-        jar="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/libs/internal_impl-23.2.0.jar"
+        jar="/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/libs/internal_impl-23.2.0.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="6e239441500605809818997dd63b62a947195f8c">
-        <dex dex="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.0_9718bb5b674cd161789f40a949bae8492d7a2661.jar" />
+        <dex dex="/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.0_539046154a5a77ed9506af8f4a2d874b373b14b6.jar" />
+    </item>
+    <item
+        jar="/home/julio/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.0/support-annotations-23.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c5bf571bb10462bd90e5419ade67793f71acbc87">
+        <dex dex="/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.0_85fa1577036584fba617387c5a549477988c8442.jar" />
+    </item>
+    <item
+        jar="/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
+        <dex dex="/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.0_246b5623f8ff263d60d05f1760c5a015fea30407.jar" />
+    </item>
+    <item
+        jar="/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e5f32fa48a3eb2de0c987025c11b6e3864b634d9">
+        <dex dex="/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.0_6a906c4b33bd2df8077b3fcbc9648e364a15c15a.jar" />
+    </item>
+    <item
+        jar="/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6e3578f92f7462d1a935a1d36173e3bdd1234976">
+        <dex dex="/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.2.0_56e96cb2e73e37ad77808a230e301713e4778c8b.jar" />
+    </item>
+    <item
+        jar="/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="292a9fa091757208efa65e77eef63088247e51f3">
+        <dex dex="/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.2.0_82423dd50bc1d096d4a5f4953af62e44c3716719.jar" />
     </item>
 
 </items>
