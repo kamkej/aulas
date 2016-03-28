@@ -30,7 +30,6 @@ public class SettingActivity extends AppCompatActivity {
 
             JSONObject sets = new JSONObject(String.valueOf(json));
 
-
             JSONArray jsonArray = sets.optJSONArray("cards");
 
 
