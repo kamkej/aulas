@@ -10,7 +10,7 @@
     tools:context="br.com.wastenot.wastenot.SettingActivity">
 
     <TextView
-
+        android:id="@+id/log"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Setting"
