@@ -1,3 +1,4 @@
+
 package br.com.wastenot.wastenot;
 
 import android.content.ContentValues;
@@ -136,7 +137,7 @@ public class BDWrapper extends SQLiteOpenHelper {
         Cursor cursor = db.query(TABLE,new String[]{KEY_ID,KEY_NAME},KEY_ID + "=?", new String[] {String.valueOf(id)},null,null,null,null );
         if(cursor != null)
             cursor.moveToFirst();
-        Cards cards = new Cards(Integer.parseInt(cursor.getString(0)),cursor.getString(1));
+        Cards cards = new Cards();
         return cards;
     }
     public List<Cards> getAllCard(){
@@ -148,8 +149,25 @@ public class BDWrapper extends SQLiteOpenHelper {
         if(cursor.moveToFirst()){
             do{
                 Cards cards = new Cards();
-                cards.setId(Integer.parseInt(cursor.getString(0)));
+                cards.setId(cursor.getString(0));
                 cards.setName(cursor.getString(1));
+                cards.setManaCost(cursor.getString(2));
+                cards.setCmc(Float.parseFloat(cursor.getString(3)));
+                cards.setColor(Integer.parseInt(cursor.getString(4)));
+                cards.setType(cursor.getString(5));
+                cards.setSupertypes(cursor.getString(6));
+                cards.setTypes(cursor.getString(7));
+                cards.setSubtypes(cursor.getString(8));
+                cards.setRarity(cursor.getString(9));
+                cards.setText(cursor.getString(10));
+                cards.setFlavor(cursor.getString(11));
+                cards.setArtist(cursor.getString(12));
+                cards.setNumber(cursor.getString(13));
+                cards.setPower(cursor.getString(14));
+                cards.setToughness(cursor.getString(15));
+                cards.setLayout(cursor.getString(16));
+                cards.setMultiverseid(cursor.getString(17));
+                cards.setImageName(cursor.getString(18));
                 cardsList.add(cards);
 
             }while (cursor.moveToNext());
@@ -163,9 +181,9 @@ public class BDWrapper extends SQLiteOpenHelper {
         values.put(KEY_NAME,cards.getName());
         values.put(KEY_M_C,cards.getManaCost());
         values.put(KEY_CMC,cards.getCmc());
-        values.put(KEY_COLOR,cards.getColors());
+     //   values.put(KEY_COLOR,cards.getColors());
         values.put(KEY_TYPE,cards.getType());
-        values.put(KEY_SUPER_TYPE,cards.getSupertype());
+       // values.put(KEY_SUPER_TYPE,cards.getSupertype());
         values.put(KEY_TYPES,cards.getTypes());
         values.put(KEY_SUB_TYPE,cards.getSubtypes());
         values.put(KEY_RARITY,cards.getRarity());
@@ -177,7 +195,7 @@ public class BDWrapper extends SQLiteOpenHelper {
         values.put(KEY_TOUGHNESS,cards.getToughness());
         values.put(KEY_IMG_NAME,cards.getImageName());
         values.put(KEY_M_S_ID,cards.getMultiverseid());
-        values.put(KEY_CARD_ID,cards.getCard_id());
+        //values.put(KEY_CARD_ID,cards.getCard_id());
 
         db.insert(TABLE, null, values);
         db.close();
@@ -185,3 +203,4 @@ public class BDWrapper extends SQLiteOpenHelper {
     }
 
 }
+

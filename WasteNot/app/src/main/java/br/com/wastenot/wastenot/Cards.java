@@ -7,14 +7,16 @@ import java.io.Serializable;
  */
 public class Cards implements Serializable {
 
-    private int id;
+    private String id;
     private String layout;
     private String name;
+    private String names;
     private String manaCost;
-    private String cmc;
-    private String colors;
+    private float cmc;
+    private int color;
+    private int colorIdentity;
     private String type;
-    private String supertype;
+    private String supertypes;
     private String types;
     private String subtypes;
     private String rarity;
@@ -24,48 +26,29 @@ public class Cards implements Serializable {
     private String number;
     private String power;
     private String toughness;
-    private String imageName;
+    private String loyalty;
     private String multiverseid;
-    private String card_id;
+    private String variations;
+    private String imageName;
+    private String watermark;
+    private String border;
+    private String timeshifted;
+    private String hand;
+    private String life;
+    private String reserved;
+    private String releaseDate;
+    private String starter;
 
-
-    public Cards( String layout, String name, String manaCost, String cmc, String colors, String type, String supertype, String types, String subtypes, String rarity, String text, String flavor, String artist, String number, String power, String toughness, String imageName, String multiverseid, String card_id) {
-
-        this.layout = layout;
-        this.name = name;
-        this.manaCost = manaCost;
-        this.cmc = cmc;
-        this.colors = colors;
-        this.type = type;
-        this.supertype = supertype;
-        this.types = types;
-        this.subtypes = subtypes;
-        this.rarity = rarity;
-        this.text = text;
-        this.flavor = flavor;
-        this.artist = artist;
-        this.number = number;
-        this.power = power;
-        this.toughness = toughness;
-        this.imageName = imageName;
-        this.multiverseid = multiverseid;
-        this.card_id = card_id;
-    }
 
     public Cards() {
 
     }
 
-    public Cards(int id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -85,6 +68,14 @@ public class Cards implements Serializable {
         this.name = name;
     }
 
+    public String getNames() {
+        return names;
+    }
+
+    public void setNames(String names) {
+        this.names = names;
+    }
+
     public String getManaCost() {
         return manaCost;
     }
@@ -93,20 +84,28 @@ public class Cards implements Serializable {
         this.manaCost = manaCost;
     }
 
-    public String getCmc() {
+    public float getCmc() {
         return cmc;
     }
 
-    public void setCmc(String cmc) {
+    public void setCmc(float cmc) {
         this.cmc = cmc;
     }
 
-    public String getColors() {
-        return colors;
+    public int getColor() {
+        return color;
     }
 
-    public void setColors(String colors) {
-        this.colors = colors;
+    public void setColor(int color) {
+        this.color = color;
+    }
+
+    public int getColorIdentity() {
+        return colorIdentity;
+    }
+
+    public void setColorIdentity(int colorIdentity) {
+        this.colorIdentity = colorIdentity;
     }
 
     public String getType() {
@@ -117,12 +116,12 @@ public class Cards implements Serializable {
         this.type = type;
     }
 
-    public String getSupertype() {
-        return supertype;
+    public String getSupertypes() {
+        return supertypes;
     }
 
-    public void setSupertype(String supertype) {
-        this.supertype = supertype;
+    public void setSupertypes(String supertypes) {
+        this.supertypes = supertypes;
     }
 
     public String getTypes() {
@@ -197,12 +196,12 @@ public class Cards implements Serializable {
         this.toughness = toughness;
     }
 
-    public String getImageName() {
-        return imageName;
+    public String getLoyalty() {
+        return loyalty;
     }
 
-    public void setImageName(String imageName) {
-        this.imageName = imageName;
+    public void setLoyalty(String loyalty) {
+        this.loyalty = loyalty;
     }
 
     public String getMultiverseid() {
@@ -213,11 +212,84 @@ public class Cards implements Serializable {
         this.multiverseid = multiverseid;
     }
 
-    public String getCard_id() {
-        return card_id;
+    public String getVariations() {
+        return variations;
     }
 
-    public void setCard_id(String card_id) {
-        this.card_id = card_id;
+    public void setVariations(String variations) {
+        this.variations = variations;
+    }
+
+    public String getImageName() {
+        return imageName;
+    }
+
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
+    }
+
+    public String getWatermark() {
+        return watermark;
+    }
+
+    public void setWatermark(String watermark) {
+        this.watermark = watermark;
+    }
+
+    public String getBorder() {
+        return border;
+    }
+
+    public void setBorder(String border) {
+        this.border = border;
+    }
+
+    public String getTimeshifted() {
+        return timeshifted;
+    }
+
+    public void setTimeshifted(String timeshifted) {
+        this.timeshifted = timeshifted;
+    }
+
+    public String getHand() {
+        return hand;
+    }
+
+    public void setHand(String hand) {
+        this.hand = hand;
+    }
+
+    public String getLife() {
+        return life;
+    }
+
+    public void setLife(String life) {
+        this.life = life;
+    }
+
+    public String getReserved() {
+        return reserved;
+    }
+
+    public void setReserved(String reserved) {
+        this.reserved = reserved;
+    }
+
+    public String getReleaseDate() {
+        return releaseDate;
+    }
+
+    public void setReleaseDate(String releaseDate) {
+        this.releaseDate = releaseDate;
+    }
+
+    public String getStarter() {
+        return starter;
+    }
+
+    public void setStarter(String starter) {
+        this.starter = starter;
     }
 }
+
