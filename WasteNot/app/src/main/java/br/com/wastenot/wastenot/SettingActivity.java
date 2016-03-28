@@ -17,16 +17,22 @@ public class SettingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
-
+        Log.d("JS","LOAD...");
+        String json = null;
         try {
+            Log.d("JS","file...");
             InputStream file = this.getAssets().open("allsets.json");
             byte[] fileArray = new byte[file.available()];
             file.read(fileArray);
             file.close();
 
-            JSONObject sets = new JSONObject(String.valueOf(fileArray));
+            json = new String(fileArray,"UTF-8");
+
+            JSONObject sets = new JSONObject(String.valueOf(json));
+
 
             JSONArray jsonArray = sets.optJSONArray("cards");
+
 
             Log.d("json", String.valueOf(jsonArray.length()));
 

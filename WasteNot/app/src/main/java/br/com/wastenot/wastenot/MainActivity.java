@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent intent = new Intent(this,MyDeckActivity.class);
+            Intent intent = new Intent(this,SettingActivity.class);
             startActivity(intent);
         }
 
