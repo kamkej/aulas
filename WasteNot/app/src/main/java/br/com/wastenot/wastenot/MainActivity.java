@@ -15,7 +15,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -54,12 +56,12 @@ public class MainActivity extends AppCompatActivity
 
 
     public void search(View view){
-
-
+        EditText edts = (EditText)findViewById(R.id.edtSearch);
+        String card = String.valueOf(edts.getText());
         ListView list = (ListView) findViewById(R.id.list);
 
         List<ItemListView> itens = new ArrayList<ItemListView>();
-        final List<Cards> cardsList = db.getAllCard();
+        final List<Cards> cardsList = db.getCard(card);
 
         for (Cards cd : cardsList){
             itens.add(new ItemListView(cd.getName(), R.drawable.whish));
