@@ -140,6 +140,60 @@ public class BDWrapper extends SQLiteOpenHelper {
         Cards cards = new Cards();
         return cards;
     }
+    public  List<Cards> getCard(String  name){
+        List<Cards> cardsList = new ArrayList<Cards>();
+        String selectQuery = "SELECT * FROM "+ TABLE +"WHERE name like";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery,null);
+
+        if(cursor.moveToFirst()){
+            do{
+                Cards card = new Cards();
+
+                card.setId(cursor.getString(0));
+                card.setLayout(cursor.getString(1));
+                card.setName(cursor.getString(2));
+                card.setNames(cursor.getString(3));
+                card.setManaCost(cursor.getString(4));
+                try {
+                    card.setCmc(Float.parseFloat(String.valueOf(cursor.getString(5))));
+                }catch(NumberFormatException e){
+                    card.setCmc(5);
+                }
+//                    c.setColor(Integer.parseInt(js.get("color").toString()));
+//                    c.setColorIdentity(Integer.parseInt(js.get("colorIdentity").toString()));
+                card.setType(cursor.getString(8));
+                card.setSupertypes(cursor.getString(9));
+                card.setTypes(cursor.getString(10));
+                card.setSubtypes(cursor.getString(11));
+                card.setRarity(cursor.getString(12));
+                card.setText(cursor.getString(13));
+             /*   card.setFlavor(cursor.getString(14));
+                card.setArtist(cursor.getString(15));
+                card.setNames(cursor.getString(16));
+                card.setPower(cursor.getString(17));
+                card.setToughness(cursor.getString(18));
+                card.setLoyalty(cursor.getString(19));
+                card.setMultiverseid(cursor.getString(20));
+                card.setVariations(cursor.getString(21));
+                card.setImageName(cursor.getString(22));
+                card.setWatermark(cursor.getString(23));
+                card.setBorder(cursor.getString(24));
+                card.setTimeshifted(cursor.getString(25));
+                card.setHand(cursor.getString(26));
+                card.setLife(cursor.getString(27));
+                card.setReserved(cursor.getString(28));
+                card.setReleaseDate(cursor.getString(29));
+                card.setStarter(cursor.getString(30));*/
+
+
+
+                cardsList.add(card);
+
+            }while (cursor.moveToNext());
+        }
+        return  cardsList;
+    }
     public List<Cards> getAllCard(){
         List<Cards> cardsList = new ArrayList<Cards>();
         String selectQuery = "SELECT * FROM "+ TABLE;
@@ -148,27 +202,47 @@ public class BDWrapper extends SQLiteOpenHelper {
 
         if(cursor.moveToFirst()){
             do{
-                Cards cards = new Cards();
-                cards.setId(cursor.getString(0));
-                cards.setName(cursor.getString(1));
-                cards.setManaCost(cursor.getString(2));
-                cards.setCmc(Float.parseFloat(cursor.getString(3)));
-                cards.setColor(Integer.parseInt(cursor.getString(4)));
-                cards.setType(cursor.getString(5));
-                cards.setSupertypes(cursor.getString(6));
-                cards.setTypes(cursor.getString(7));
-                cards.setSubtypes(cursor.getString(8));
-                cards.setRarity(cursor.getString(9));
-                cards.setText(cursor.getString(10));
-                cards.setFlavor(cursor.getString(11));
-                cards.setArtist(cursor.getString(12));
-                cards.setNumber(cursor.getString(13));
-                cards.setPower(cursor.getString(14));
-                cards.setToughness(cursor.getString(15));
-                cards.setLayout(cursor.getString(16));
-                cards.setMultiverseid(cursor.getString(17));
-                cards.setImageName(cursor.getString(18));
-                cardsList.add(cards);
+                Cards card = new Cards();
+
+                card.setId(cursor.getString(0));
+                card.setLayout(cursor.getString(1));
+                card.setName(cursor.getString(2));
+                card.setNames(cursor.getString(3));
+                card.setManaCost(cursor.getString(4));
+                try {
+                    card.setCmc(Float.parseFloat(String.valueOf(cursor.getString(5))));
+                }catch(NumberFormatException e){
+                    card.setCmc(5);
+                }
+//                    c.setColor(Integer.parseInt(js.get("color").toString()));
+//                    c.setColorIdentity(Integer.parseInt(js.get("colorIdentity").toString()));
+                card.setType(cursor.getString(8));
+                card.setSupertypes(cursor.getString(9));
+                card.setTypes(cursor.getString(10));
+                card.setSubtypes(cursor.getString(11));
+                card.setRarity(cursor.getString(12));
+                card.setText(cursor.getString(13));
+             /*   card.setFlavor(cursor.getString(14));
+                card.setArtist(cursor.getString(15));
+                card.setNames(cursor.getString(16));
+                card.setPower(cursor.getString(17));
+                card.setToughness(cursor.getString(18));
+                card.setLoyalty(cursor.getString(19));
+                card.setMultiverseid(cursor.getString(20));
+                card.setVariations(cursor.getString(21));
+                card.setImageName(cursor.getString(22));
+                card.setWatermark(cursor.getString(23));
+                card.setBorder(cursor.getString(24));
+                card.setTimeshifted(cursor.getString(25));
+                card.setHand(cursor.getString(26));
+                card.setLife(cursor.getString(27));
+                card.setReserved(cursor.getString(28));
+                card.setReleaseDate(cursor.getString(29));
+                card.setStarter(cursor.getString(30));*/
+
+
+
+                cardsList.add(card);
 
             }while (cursor.moveToNext());
         }

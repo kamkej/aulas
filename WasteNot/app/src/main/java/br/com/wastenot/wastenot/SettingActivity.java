@@ -21,29 +21,12 @@ public class SettingActivity extends AppCompatActivity {
         Log.d("JS", "LOAD...");
         String json = null;
         TextView  log = (TextView) findViewById(R.id.log);
-        try {
-            Log.d("JS","file...");
-            InputStream file = this.getAssets().open("allsets.json");
-            byte[] fileArray = new byte[file.available()];
-            file.read(fileArray);
-            file.close();
-
-            json = new String(fileArray,"UTF-8");
-
-            JSONObject sets = new JSONObject(String.valueOf(json));
-
-            JSONArray jsonArray = sets.optJSONArray("cards");
 
 
            // Log.d("json", String.valueOf(jsonArray.length()));
-            log.setText(String.valueOf(jsonArray.length()));
+            log.setText("ok");
 
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
 
 
     }
