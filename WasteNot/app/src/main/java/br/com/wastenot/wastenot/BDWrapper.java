@@ -142,7 +142,7 @@ public class BDWrapper extends SQLiteOpenHelper {
     }
     public  List<Cards> getCard(String  name){
         List<Cards> cardsList = new ArrayList<Cards>();
-        String selectQuery = "SELECT * FROM "+ TABLE +"WHERE name like %"+ name+"%";
+        String selectQuery = "SELECT * FROM "+ TABLE +" WHERE name like '%"+ name+"%'";
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery,null);
 
@@ -168,7 +168,7 @@ public class BDWrapper extends SQLiteOpenHelper {
                 card.setSubtypes(cursor.getString(11));
                 card.setRarity(cursor.getString(12));
                 card.setText(cursor.getString(13));
-             /*   card.setFlavor(cursor.getString(14));
+                card.setFlavor(cursor.getString(14));
                 card.setArtist(cursor.getString(15));
                 card.setNames(cursor.getString(16));
                 card.setPower(cursor.getString(17));
@@ -184,7 +184,7 @@ public class BDWrapper extends SQLiteOpenHelper {
                 card.setLife(cursor.getString(27));
                 card.setReserved(cursor.getString(28));
                 card.setReleaseDate(cursor.getString(29));
-                card.setStarter(cursor.getString(30));*/
+                card.setStarter(cursor.getString(30));
 
 
 
