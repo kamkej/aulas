@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/jars/classes.jar"
+        jar="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
-        <dex dex="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.0_6b0fc8829aebc7e94df77f27ae2564ecf71e8317.jar" />
+        sha1="1aa5b025efe97f5006f5be16d6ca67c6c3c0c0d8">
+        <dex dex="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.2.0_950afee4eda679400dd5708ad4596f6f65372fb2.jar" />
     </item>
     <item
         jar="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/classes.jar"
@@ -23,18 +23,18 @@
         <dex dex="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.0_9718bb5b674cd161789f40a949bae8492d7a2661.jar" />
     </item>
     <item
+        jar="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
+        <dex dex="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.0_6b0fc8829aebc7e94df77f27ae2564ecf71e8317.jar" />
+    </item>
+    <item
         jar="/home/ssl/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.0/support-annotations-23.2.0.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="c5bf571bb10462bd90e5419ade67793f71acbc87">
         <dex dex="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.0_7685317cfc09bc986440a554bc03635372314d25.jar" />
-    </item>
-    <item
-        jar="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1aa5b025efe97f5006f5be16d6ca67c6c3c0c0d8">
-        <dex dex="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.2.0_950afee4eda679400dd5708ad4596f6f65372fb2.jar" />
     </item>
     <item
         jar="/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/jars/classes.jar"

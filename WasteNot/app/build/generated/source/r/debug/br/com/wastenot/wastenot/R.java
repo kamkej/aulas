@@ -2362,7 +2362,7 @@ containing a value of this type.
         public static final int image=0x7f0d003f;
         public static final int imageButton=0x7f0d0072;
         public static final int imageView=0x7f0d007e;
-        public static final int imageView2=0x7f0d0069;
+        public static final int imgcard=0x7f0d0069;
         public static final int info=0x7f0d008b;
         public static final int item_touch_helper_previous_elevation=0x7f0d0005;
         public static final int itemimgview=0x7f0d007c;
