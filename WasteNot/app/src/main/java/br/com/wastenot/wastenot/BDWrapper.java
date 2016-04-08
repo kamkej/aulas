@@ -160,8 +160,8 @@ public class BDWrapper extends SQLiteOpenHelper {
                 }catch(NumberFormatException e){
                     card.setCmc(5);
                 }
-//                    c.setColor(Integer.parseInt(js.get("color").toString()));
-//                    c.setColorIdentity(Integer.parseInt(js.get("colorIdentity").toString()));
+                card.setColor(cursor.getString(6));
+                card.setColorIdentity(cursor.getString(7));
                 card.setType(cursor.getString(8));
                 card.setSupertypes(cursor.getString(9));
                 card.setTypes(cursor.getString(10));
@@ -170,7 +170,7 @@ public class BDWrapper extends SQLiteOpenHelper {
                 card.setText(cursor.getString(13));
                 card.setFlavor(cursor.getString(14));
                 card.setArtist(cursor.getString(15));
-                card.setNames(cursor.getString(16));
+                card.setNumber(cursor.getString(16));
                 card.setPower(cursor.getString(17));
                 card.setToughness(cursor.getString(18));
                 card.setLoyalty(cursor.getString(19));
@@ -222,9 +222,9 @@ public class BDWrapper extends SQLiteOpenHelper {
                 card.setSubtypes(cursor.getString(11));
                 card.setRarity(cursor.getString(12));
                 card.setText(cursor.getString(13));
-             /*   card.setFlavor(cursor.getString(14));
+                card.setFlavor(cursor.getString(14));
                 card.setArtist(cursor.getString(15));
-                card.setNames(cursor.getString(16));
+                card.setNumber(cursor.getString(16));
                 card.setPower(cursor.getString(17));
                 card.setToughness(cursor.getString(18));
                 card.setLoyalty(cursor.getString(19));
@@ -238,7 +238,7 @@ public class BDWrapper extends SQLiteOpenHelper {
                 card.setLife(cursor.getString(27));
                 card.setReserved(cursor.getString(28));
                 card.setReleaseDate(cursor.getString(29));
-                card.setStarter(cursor.getString(30));*/
+                card.setStarter(cursor.getString(30));
 
 
 

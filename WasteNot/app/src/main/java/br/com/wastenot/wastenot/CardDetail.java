@@ -1,13 +1,16 @@
 package br.com.wastenot.wastenot;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Layout;
@@ -27,7 +30,8 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import java.io.InputStream;
 import java.net.URL;
 
-import static br.com.wastenot.wastenot.R.color.red;
+import static br.com.wastenot.wastenot.R.*;
+
 
 public class CardDetail extends AppCompatActivity {
     ImageView imgCard;
@@ -42,26 +46,56 @@ public class CardDetail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_card_detail);
+        setContentView(layout.activity_card_detail);
         Intent intent = getIntent();
         Cards cards = (Cards) intent.getSerializableExtra("cards");
 
-        RelativeLayout layout = (RelativeLayout) findViewById(R.id.layoutid);
-        layout.setBackgroundResource(R.drawable.roundeditext);
+        RelativeLayout layout = (RelativeLayout) findViewById(id.layoutid);
+        layout.setBackgroundResource(drawable.roundeditext);
 
-        LinearLayout border = (LinearLayout) findViewById(R.id.layoutBorder);
-        border.setBackgroundColor(getResources().getColor(R.color.red));
-        mProgress = (ProgressBar) findViewById(R.id.progressBar);
-        textViewLoad = (TextView) findViewById(R.id.txtLoading);
+        LinearLayout border = (LinearLayout) findViewById(id.layoutBorder);
+        int color;
+        if(cards.getBorder().equalsIgnoreCase("black")) {
+             color = R.color.black;
+        }else if (cards.getBorder().equalsIgnoreCase("silver")){
+             color = R.color.silver;
+        }else if(cards.getBorder().equalsIgnoreCase("white")){
+             color = R.color.white;
+        }else {
+             color = R.color.black;
+        }
 
-        TextView title = (TextView) findViewById(R.id.txtTitle);
-        TextView text = (TextView) findViewById(R.id.txtText);
 
-        imgCard = (ImageView) findViewById(R.id.imgcard);
+
+
+        border.setBackgroundColor(ContextCompat.getColor(this, color));
+        mProgress = (ProgressBar) findViewById(id.progressBar);
+        textViewLoad = (TextView) findViewById(id.txtLoading);
+
+        TextView title = (TextView) findViewById(id.txtTitle);
+        TextView text = (TextView) findViewById(id.txtText);
+        TextView mana = (TextView) findViewById(id.txtMana);
+        TextView type = (TextView) findViewById(id.txtType);
+        TextView flavor = (TextView) findViewById(id.txtFlavor);
+        TextView artist = (TextView) findViewById(id.txtArtist);
+        TextView yaer = (TextView) findViewById(id.txtYear);
+        TextView number = (TextView) findViewById(id.txtNumber);
+        TextView pt = (TextView) findViewById(id.txtPT);
+
+
+
+        imgCard = (ImageView) findViewById(id.imgcard);
 
 
         title.setText(cards.getName());
         text.setText(cards.getText());
+        mana.setText(cards.getManaCost());
+        type.setText(cards.getType());
+        flavor.setText(cards.getFlavor());
+        artist.setText(cards.getArtist());
+        yaer.setText(cards.getReleaseDate());
+        number.setText(cards.getNumber());
+        pt.setText(cards.getPower()+"/"+cards.getToughness());
 
         new LoadImage().execute("http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=" + cards.getMultiverseid() + "&type=card");
 

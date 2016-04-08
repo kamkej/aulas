@@ -13,8 +13,8 @@ public class Cards implements Serializable {
     private String names;
     private String manaCost;
     private float cmc;
-    private int color;
-    private int colorIdentity;
+    private String color;
+    private String colorIdentity;
     private String type;
     private String supertypes;
     private String types;
@@ -38,6 +38,8 @@ public class Cards implements Serializable {
     private String reserved;
     private String releaseDate;
     private String starter;
+    private String setsCode;
+
 
 
     public Cards() {
@@ -92,19 +94,19 @@ public class Cards implements Serializable {
         this.cmc = cmc;
     }
 
-    public int getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(int color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
-    public int getColorIdentity() {
+    public String getColorIdentity() {
         return colorIdentity;
     }
 
-    public void setColorIdentity(int colorIdentity) {
+    public void setColorIdentity(String colorIdentity) {
         this.colorIdentity = colorIdentity;
     }
 

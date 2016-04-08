@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.view.Gravity;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,6 +18,7 @@ import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +26,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import java.util.List;
+
+import static android.view.Gravity.*;
 
 
 public class MainActivity extends AppCompatActivity
@@ -55,7 +59,7 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    public void search(View view){
+    public void search(final View view){
         EditText edts = (EditText)findViewById(R.id.edtSearch);
         String card = String.valueOf(edts.getText());
         ListView list = (ListView) findViewById(R.id.list);
@@ -84,6 +88,7 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
+
 
     }
 
