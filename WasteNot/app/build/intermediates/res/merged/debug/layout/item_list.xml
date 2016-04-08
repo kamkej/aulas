@@ -3,7 +3,8 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="5sp">
+    android:padding="5sp"
+    >
     <ImageView
         android:id="@+id/itemimgview"
         android:layout_width="24dp"
@@ -20,4 +21,5 @@
         android:textColor="#ff0000"
         />
 
+        
 </LinearLayout>

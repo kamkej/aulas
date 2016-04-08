@@ -3,7 +3,8 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="5sp">
+    android:padding="5sp"
+    >
     <ImageView
         android:id="@+id/itemimgview"
         android:layout_width="24dp"
@@ -19,8 +20,6 @@
         android:gravity="center_vertical"
         android:textColor="#ff0000"
         />
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
         
 </LinearLayout>

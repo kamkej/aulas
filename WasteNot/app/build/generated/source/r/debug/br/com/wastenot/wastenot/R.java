@@ -2326,20 +2326,21 @@ containing a value of this type.
         public static final int design_snackbar_background=0x7f02004f;
         public static final int havelist=0x7f020050;
         public static final int ic_have=0x7f020051;
-        public static final int ic_menu_camera=0x7f02005a;
-        public static final int ic_menu_gallery=0x7f02005b;
-        public static final int ic_menu_manage=0x7f02005c;
-        public static final int ic_menu_send=0x7f02005d;
-        public static final int ic_menu_share=0x7f02005e;
+        public static final int ic_menu_camera=0x7f02005b;
+        public static final int ic_menu_gallery=0x7f02005c;
+        public static final int ic_menu_manage=0x7f02005d;
+        public static final int ic_menu_send=0x7f02005e;
+        public static final int ic_menu_share=0x7f02005f;
         public static final int ic_menu_slideshow=0x7f020052;
         public static final int ic_my_deck=0x7f020053;
         public static final int ic_wanted_list=0x7f020054;
-        public static final int logo=0x7f020055;
-        public static final int mydeck=0x7f020056;
-        public static final int notification_template_icon_bg=0x7f02005f;
-        public static final int roundeditext=0x7f020057;
-        public static final int side_nav_bar=0x7f020058;
-        public static final int whish=0x7f020059;
+        public static final int listviewcolors=0x7f020055;
+        public static final int logo=0x7f020056;
+        public static final int mydeck=0x7f020057;
+        public static final int notification_template_icon_bg=0x7f020060;
+        public static final int roundeditext=0x7f020058;
+        public static final int side_nav_bar=0x7f020059;
+        public static final int whish=0x7f02005a;
     }
     public static final class id {
         public static final int about=0x7f0d009d;

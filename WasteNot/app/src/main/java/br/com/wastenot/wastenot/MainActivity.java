@@ -16,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.PopupWindow;
@@ -59,20 +60,21 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    public void search(final View view){
-        EditText edts = (EditText)findViewById(R.id.edtSearch);
+    public void search(final View view) {
+        EditText edts = (EditText) findViewById(R.id.edtSearch);
         String card = String.valueOf(edts.getText());
         ListView list = (ListView) findViewById(R.id.list);
 
         List<ItemListView> itens = new ArrayList<ItemListView>();
         final List<Cards> cardsList = db.getCard(card);
 
-        for (Cards cd : cardsList){
+        for (Cards cd : cardsList) {
             itens.add(new ItemListView(cd.getName(), R.drawable.whish));
         }
 
-        AdapterListView adapter = new AdapterListView(this,itens);
-        list.setAdapter(adapter);
+        AdapterListView adapter = new AdapterListView(this, itens);
+               list.setAdapter(adapter);
+        list.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
         //Toast.makeText(getApplicationContext(), "list", Toast.LENGTH_SHORT).show();
 
@@ -82,15 +84,29 @@ public class MainActivity extends AppCompatActivity
 
                 Cards card = cardsList.get(position);
 
-                Intent intent = (new Intent(getApplicationContext(),CardDetail.class));
-                intent.putExtra("cards",card);
+                Intent intent = (new Intent(getApplicationContext(), CardDetail.class));
+                intent.putExtra("cards", card);
 
                 startActivity(intent);
             }
         });
 
+        list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getApplicationContext(), "long Click", Toast.LENGTH_SHORT).show();
+
+
+
+                return true;
+            }
+        });
+
 
     }
+
+
 
     @Override
     public void onBackPressed() {
