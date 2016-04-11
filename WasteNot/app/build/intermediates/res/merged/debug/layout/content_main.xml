@@ -48,6 +48,8 @@
         android:divider="#FFECEC"
         android:dividerHeight="2sp"
         android:layout_alignParentTop="@+id/imageButton"
+        android:listSelector="@drawable/listviewcolors"
+        android:choiceMode="multipleChoiceModal"
         >
 
     </ListView>
