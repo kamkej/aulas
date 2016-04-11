@@ -49,7 +49,7 @@
         android:dividerHeight="2sp"
         android:layout_alignParentTop="@+id/imageButton"
         android:listSelector="@drawable/listviewcolors"
-        android:choiceMode="multipleChoiceModal"
+        android:choiceMode="multipleChoice"
         >
 
     </ListView>

@@ -2,6 +2,7 @@ package br.com.wastenot.wastenot;
 
 import android.app.TaskStackBuilder;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -72,7 +73,7 @@ public class MainActivity extends AppCompatActivity
             itens.add(new ItemListView(cd.getName(), R.drawable.whish));
         }
 
-        AdapterListView adapter = new AdapterListView(this, itens);
+        final AdapterListView adapter = new AdapterListView(this, itens);
                list.setAdapter(adapter);
 
 
@@ -96,10 +97,9 @@ public class MainActivity extends AppCompatActivity
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Toast.makeText(getApplicationContext(), "long Click", Toast.LENGTH_SHORT).show();
-
-            //    view.setSelected(true);
-
+                Toast.makeText(getApplicationContext(),"Hi" , Toast.LENGTH_SHORT).show();
+                list.getSelectedItem();
+                adapter.notifyAll();
                 return true;
             }
         });
