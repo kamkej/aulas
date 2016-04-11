@@ -49,6 +49,10 @@
         android:dividerHeight="2sp"
         android:layout_alignParentTop="@+id/imageButton"
         android:listSelector="@drawable/listviewcolors"
+<<<<<<< HEAD
+=======
+        android:choiceMode="multipleChoice"
+>>>>>>> refs/remotes/origin/master
         >
 
     </ListView>

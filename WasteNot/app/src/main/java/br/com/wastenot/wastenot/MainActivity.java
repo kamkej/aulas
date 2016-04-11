@@ -2,6 +2,7 @@ package br.com.wastenot.wastenot;
 
 import android.app.TaskStackBuilder;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity
     public void search(final View view) {
         EditText edts = (EditText) findViewById(R.id.edtSearch);
         String card = String.valueOf(edts.getText());
-        ListView list = (ListView) findViewById(R.id.list);
+        final ListView list = (ListView) findViewById(R.id.list);
 
         List<ItemListView> itens = new ArrayList<ItemListView>();
         final List<Cards> cardsList = db.getCard(card);
@@ -72,9 +73,9 @@ public class MainActivity extends AppCompatActivity
             itens.add(new ItemListView(cd.getName(), R.drawable.whish));
         }
 
-        AdapterListView adapter = new AdapterListView(this, itens);
+        final AdapterListView adapter = new AdapterListView(this, itens);
                list.setAdapter(adapter);
-        list.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+
 
         //Toast.makeText(getApplicationContext(), "list", Toast.LENGTH_SHORT).show();
 
@@ -95,10 +96,10 @@ public class MainActivity extends AppCompatActivity
 
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), "long Click", Toast.LENGTH_SHORT).show();
 
-
-
+                Toast.makeText(getApplicationContext(),"Hi" , Toast.LENGTH_SHORT).show();
+                list.getSelectedItem();
+                adapter.notifyAll();
                 return true;
             }
         });
