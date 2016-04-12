@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -53,8 +54,6 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        //Teste db
-
         db = new BDWrapper(this);
 
 
@@ -74,8 +73,8 @@ public class MainActivity extends AppCompatActivity
         }
 
         final AdapterListView adapter = new AdapterListView(this, itens);
-               list.setAdapter(adapter);
 
+               list.setAdapter(adapter);
 
         //Toast.makeText(getApplicationContext(), "list", Toast.LENGTH_SHORT).show();
 
@@ -97,10 +96,22 @@ public class MainActivity extends AppCompatActivity
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Toast.makeText(getApplicationContext(),"Hi" , Toast.LENGTH_SHORT).show();
-                list.getSelectedItem();
-                adapter.notifyAll();
+                Toast.makeText(getApplicationContext(), "Hi", Toast.LENGTH_SHORT).show();
+                list.setSelected(true);
+                view.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                Log.v("list", String.valueOf(list.isSelected()));
+
+
                 return true;
+            }
+        });
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String selectedFromList =(String) (list.getItemAtPosition(position));
+                Log.d("ok",selectedFromList);
             }
         });
 
