@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -17,6 +18,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.EditText;
@@ -62,19 +64,23 @@ public class MainActivity extends AppCompatActivity
 
     public void search(final View view) {
         EditText edts = (EditText) findViewById(R.id.edtSearch);
-        String card = String.valueOf(edts.getText());
+        final String card = String.valueOf(edts.getText());
         final ListView list = (ListView) findViewById(R.id.list);
 
         List<ItemListView> itens = new ArrayList<ItemListView>();
         final List<Cards> cardsList = db.getCard(card);
-
+        final List<Cards> cardsSelect = null;
         for (Cards cd : cardsList) {
             itens.add(new ItemListView(cd.getName(), R.drawable.whish));
         }
 
+
         final AdapterListView adapter = new AdapterListView(this, itens);
+        list.requestFocusFromTouch();
+        //list.setChoiceMode(AbsListView.CHOICE_MODE_SINGLE);
 
                list.setAdapter(adapter);
+        
 
         //Toast.makeText(getApplicationContext(), "list", Toast.LENGTH_SHORT).show();
 
@@ -82,12 +88,19 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+            if(view.isSelected()){
+           //     parent.setSelected(false);
+          //      view.setBackgroundColor(0);
+            }else{
                 Cards card = cardsList.get(position);
 
                 Intent intent = (new Intent(getApplicationContext(), CardDetail.class));
                 intent.putExtra("cards", card);
 
                 startActivity(intent);
+            }
+
+
             }
         });
 
@@ -96,24 +109,18 @@ public class MainActivity extends AppCompatActivity
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Toast.makeText(getApplicationContext(), "Hi", Toast.LENGTH_SHORT).show();
-                list.setSelected(true);
-                view.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                Log.v("list", String.valueOf(list.isSelected()));
+                   parent.requestFocusFromTouch();
 
+                    view.setSelected(true);
+              //      view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary));
+
+
+                  //  Toast.makeText(getApplicationContext(), cardsList.get(position).getId(), Toast.LENGTH_SHORT).show();
 
                 return true;
             }
         });
 
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String selectedFromList =(String) (list.getItemAtPosition(position));
-                Log.d("ok",selectedFromList);
-            }
-        });
 
 
     }
