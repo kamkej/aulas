@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity
         //list.setChoiceMode(AbsListView.CHOICE_MODE_SINGLE);
 
                list.setAdapter(adapter);
-        
+
 
         //Toast.makeText(getApplicationContext(), "list", Toast.LENGTH_SHORT).show();
 
@@ -110,8 +110,9 @@ public class MainActivity extends AppCompatActivity
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
                    parent.requestFocusFromTouch();
-
                     view.setSelected(true);
+
+    
               //      view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary));
 
 
