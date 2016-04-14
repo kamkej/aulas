@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:2:1-42:12
+ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:2:1-44:12
 	package
 		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:3:5-39
 		INJECTED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml
@@ -14,11 +14,11 @@ ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidMa
 		INJECTED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml
 		INJECTED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:4:5-67
+ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:5:5-67
 	android:name
-		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:4:22-64
+		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:5:5-40:19
+ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:7:5-42:19
 MERGED from [com.android.support:appcompat-v7:23.2.0] /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:23.2.0] /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.2.0] /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/AndroidManifest.xml:7:5-20
@@ -40,17 +40,17 @@ MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] /home/ssl/A
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:23.2.0] /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:8:9-41
+		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:10:9-41
 	android:supportsRtl
-		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:9:9-35
+		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:12:9-35
 	android:allowBackup
-		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:8:9-35
 	android:icon
-		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:9:9-43
 	android:largeHeap
 		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:11:9-33
 	android:theme
-		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:10:9-40
+		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:13:9-40
 activity#br.com.wastenot.wastenot.MainActivity
 ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:14:9-23:20
 	android:label
@@ -90,16 +90,16 @@ ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidMa
 	android:name
 		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:32:19-45
 activity#br.com.wastenot.wastenot.SettingActivity
-ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:33:9-62
+ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:33:9-53
 	android:name
 		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:33:19-50
 meta-data#com.google.android.gms.version
-ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:36:9-38:69
+ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:38:9-40:69
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:38:13-66
+		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:40:13-66
 	android:name
-		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:37:13-58
+		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:39:13-58
 uses-sdk
 INJECTED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.2.0] /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:21:5-23:78
