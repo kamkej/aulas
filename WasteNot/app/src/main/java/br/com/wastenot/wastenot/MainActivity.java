@@ -85,8 +85,8 @@ public class MainActivity extends AppCompatActivity
 
 
         final AdapterListView adapter = new AdapterListView(this, itens);
-        list.requestFocusFromTouch();
-        //list.setChoiceMode(AbsListView.CHOICE_MODE_SINGLE);
+      //  list.requestFocusFromTouch();
+        list.setChoiceMode(list.CHOICE_MODE_MULTIPLE);
 
                list.setAdapter(adapter);
 
@@ -118,11 +118,10 @@ public class MainActivity extends AppCompatActivity
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
-                   view.requestFocusFromTouch();
-                   view.setSelected(true);
-
-    
-              //      view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary));
+                // view.setSelected(true);
+                list.requestFocusFromTouch(); // IMPORTANT!
+                list.setSelected(true);
+                //      view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary));
 
 
                   //  Toast.makeText(getApplicationContext(), cardsList.get(position).getId(), Toast.LENGTH_SHORT).show();
