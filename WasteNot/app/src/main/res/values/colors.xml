@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#606060</color>
     <color name="colorAccent">#91bae7</color>
     <color name="textColorPrimary">#bddd15</color>
+    <color name="itemselect">#706f6e6e</color>
     <color name="white">#fff</color>
     <color name="silver">#CCCCCC</color>
     <color name="black">#000</color>
