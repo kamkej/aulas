@@ -38,6 +38,7 @@ import static android.view.Gravity.*;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     BDWrapper db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -97,10 +98,10 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                if (view.isActivated()) {
-                       view.setSelected(false);
+                if (list.isItemChecked(position)) {
+                     // view.setSelected(false);
                        view.setBackgroundColor(0);
-                    Toast.makeText(getApplicationContext(), "hi", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "simple", Toast.LENGTH_SHORT).show();
                 } else {
                     Cards card = cardsList.get(position);
 
@@ -120,11 +121,16 @@ public class MainActivity extends AppCompatActivity
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
-//                view.setFocusableInTouchMode(true);
-                view.setSelected(true);
-                view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
+                MenuItem menuItem = (MenuItem)findViewById(R.id.action_favorite);
+                menuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
 
-                Toast.makeText(getApplicationContext(),"hi", Toast.LENGTH_SHORT).show();
+
+//                view.setFocusableInTouchMode(true);
+             //   view.setSelected(true);
+
+             //  view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
+
+              //  Toast.makeText(getApplicationContext(),"hi", Toast.LENGTH_SHORT).show();
 
 
                 //  Toast.makeText(getApplicationContext(), cardsList.get(position).getId(), Toast.LENGTH_SHORT).show();
@@ -153,6 +159,7 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+
         return true;
     }
 

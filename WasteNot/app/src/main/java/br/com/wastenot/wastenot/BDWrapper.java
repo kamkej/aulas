@@ -194,6 +194,60 @@ public class BDWrapper extends SQLiteOpenHelper {
         }
         return  cardsList;
     }
+    public  List<Cards> getHaveCard(String  name){
+        List<Cards> cardsList = new ArrayList<Cards>();
+        String selectQuery = "SELECT * FROM  cards WHERE  haveList = '1'";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery,null);
+
+        if(cursor.moveToFirst()){
+            do{
+                Cards card = new Cards();
+
+                card.setId(cursor.getString(0));
+                card.setLayout(cursor.getString(1));
+                card.setName(cursor.getString(2));
+                card.setNames(cursor.getString(3));
+                card.setManaCost(cursor.getString(4));
+                try {
+                    card.setCmc(Float.parseFloat(String.valueOf(cursor.getString(5))));
+                }catch(NumberFormatException e){
+                    card.setCmc(5);
+                }
+                card.setColor(cursor.getString(6));
+                card.setColorIdentity(cursor.getString(7));
+                card.setType(cursor.getString(8));
+                card.setSupertypes(cursor.getString(9));
+                card.setTypes(cursor.getString(10));
+                card.setSubtypes(cursor.getString(11));
+                card.setRarity(cursor.getString(12));
+                card.setText(cursor.getString(13));
+                card.setFlavor(cursor.getString(14));
+                card.setArtist(cursor.getString(15));
+                card.setNumber(cursor.getString(16));
+                card.setPower(cursor.getString(17));
+                card.setToughness(cursor.getString(18));
+                card.setLoyalty(cursor.getString(19));
+                card.setMultiverseid(cursor.getString(20));
+                card.setVariations(cursor.getString(21));
+                card.setImageName(cursor.getString(22));
+                card.setWatermark(cursor.getString(23));
+                card.setBorder(cursor.getString(24));
+                card.setTimeshifted(cursor.getString(25));
+                card.setHand(cursor.getString(26));
+                card.setLife(cursor.getString(27));
+                card.setReserved(cursor.getString(28));
+                card.setReleaseDate(cursor.getString(29));
+                card.setStarter(cursor.getString(30));
+
+
+
+                cardsList.add(card);
+
+            }while (cursor.moveToNext());
+        }
+        return  cardsList;
+    }
     public List<Cards> getAllCard(){
         List<Cards> cardsList = new ArrayList<Cards>();
         String selectQuery = "SELECT * FROM "+ TABLE;
