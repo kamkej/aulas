@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "outputFile": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/values-tl/values-tl.xml",
         "map": [
             {
@@ -1910,6 +1911,8 @@
         ]
     },
     {
+=======
+>>>>>>> refs/remotes/origin/master
         "outputFile": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/values-tl/values-tl.xml",
         "map": [
             {

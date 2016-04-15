@@ -15,6 +15,7 @@
     <string name="about">About us</string>
     <string name="title_activity_have_list">HaveListActivity</string>
     <string name="title_activity_my_deck">MyDeckActivity</string>
+    <string name="title_activity_novocla">novocla</string>
 
 
 </resources>

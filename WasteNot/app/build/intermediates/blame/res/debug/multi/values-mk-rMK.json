@@ -915,6 +915,7 @@
                 }
             }
         ]
+<<<<<<< HEAD
     },
     {
         "outputFile": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/res/merged/debug/values-mk-rMK/values-mk-rMK.xml",
@@ -2749,5 +2750,7 @@
                 }
             }
         ]
+=======
+>>>>>>> refs/remotes/origin/master
     }
 ]

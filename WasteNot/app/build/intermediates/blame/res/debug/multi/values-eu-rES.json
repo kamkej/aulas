@@ -953,6 +953,7 @@
                 }
             }
         ]
+<<<<<<< HEAD
     },
     {
         "outputFile": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/res/merged/debug/values-eu-rES/values-eu-rES.xml",
@@ -2863,5 +2864,7 @@
                 }
             }
         ]
+=======
+>>>>>>> refs/remotes/origin/master
     }
 ]

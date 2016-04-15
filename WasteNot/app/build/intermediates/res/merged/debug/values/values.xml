@@ -356,6 +356,7 @@
     <string name="title_activity_have_list">HaveListActivity</string>
     <string name="title_activity_main">Waste Not</string>
     <string name="title_activity_my_deck">MyDeckActivity</string>
+    <string name="title_activity_novocla">novocla</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

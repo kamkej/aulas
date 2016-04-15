@@ -934,6 +934,7 @@
                 }
             }
         ]
+<<<<<<< HEAD
     },
     {
         "outputFile": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/values-uz-rUZ/values-uz-rUZ.xml",
@@ -2806,5 +2807,7 @@
                 }
             }
         ]
+=======
+>>>>>>> refs/remotes/origin/master
     }
 ]

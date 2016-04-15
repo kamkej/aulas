@@ -136,6 +136,7 @@
                 }
             }
         ]
+<<<<<<< HEAD
     },
     {
         "outputFile": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/res/merged/debug/values-night-v8/values-night-v8.xml",
@@ -412,5 +413,7 @@
                 }
             }
         ]
+=======
+>>>>>>> refs/remotes/origin/master
     }
 ]

@@ -22,6 +22,7 @@
                 }
             }
         ]
+<<<<<<< HEAD
     },
     {
         "outputFile": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/values-w360dp-v13/values-w360dp-v13.xml",
@@ -70,5 +71,7 @@
                 }
             }
         ]
+=======
+>>>>>>> refs/remotes/origin/master
     }
 ]

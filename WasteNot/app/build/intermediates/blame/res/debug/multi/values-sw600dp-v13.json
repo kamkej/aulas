@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "outputFile": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/values-sw600dp-v13/values-sw600dp-v13.xml",
         "map": [
             {
@@ -698,6 +699,8 @@
         ]
     },
     {
+=======
+>>>>>>> refs/remotes/origin/master
         "outputFile": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/values-sw600dp-v13/values-sw600dp-v13.xml",
         "map": [
             {

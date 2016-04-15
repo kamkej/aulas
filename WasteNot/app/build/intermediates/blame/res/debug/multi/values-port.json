@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "outputFile": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/res/merged/debug/values-port/values-port.xml",
         "map": [
             {
@@ -48,6 +49,8 @@
         ]
     },
     {
+=======
+>>>>>>> refs/remotes/origin/master
         "outputFile": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/values-port/values-port.xml",
         "map": [
             {

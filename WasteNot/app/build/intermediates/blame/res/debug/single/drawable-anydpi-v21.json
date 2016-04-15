@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "merged": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_my_deck.xml",
         "source": "/home/julio/AndroidProject/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_my_deck.xml"
     },
@@ -42,10 +43,22 @@
     {
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_have.xml",
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_have.xml"
+=======
+        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_my_deck.xml",
+        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_my_deck.xml"
     },
     {
-        "merged": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml",
-        "source": "/home/julio/AndroidProject/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml"
+        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_share_material.xml",
+        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_share_material.xml"
+    },
+    {
+        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_voice_search_api_material.xml",
+        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_voice_search_api_material.xml"
+>>>>>>> refs/remotes/origin/master
+    },
+    {
+        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_cut_material.xml",
+        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_cut_material.xml"
     },
     {
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_selectall_material.xml",
@@ -56,6 +69,7 @@
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_wanted_list.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_radio_off_mtrl.xml",
         "source": "/home/julio/AndroidProject/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_radio_off_mtrl.xml"
     },
@@ -168,6 +182,8 @@
         "source": "/home/julio/AndroidProject/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_go_search_api_material.xml"
     },
     {
+=======
+>>>>>>> refs/remotes/origin/master
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_ab_back_material.xml",
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_ab_back_material.xml"
     },
@@ -180,6 +196,7 @@
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_overflow_material.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_radio_off_mtrl.xml",
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_radio_off_mtrl.xml"
     },
@@ -188,19 +205,34 @@
         "source": "/home/julio/AndroidProject/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_share_material.xml"
     },
     {
+=======
+        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml",
+        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_copy_material.xml"
+    },
+    {
+        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_checkbox_checked_mtrl.xml",
+        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_checkbox_checked_mtrl.xml"
+    },
+    {
+>>>>>>> refs/remotes/origin/master
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_btn_checkbox_unchecked_mtrl.xml",
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_checkbox_unchecked_mtrl.xml"
     },
     {
-        "merged": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_overflow_material.xml",
-        "source": "/home/julio/AndroidProject/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_overflow_material.xml"
+        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_go_search_api_material.xml",
+        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_go_search_api_material.xml"
     },
     {
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_clear_material.xml",
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_clear_material.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/abc_ic_menu_cut_material.xml",
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_ic_menu_cut_material.xml"
+=======
+        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_have.xml",
+        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_have.xml"
+>>>>>>> refs/remotes/origin/master
     }
 ]
