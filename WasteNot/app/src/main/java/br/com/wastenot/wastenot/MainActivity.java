@@ -85,8 +85,13 @@ public class MainActivity extends AppCompatActivity
 
 
         final AdapterListView adapter = new AdapterListView(this, itens);
+<<<<<<< HEAD
       //  list.requestFocusFromTouch();
         list.setChoiceMode(list.CHOICE_MODE_MULTIPLE);
+=======
+
+        list.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);
+>>>>>>> a712761429745dd8562f226aca6a5f84326c8ad9
 
                list.setAdapter(adapter);
 
@@ -97,18 +102,20 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-            if(view.isSelected()){
-           //     parent.setSelected(false);
-          //      view.setBackgroundColor(0);
-            }else{
-                Cards card = cardsList.get(position);
+                if (view.isActivated()) {
+                       view.setSelected(false);
+                       view.setBackgroundColor(0);
+                    Toast.makeText(getApplicationContext(), "hi", Toast.LENGTH_SHORT).show();
+                } else {
+                    Cards card = cardsList.get(position);
 
-                Intent intent = (new Intent(getApplicationContext(), CardDetail.class));
-                intent.putExtra("cards", card);
+                    Intent intent = (new Intent(getApplicationContext(), CardDetail.class));
+                    intent.putExtra("cards", card);
 
-                startActivity(intent);
-            }
+                    startActivity(intent);
+                }
 
+               // Toast.makeText(getApplicationContext(), "out", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -118,13 +125,21 @@ public class MainActivity extends AppCompatActivity
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
+<<<<<<< HEAD
                 // view.setSelected(true);
                 list.requestFocusFromTouch(); // IMPORTANT!
                 list.setSelected(true);
                 //      view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary));
+=======
+//                view.setFocusableInTouchMode(true);
+                view.setSelected(true);
+                view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
+
+                Toast.makeText(getApplicationContext(),"hi", Toast.LENGTH_SHORT).show();
+>>>>>>> a712761429745dd8562f226aca6a5f84326c8ad9
 
 
-                  //  Toast.makeText(getApplicationContext(), cardsList.get(position).getId(), Toast.LENGTH_SHORT).show();
+                //  Toast.makeText(getApplicationContext(), cardsList.get(position).getId(), Toast.LENGTH_SHORT).show();
 
                 return true;
             }
