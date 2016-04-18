@@ -38,6 +38,7 @@ import static android.view.Gravity.*;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     BDWrapper db;
+    MenuItem dtos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,12 +122,10 @@ public class MainActivity extends AppCompatActivity
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
-                MenuItem menuItem = (MenuItem)findViewById(R.id.action_favorite);
-                menuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+                dtos.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
 
-
-//                view.setFocusableInTouchMode(true);
-             //   view.setSelected(true);
+                view.setFocusableInTouchMode(true);
+                view.setSelected(true);
 
              //  view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
 
@@ -159,7 +158,7 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-
+      dtos = menu.findItem(R.id.action_favorite);
         return true;
     }
 
@@ -177,6 +176,13 @@ public class MainActivity extends AppCompatActivity
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+            menu.findItem(R.id.action_favorite).setVisible(true);
+        return super.onPrepareOptionsMenu(menu);
+
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
