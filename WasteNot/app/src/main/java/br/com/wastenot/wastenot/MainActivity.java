@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity
 
         final AdapterListView adapter = new AdapterListView(this, itens);
 
-        list.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);
+        list.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
                list.setAdapter(adapter);
 
@@ -98,6 +98,7 @@ public class MainActivity extends AppCompatActivity
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                dtos.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
 
                 if (list.isItemChecked(position)) {
                      // view.setSelected(false);
