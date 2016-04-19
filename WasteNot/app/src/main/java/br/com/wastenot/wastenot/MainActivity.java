@@ -88,13 +88,12 @@ public class MainActivity extends AppCompatActivity
 
         final AdapterListView adapter = new AdapterListView(this, itens);
 
-<<<<<<< HEAD
+
       //  list.requestFocusFromTouch();
 
         list.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);
-=======
-        list.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
->>>>>>> be601440d3fd54028c9be211734718a1945e66f1
+
+
 
 
                list.setAdapter(adapter);
@@ -107,58 +106,54 @@ public class MainActivity extends AppCompatActivity
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 dtos.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
 
-<<<<<<< HEAD
-                if (view.isFocused()) {
+                   if (parent.isSelected()) {
+                       parent.setSelected(false);
+                        // view.setSelected(false);
+                  //      parent.setSelected(false);
+                       // view.setBackgroundColor(0);
 
-                       view.setSelected(false);
-=======
-                if (list.isItemChecked(position)) {
-                     // view.setSelected(false);
->>>>>>> be601440d3fd54028c9be211734718a1945e66f1
-                       view.setBackgroundColor(0);
-                    Toast.makeText(getApplicationContext(), "simple", Toast.LENGTH_SHORT).show();
-                } else {
-                    Cards card = cardsList.get(position);
+                       // Toast.makeText(getApplicationContext(),String.valueOf(parent.getSelectedItem()), Toast.LENGTH_SHORT).show();
+                    } else {
+                        Cards card = cardsList.get(position);
 
-                    Intent intent = (new Intent(getApplicationContext(), CardDetail.class));
-                    intent.putExtra("cards", card);
+                        Intent intent = (new Intent(getApplicationContext(), CardDetail.class));
+                        intent.putExtra("cards", card);
 
-                    startActivity(intent);
+                        startActivity(intent);
+                    }
+
+                    // Toast.makeText(getApplicationContext(), "out", Toast.LENGTH_SHORT).show();
+
                 }
 
-               // Toast.makeText(getApplicationContext(), "out", Toast.LENGTH_SHORT).show();
-
-            }
         });
 
         list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-
-<<<<<<< HEAD
-
-                // view.setSelected(true);
-                list.requestFocusFromTouch(); // IMPORTANT!
-                view.setSelected(true);                //      view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary));
-
-//                view.setFocusableInTouchMode(true);
-               // view.setSelected(true);
-             //   view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
-
-=======
                 dtos.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
 
-                view.setFocusableInTouchMode(true);
-                view.setSelected(true);
 
-             //  view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
+                // view.setSelected(true);
+         //       parent.requestFocusFromTouch(); // IMPORTANT!
 
-              //  Toast.makeText(getApplicationContext(),"hi", Toast.LENGTH_SHORT).show();
->>>>>>> be601440d3fd54028c9be211734718a1945e66f1
+                parent.setSelected(true);
+
+                //      view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary));
+
+//                view.setFocusableInTouchMode(true);
+                // view.setSelected(true);
+                //   view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
 
 
-                //  Toast.makeText(getApplicationContext(), cardsList.get(position).getId(), Toast.LENGTH_SHORT).show();
+                //    view.setFocusableInTouchMode(true);
+                //      view.setSelected(true);
+
+                //  view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
+
+                //  Toast.makeText(getApplicationContext(),"hi", Toast.LENGTH_SHORT).show();
+
 
                 return true;
             }
