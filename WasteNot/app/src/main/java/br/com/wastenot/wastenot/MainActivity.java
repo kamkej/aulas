@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     BDWrapper db;
     MenuItem dtos;
+    List<String> ids = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,11 +107,13 @@ public class MainActivity extends AppCompatActivity
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 dtos.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
 
-                   if (parent.isSelected()) {
-                       parent.setSelected(false);
+
+
+                   if (ids.contains(cardsList.get(position))) {
+
                         // view.setSelected(false);
                   //      parent.setSelected(false);
-                       // view.setBackgroundColor(0);
+                        view.setBackgroundColor(0);
 
                        // Toast.makeText(getApplicationContext(),String.valueOf(parent.getSelectedItem()), Toast.LENGTH_SHORT).show();
                     } else {
@@ -134,6 +137,9 @@ public class MainActivity extends AppCompatActivity
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 dtos.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
 
+                ids.add(cardsList.get(position).getId());
+
+                view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
 
                 // view.setSelected(true);
          //       parent.requestFocusFromTouch(); // IMPORTANT!
