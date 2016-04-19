@@ -38,6 +38,8 @@ import static android.view.Gravity.*;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     BDWrapper db;
+    MenuItem dtos;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,9 +88,13 @@ public class MainActivity extends AppCompatActivity
 
         final AdapterListView adapter = new AdapterListView(this, itens);
 
+<<<<<<< HEAD
       //  list.requestFocusFromTouch();
 
         list.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);
+=======
+        list.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+>>>>>>> be601440d3fd54028c9be211734718a1945e66f1
 
 
                list.setAdapter(adapter);
@@ -99,12 +105,18 @@ public class MainActivity extends AppCompatActivity
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                dtos.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
 
+<<<<<<< HEAD
                 if (view.isFocused()) {
 
                        view.setSelected(false);
+=======
+                if (list.isItemChecked(position)) {
+                     // view.setSelected(false);
+>>>>>>> be601440d3fd54028c9be211734718a1945e66f1
                        view.setBackgroundColor(0);
-                    Toast.makeText(getApplicationContext(), "hi", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "simple", Toast.LENGTH_SHORT).show();
                 } else {
                     Cards card = cardsList.get(position);
 
@@ -124,6 +136,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
+<<<<<<< HEAD
 
                 // view.setSelected(true);
                 list.requestFocusFromTouch(); // IMPORTANT!
@@ -133,6 +146,16 @@ public class MainActivity extends AppCompatActivity
                // view.setSelected(true);
              //   view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
 
+=======
+                dtos.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+
+                view.setFocusableInTouchMode(true);
+                view.setSelected(true);
+
+             //  view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
+
+              //  Toast.makeText(getApplicationContext(),"hi", Toast.LENGTH_SHORT).show();
+>>>>>>> be601440d3fd54028c9be211734718a1945e66f1
 
 
                 //  Toast.makeText(getApplicationContext(), cardsList.get(position).getId(), Toast.LENGTH_SHORT).show();
@@ -161,6 +184,7 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+      dtos = menu.findItem(R.id.action_favorite);
         return true;
     }
 
@@ -178,6 +202,13 @@ public class MainActivity extends AppCompatActivity
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+            menu.findItem(R.id.action_favorite).setVisible(true);
+        return super.onPrepareOptionsMenu(menu);
+
     }
 
     @SuppressWarnings("StatementWithEmptyBody")

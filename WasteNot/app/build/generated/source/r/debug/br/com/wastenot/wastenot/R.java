@@ -2347,8 +2347,13 @@ containing a value of this type.
         public static final int whish=0x7f02005f;
     }
     public static final class id {
+<<<<<<< HEAD
         public static final int about=0x7f0d00a6;
         public static final int action0=0x7f0d0090;
+=======
+        public static final int about=0x7f0d009f;
+        public static final int action0=0x7f0d008e;
+>>>>>>> be601440d3fd54028c9be211734718a1945e66f1
         public static final int action_bar=0x7f0d005c;
         public static final int action_bar_activity_content=0x7f0d0000;
         public static final int action_bar_container=0x7f0d005b;
@@ -2357,13 +2362,22 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f0d003d;
         public static final int action_bar_title=0x7f0d003c;
         public static final int action_context_bar=0x7f0d005d;
+<<<<<<< HEAD
         public static final int action_divider=0x7f0d0094;
+=======
+        public static final int action_divider=0x7f0d0092;
+        public static final int action_favorite=0x7f0d009e;
+>>>>>>> be601440d3fd54028c9be211734718a1945e66f1
         public static final int action_menu_divider=0x7f0d0002;
         public static final int action_menu_presenter=0x7f0d0003;
         public static final int action_mode_bar=0x7f0d0059;
         public static final int action_mode_bar_stub=0x7f0d0058;
         public static final int action_mode_close_button=0x7f0d003e;
+<<<<<<< HEAD
         public static final int action_settings=0x7f0d00a7;
+=======
+        public static final int action_settings=0x7f0d00a0;
+>>>>>>> be601440d3fd54028c9be211734718a1945e66f1
         public static final int activity_chooser_view_content=0x7f0d003f;
         public static final int adjust_height=0x7f0d0033;
         public static final int adjust_width=0x7f0d0034;
@@ -2435,6 +2449,7 @@ containing a value of this type.
         public static final int middle=0x7f0d0032;
         public static final int mini=0x7f0d0030;
         public static final int multiply=0x7f0d0027;
+<<<<<<< HEAD
         public static final int nav_camera=0x7f0d00a0;
         public static final int nav_decks=0x7f0d009d;
         public static final int nav_gallery=0x7f0d00a1;
@@ -2443,6 +2458,10 @@ containing a value of this type.
         public static final int nav_send=0x7f0d00a5;
         public static final int nav_share=0x7f0d00a4;
         public static final int nav_slideshow=0x7f0d00a2;
+=======
+        public static final int nav_decks=0x7f0d009b;
+        public static final int nav_have_list=0x7f0d009c;
+>>>>>>> be601440d3fd54028c9be211734718a1945e66f1
         public static final int nav_view=0x7f0d007c;
         public static final int nav_wanted_list=0x7f0d009f;
         public static final int navigation_header_container=0x7f0d0087;
@@ -2591,9 +2610,7 @@ containing a value of this type.
     }
     public static final class menu {
         public static final int activity_main_drawer=0x7f0e0000;
-        public static final int activity_novocla_drawer=0x7f0e0001;
-        public static final int main=0x7f0e0002;
-        public static final int novocla=0x7f0e0003;
+        public static final int main=0x7f0e0001;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
