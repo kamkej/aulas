@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <merger version="3"><dataSet config="main"><source path="/home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/debug/jniLibs"/></dataSet></merger>
-=======
-<merger version="3"><dataSet config="main"><source path="/home/julio/AndroidProject/aulas/WasteNot/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/home/julio/AndroidProject/aulas/WasteNot/app/src/debug/jniLibs"/></dataSet></merger>
->>>>>>> a712761429745dd8562f226aca6a5f84326c8ad9

@@ -85,13 +85,11 @@ public class MainActivity extends AppCompatActivity
 
 
         final AdapterListView adapter = new AdapterListView(this, itens);
-<<<<<<< HEAD
+
       //  list.requestFocusFromTouch();
-        list.setChoiceMode(list.CHOICE_MODE_MULTIPLE);
-=======
 
         list.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);
->>>>>>> a712761429745dd8562f226aca6a5f84326c8ad9
+
 
                list.setAdapter(adapter);
 
@@ -102,7 +100,8 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                if (view.isActivated()) {
+                if (view.isFocused()) {
+
                        view.setSelected(false);
                        view.setBackgroundColor(0);
                     Toast.makeText(getApplicationContext(), "hi", Toast.LENGTH_SHORT).show();
@@ -125,18 +124,15 @@ public class MainActivity extends AppCompatActivity
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
-<<<<<<< HEAD
+
                 // view.setSelected(true);
                 list.requestFocusFromTouch(); // IMPORTANT!
-                list.setSelected(true);
-                //      view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary));
-=======
-//                view.setFocusableInTouchMode(true);
-                view.setSelected(true);
-                view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
+                view.setSelected(true);                //      view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary));
 
-                Toast.makeText(getApplicationContext(),"hi", Toast.LENGTH_SHORT).show();
->>>>>>> a712761429745dd8562f226aca6a5f84326c8ad9
+//                view.setFocusableInTouchMode(true);
+               // view.setSelected(true);
+             //   view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
+
 
 
                 //  Toast.makeText(getApplicationContext(), cardsList.get(position).getId(), Toast.LENGTH_SHORT).show();
