@@ -44,7 +44,13 @@ public class MainActivity extends AppCompatActivity
     BDWrapper db;
     MenuItem dtos;
     ListView list;
+    EditText edts;
+    String card;
+    List<Cards> cardsList;
     List<String> cardsSelect = new ArrayList<String>();
+    List<ItemListView> itens = new ArrayList<ItemListView>();
+    AdapterListView adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +59,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         list = (ListView) findViewById(R.id.list);
-
+        edts = (EditText) findViewById(R.id.edtSearch);
 
 
 
@@ -72,23 +78,22 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-
-    public void search(final View view) {
-        dtos.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
-        dtos.setVisible(false);
-        EditText edts = (EditText) findViewById(R.id.edtSearch);
-        final String card = String.valueOf(edts.getText());
-
-        List<ItemListView> itens = new ArrayList<ItemListView>();
-        final List<Cards> cardsList = db.getCard(card);
+    protected void getCards(){
+        card = String.valueOf(edts.getText());
+        cardsList = db.getCard(card);
         for (Cards cd : cardsList) {
             itens.add(new ItemListView(cd.getName(), R.drawable.whish));
         }
 
+        adapter = new AdapterListView(this, itens);
+        list.setAdapter(adapter);
+    }
 
-        final AdapterListView adapter = new AdapterListView(this, itens);
-            list.setAdapter(adapter);
 
+    public void search(final View view) {
+        dtos.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+        dtos.setVisible(false);
+        getCards();
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -165,9 +170,11 @@ public class MainActivity extends AppCompatActivity
                 Log.d("id", idc);
             }
             cardsSelect.removeAll(cardsSelect);
+            getCards();
+            dtos.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+            dtos.setVisible(false);
 
-
-            Toast.makeText(this,"Item add com sucesso",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"items added successfully",Toast.LENGTH_LONG).show();
         }
 
         return super.onOptionsItemSelected(item);
@@ -195,7 +202,8 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.nav_wanted_list) {
-
+            Intent intent = (new Intent(this,HaveListActivity.class));
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

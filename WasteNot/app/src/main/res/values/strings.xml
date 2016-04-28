@@ -16,6 +16,7 @@
     <string name="title_activity_have_list">HaveListActivity</string>
     <string name="title_activity_my_deck">MyDeckActivity</string>
     <string name="title_activity_novocla">novocla</string>
+    <string name="title_activity_whish_list">WhishListActivity</string>
 
 
 </resources>

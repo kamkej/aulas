@@ -1,14 +1,6 @@
 [
     {
-        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_launcher.png",
-        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/mipmap-hdpi/ic_launcher.png"
-    },
-    {
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_launcher.png",
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/mipmap-hdpi/ic_launcher.png"
-    },
-    {
-        "merged": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_launcher.png",
-        "source": "/home/julio/AndroidProject/aulas/WasteNot/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     }
 ]
