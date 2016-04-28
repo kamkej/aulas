@@ -4,6 +4,7 @@ import android.app.TaskStackBuilder;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
@@ -30,7 +31,10 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 import static android.view.Gravity.*;
 
@@ -39,7 +43,8 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     BDWrapper db;
     MenuItem dtos;
-    List<String> ids = null;
+    ListView list;
+    List<String> cardsSelect = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,15 +52,9 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        list = (ListView) findViewById(R.id.list);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.mainadd);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -75,91 +74,52 @@ public class MainActivity extends AppCompatActivity
 
 
     public void search(final View view) {
+        dtos.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+        dtos.setVisible(false);
         EditText edts = (EditText) findViewById(R.id.edtSearch);
         final String card = String.valueOf(edts.getText());
-        final ListView list = (ListView) findViewById(R.id.list);
 
         List<ItemListView> itens = new ArrayList<ItemListView>();
         final List<Cards> cardsList = db.getCard(card);
-        final List<Cards> cardsSelect = null;
         for (Cards cd : cardsList) {
             itens.add(new ItemListView(cd.getName(), R.drawable.whish));
         }
 
 
         final AdapterListView adapter = new AdapterListView(this, itens);
-
-
-      //  list.requestFocusFromTouch();
-
-        list.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);
-
-
-
-
-               list.setAdapter(adapter);
-
-
-        //Toast.makeText(getApplicationContext(), "list", Toast.LENGTH_SHORT).show();
+            list.setAdapter(adapter);
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                dtos.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
 
 
-
-                   if (ids.contains(cardsList.get(position))) {
-
-                        // view.setSelected(false);
-                  //      parent.setSelected(false);
+                   if (cardsSelect.contains(cardsList.get(position).getId())) {
+                       cardsSelect.remove(cardsSelect.indexOf(cardsList.get(position).getId()));
                         view.setBackgroundColor(0);
+                       if(cardsSelect.isEmpty()){
+                           dtos.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+                           dtos.setVisible(false);
 
-                       // Toast.makeText(getApplicationContext(),String.valueOf(parent.getSelectedItem()), Toast.LENGTH_SHORT).show();
+                       }
                     } else {
                         Cards card = cardsList.get(position);
-
                         Intent intent = (new Intent(getApplicationContext(), CardDetail.class));
                         intent.putExtra("cards", card);
-
                         startActivity(intent);
                     }
-
-                    // Toast.makeText(getApplicationContext(), "out", Toast.LENGTH_SHORT).show();
-
                 }
-
         });
-
         list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 dtos.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+                dtos.setVisible(true);
 
-                ids.add(cardsList.get(position).getId());
+                cardsSelect.add(cardsList.get(position).getId());
 
                 view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
-
-                // view.setSelected(true);
-         //       parent.requestFocusFromTouch(); // IMPORTANT!
-
-                parent.setSelected(true);
-
-                //      view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary));
-
-//                view.setFocusableInTouchMode(true);
-                // view.setSelected(true);
-                //   view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
-
-
-                //    view.setFocusableInTouchMode(true);
-                //      view.setSelected(true);
-
-                //  view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
-
-                //  Toast.makeText(getApplicationContext(),"hi", Toast.LENGTH_SHORT).show();
-
 
                 return true;
             }
@@ -200,6 +160,14 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.action_settings) {
             Intent intent = new Intent(this,SettingActivity.class);
             startActivity(intent);
+        } else if(id == R.id.action_favorite){
+            for (String idc  : cardsSelect) {
+                Log.d("id", idc);
+            }
+            cardsSelect.removeAll(cardsSelect);
+
+
+            Toast.makeText(this,"Item add com sucesso",Toast.LENGTH_LONG).show();
         }
 
         return super.onOptionsItemSelected(item);
@@ -207,7 +175,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-            menu.findItem(R.id.action_favorite).setVisible(true);
+     //       menu.findItem(R.id.action_favorite).setVisible(true);
         return super.onPrepareOptionsMenu(menu);
 
     }
