@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -22,6 +23,7 @@ public class wantedList extends AppCompatActivity implements NavigationView.OnNa
     BDWrapper db;
     ListView list;
     List<Cards> cardsList;
+    MenuItem have,wanted;
     List<String> cardsSelect = new ArrayList<String>();
     List<ItemListView> itens = new ArrayList<ItemListView>();
     AdapterListView adapter;
@@ -44,13 +46,37 @@ public class wantedList extends AppCompatActivity implements NavigationView.OnNa
 
         list = (ListView) findViewById(R.id.listwanted);
         db = new BDWrapper(this);
-        cardsList = db.getHaveCard();
+        cardsList = db.getWantedCard();
         for (Cards cd : cardsList) {
             itens.add(new ItemListView(cd.getName(), R.drawable.whish));
         }
 
         adapter = new AdapterListView(this, itens);
         list.setAdapter(adapter);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+
+                if (cardsSelect.contains(cardsList.get(position).getId())) {
+                    cardsSelect.remove(cardsSelect.indexOf(cardsList.get(position).getId()));
+                    view.setBackgroundColor(0);
+                    if (cardsSelect.isEmpty()) {
+                        have.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+                        have.setVisible(false);
+                        wanted.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+                        wanted.setVisible(false);
+
+                    }
+                } else {
+                    Cards card = cardsList.get(position);
+                    Intent intent = (new Intent(getApplicationContext(), CardDetail.class));
+                    intent.putExtra("cards", card);
+                    startActivity(intent);
+                }
+            }
+        });
 
 
     }
