@@ -42,7 +42,7 @@ import static android.view.Gravity.*;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     BDWrapper db;
-    MenuItem dtos;
+    MenuItem have,wanted;
     ListView list;
     EditText edts;
     String card;
@@ -91,8 +91,10 @@ public class MainActivity extends AppCompatActivity
 
 
     public void search(final View view) {
-        dtos.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
-        dtos.setVisible(false);
+        have.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+        have.setVisible(false);
+        wanted.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+        wanted.setVisible(false);
         getCards();
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -103,8 +105,10 @@ public class MainActivity extends AppCompatActivity
                        cardsSelect.remove(cardsSelect.indexOf(cardsList.get(position).getId()));
                         view.setBackgroundColor(0);
                        if(cardsSelect.isEmpty()){
-                           dtos.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
-                           dtos.setVisible(false);
+                           have.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+                           have.setVisible(false);
+                           wanted.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+                           wanted.setVisible(false);
 
                        }
                     } else {
@@ -119,8 +123,10 @@ public class MainActivity extends AppCompatActivity
 
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                dtos.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-                dtos.setVisible(true);
+                have.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+                have.setVisible(true);
+                wanted.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+                wanted.setVisible(true);
 
                 cardsSelect.add(cardsList.get(position).getId());
 
@@ -150,7 +156,8 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-      dtos = menu.findItem(R.id.action_favorite);
+         have = menu.findItem(R.id.action_have);
+         wanted = menu.findItem(R.id.action_wanted);
         return true;
     }
 
@@ -165,18 +172,32 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.action_settings) {
             Intent intent = new Intent(this,SettingActivity.class);
             startActivity(intent);
-        } else if(id == R.id.action_favorite){
+        } else if(id == R.id.action_have){
             for (String idc  : cardsSelect) {
                 Log.d("id", idc);
                 db.updateCard(idc,"1","0");
             }
             cardsSelect.removeAll(cardsSelect);
             getCards();
-            dtos.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
-            dtos.setVisible(false);
-
-
+            have.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+            have.setVisible(false);
+            wanted.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+            wanted.setVisible(false);
             Toast.makeText(this,"items added successfully",Toast.LENGTH_LONG).show();
+
+        }else if(id==R.id.action_wanted){
+            for (String idc  : cardsSelect) {
+                Log.d("id", idc);
+                db.updateCard(idc,"0","1");
+            }
+            cardsSelect.removeAll(cardsSelect);
+            getCards();
+            have.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+            have.setVisible(false);
+            wanted.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+            wanted.setVisible(false);
+            Toast.makeText(this,"items added successfully",Toast.LENGTH_LONG).show();
+
         }
 
         return super.onOptionsItemSelected(item);

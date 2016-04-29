@@ -12,8 +12,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class wantedList extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    BDWrapper db;
+    ListView list;
+    List<Cards> cardsList;
+    List<String> cardsSelect = new ArrayList<String>();
+    List<ItemListView> itens = new ArrayList<ItemListView>();
+    AdapterListView adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +41,16 @@ public class wantedList extends AppCompatActivity implements NavigationView.OnNa
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        list = (ListView) findViewById(R.id.listwanted);
+        db = new BDWrapper(this);
+        cardsList = db.getHaveCard();
+        for (Cards cd : cardsList) {
+            itens.add(new ItemListView(cd.getName(), R.drawable.whish));
+        }
+
+        adapter = new AdapterListView(this, itens);
+        list.setAdapter(adapter);
 
 
     }
