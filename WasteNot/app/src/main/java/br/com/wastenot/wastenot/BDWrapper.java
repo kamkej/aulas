@@ -251,10 +251,10 @@ public class BDWrapper extends SQLiteOpenHelper {
     public boolean updateCard(String id,String have, String  wish ){
         SQLiteDatabase db = this.getReadableDatabase();
         ContentValues values = new ContentValues();
-        values.put("whishList",wish);
-        values.put("haveList",have);
+        values.put("whishlist",wish);
+        values.put("havelist",have);
 
-        return  db.update(TABLE,values,"id = " + id,null)>0;
+        return  db.update(TABLE,values,"id = '"+id+"'",null)>0;
     }
     public List<Cards> getAllCard(){
         List<Cards> cardsList = new ArrayList<Cards>();
