@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 public class WishListActivity extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -27,6 +28,16 @@ public class WishListActivity extends AppCompatActivity  implements NavigationVi
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+       /* list = (ListView) findViewById(R.id.list);
+        db = new BDWrapper(this);
+        cardsList = db.getHaveCard();
+        for (Cards cd : cardsList) {
+            itens.add(new ItemListView(cd.getName(), R.drawable.whish));
+        }
+
+        adapter = new AdapterListView(this, itens);
+        list.setAdapter(adapter);*/
     }
 
     @Override
