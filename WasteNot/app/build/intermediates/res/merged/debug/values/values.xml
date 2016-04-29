@@ -358,6 +358,7 @@
     <string name="title_activity_main">Waste Not</string>
     <string name="title_activity_my_deck">MyDeckActivity</string>
     <string name="title_activity_novocla">novocla</string>
+    <string name="title_activity_wanted_list">wantedList</string>
     <string name="title_activity_whish_list">WhishListActivity</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>

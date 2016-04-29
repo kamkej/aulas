@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml:2:1-45:12
+ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml:2:1-48:12
 	package
 		ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml:3:5-39
 		INJECTED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml
@@ -18,7 +18,7 @@ ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifes
 	android:name
 		ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml:7:5-43:19
+ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml:7:5-46:19
 MERGED from [com.android.support:appcompat-v7:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/AndroidManifest.xml:7:5-20
@@ -100,10 +100,14 @@ MERGED from [com.google.android.gms:play-services-basement:8.1.0] /home/julio/An
 		ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml:40:13-66
 	android:name
 		ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml:39:13-58
-activity#br.com.wastenot.wastenot.WishListActivity
-ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml:42:9-63
+activity#br.com.wastenot.wastenot.wantedList
+ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml:42:9-45:68
+	android:label
+		ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml:44:13-63
+	android:theme
+		ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml:45:13-56
 	android:name
-		ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml:42:19-51
+		ADDED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml:43:13-39
 uses-sdk
 INJECTED from /home/julio/AndroidProject/aulas/WasteNot/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.2.0] /home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:21:5-23:78

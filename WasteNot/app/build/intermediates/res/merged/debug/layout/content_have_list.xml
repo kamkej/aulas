@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="br.com.wastenot.wastenot.HaveListActivity"
-    tools:showIn="@layout/app_bar_whish"
+    tools:showIn="@layout/app_bar_have"
     android:background="#fcfcfc"
     android:orientation="vertical">
 

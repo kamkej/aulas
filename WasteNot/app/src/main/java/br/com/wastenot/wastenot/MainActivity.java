@@ -204,7 +204,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.nav_wanted_list) {
-            Intent intent = (new Intent(this,WishListActivity.class));
+            Intent intent = (new Intent(this,wantedList.class));
             startActivity(intent);
         }
 

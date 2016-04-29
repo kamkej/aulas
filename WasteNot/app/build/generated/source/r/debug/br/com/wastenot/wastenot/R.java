@@ -2549,14 +2549,14 @@ containing a value of this type.
         public static final int activity_main=0x7f04001b;
         public static final int activity_my_deck=0x7f04001c;
         public static final int activity_setting=0x7f04001d;
-        public static final int activity_wish_list=0x7f04001e;
+        public static final int activity_wanted_list=0x7f04001e;
         public static final int app_bar_have=0x7f04001f;
         public static final int app_bar_main=0x7f040020;
-        public static final int app_bar_whish=0x7f040021;
+        public static final int app_bar_wanted=0x7f040021;
         public static final int content_have_list=0x7f040022;
         public static final int content_main=0x7f040023;
         public static final int content_my_deck=0x7f040024;
-        public static final int content_whish_list=0x7f040025;
+        public static final int content_wanted_list=0x7f040025;
         public static final int design_bottom_sheet_dialog=0x7f040026;
         public static final int design_layout_snackbar=0x7f040027;
         public static final int design_layout_snackbar_include=0x7f040028;
@@ -2660,7 +2660,8 @@ containing a value of this type.
         public static final int title_activity_main=0x7f060040;
         public static final int title_activity_my_deck=0x7f060041;
         public static final int title_activity_novocla=0x7f060042;
-        public static final int title_activity_whish_list=0x7f060043;
+        public static final int title_activity_wanted_list=0x7f060043;
+        public static final int title_activity_whish_list=0x7f060044;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f090088;
