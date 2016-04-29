@@ -52,12 +52,12 @@
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/layout/item_list.xml"
     },
     {
-        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
-        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_expanded_menu_layout.xml"
-    },
-    {
         "merged": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/activity_my_deck.xml",
         "source": "/home/julio/AndroidProject/aulas/WasteNot/app/src/main/res/layout/activity_my_deck.xml"
+    },
+    {
+        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_expanded_menu_layout.xml"
     },
     {
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
