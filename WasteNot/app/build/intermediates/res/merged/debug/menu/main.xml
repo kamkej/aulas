@@ -3,13 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
     <item
-        android:id="@+id/action_favorite"
-        android:icon="@android:drawable/star_on"
+        android:id="@+id/action_have"
+        android:icon="@drawable/ic_wanted_list"
         android:title="wish"
         app:showAsAction='never'
         />
-
     <item
+        android:id="@+id/action_wanted"
+        android:icon="@drawable/ic_have"
+        android:title="wish"
+        app:showAsAction='never'
+        />
+    <item
+
         android:id="@+id/about"
         android:orderInCategory="100"
         android:title="@string/about"

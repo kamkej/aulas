@@ -4,12 +4,12 @@
         "source": "/home/julio/AndroidProject/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_menu_overflow_material.png"
     },
     {
-        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_btn_checkbox_unchecked_mtrl.png",
-        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-ldpi/abc_btn_checkbox_unchecked_mtrl.png"
-    },
-    {
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_wanted_list.png",
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-ldpi/ic_wanted_list.png"
+    },
+    {
+        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_btn_checkbox_unchecked_mtrl.png",
+        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-ldpi/abc_btn_checkbox_unchecked_mtrl.png"
     },
     {
         "merged": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_go_search_api_material.png",
