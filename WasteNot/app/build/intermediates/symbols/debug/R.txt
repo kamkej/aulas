@@ -669,7 +669,7 @@ int id design_navigation_view 0x7f0d0085
 int id disableHome 0x7f0d000e
 int id drawer_layout 0x7f0d0079
 int id edit_query 0x7f0d005e
-int id edtSearch 0x7f0d007e
+int id edtSearch 0x7f0d0080
 int id end 0x7f0d0021
 int id end_padder 0x7f0d0099
 int id enterAlways 0x7f0d0015
@@ -699,7 +699,7 @@ int id layoutid 0x7f0d006c
 int id left 0x7f0d0023
 int id line1 0x7f0d0092
 int id line3 0x7f0d0096
-int id list 0x7f0d0080
+int id list 0x7f0d007e
 int id listMode 0x7f0d000b
 int id list_item 0x7f0d0043
 int id log 0x7f0d007d

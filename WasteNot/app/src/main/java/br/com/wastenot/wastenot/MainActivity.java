@@ -168,11 +168,13 @@ public class MainActivity extends AppCompatActivity
         } else if(id == R.id.action_favorite){
             for (String idc  : cardsSelect) {
                 Log.d("id", idc);
+                db.updateCard(idc,"1","0");
             }
             cardsSelect.removeAll(cardsSelect);
             getCards();
             dtos.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
             dtos.setVisible(false);
+
 
             Toast.makeText(this,"items added successfully",Toast.LENGTH_LONG).show();
         }
@@ -202,7 +204,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.nav_wanted_list) {
-            Intent intent = (new Intent(this,HaveListActivity.class));
+            Intent intent = (new Intent(this,WishListActivity.class));
             startActivity(intent);
         }
 

@@ -44,7 +44,7 @@ public class WishListActivity extends AppCompatActivity  implements NavigationVi
             finish();
 
         } else if (id == R.id.nav_wanted_list) {
-            Intent intent = (new Intent(this,HaveListActivity.class));
+            Intent intent = (new Intent(this,WishListActivity.class));
             startActivity(intent);
             finish();
         }

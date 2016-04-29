@@ -2395,7 +2395,7 @@ containing a value of this type.
         public static final int disableHome=0x7f0d000e;
         public static final int drawer_layout=0x7f0d0079;
         public static final int edit_query=0x7f0d005e;
-        public static final int edtSearch=0x7f0d007e;
+        public static final int edtSearch=0x7f0d0080;
         public static final int end=0x7f0d0021;
         public static final int end_padder=0x7f0d0099;
         public static final int enterAlways=0x7f0d0015;
@@ -2425,7 +2425,7 @@ containing a value of this type.
         public static final int left=0x7f0d0023;
         public static final int line1=0x7f0d0092;
         public static final int line3=0x7f0d0096;
-        public static final int list=0x7f0d0080;
+        public static final int list=0x7f0d007e;
         public static final int listMode=0x7f0d000b;
         public static final int list_item=0x7f0d0043;
         public static final int log=0x7f0d007d;

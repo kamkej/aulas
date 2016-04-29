@@ -194,7 +194,7 @@ public class BDWrapper extends SQLiteOpenHelper {
         }
         return  cardsList;
     }
-    public  List<Cards> getHaveCard(String  name){
+    public  List<Cards> getHaveCard(){
         List<Cards> cardsList = new ArrayList<Cards>();
         String selectQuery = "SELECT * FROM  cards WHERE  haveList = '1'";
         SQLiteDatabase db = this.getReadableDatabase();
@@ -247,6 +247,14 @@ public class BDWrapper extends SQLiteOpenHelper {
             }while (cursor.moveToNext());
         }
         return  cardsList;
+    }
+    public boolean updateCard(String id,String have, String  wish ){
+        SQLiteDatabase db = this.getReadableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("whishList",wish);
+        values.put("haveList",have);
+
+        return  db.update(TABLE,values,"id = " + id,null)>0;
     }
     public List<Cards> getAllCard(){
         List<Cards> cardsList = new ArrayList<Cards>();
@@ -322,11 +330,12 @@ public class BDWrapper extends SQLiteOpenHelper {
         values.put(KEY_POWER,cards.getPower());
         values.put(KEY_TOUGHNESS,cards.getToughness());
         values.put(KEY_IMG_NAME,cards.getImageName());
-        values.put(KEY_M_S_ID,cards.getMultiverseid());
+        values.put(KEY_M_S_ID, cards.getMultiverseid());
         //values.put(KEY_CARD_ID,cards.getCard_id());
 
         db.insert(TABLE, null, values);
         db.close();
+
 
     }
 
