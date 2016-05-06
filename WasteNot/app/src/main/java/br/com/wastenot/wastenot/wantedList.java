@@ -2,18 +2,20 @@ package br.com.wastenot.wastenot;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +25,7 @@ public class wantedList extends AppCompatActivity implements NavigationView.OnNa
     BDWrapper db;
     ListView list;
     List<Cards> cardsList;
-    MenuItem have,wanted;
+    MenuItem dell;
     List<String> cardsSelect = new ArrayList<String>();
     List<ItemListView> itens = new ArrayList<ItemListView>();
     AdapterListView adapter;
@@ -63,10 +65,9 @@ public class wantedList extends AppCompatActivity implements NavigationView.OnNa
                     cardsSelect.remove(cardsSelect.indexOf(cardsList.get(position).getId()));
                     view.setBackgroundColor(0);
                     if (cardsSelect.isEmpty()) {
-                        have.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
-                        have.setVisible(false);
-                        wanted.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
-                        wanted.setVisible(false);
+                        dell.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+                        dell.setVisible(false);
+
 
                     }
                 } else {
@@ -77,7 +78,61 @@ public class wantedList extends AppCompatActivity implements NavigationView.OnNa
                 }
             }
         });
+        list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                dell.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+                dell.setVisible(true);
+
+
+                cardsSelect.add(cardsList.get(position).getId());
+
+                view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
+
+                return true;
+            }
+        });
+
+
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.delitem, menu);
+        dell = menu.findItem(R.id.action_dell);
+
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+         if(id == R.id.action_dell){
+            for (String idc  : cardsSelect) {
+                Log.d("id", idc);
+                db.updateCard(idc,"0","0");
+            }
+            cardsSelect.removeAll(cardsSelect);
+
+            dell.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+            dell.setVisible(false);
+
+            Toast.makeText(this, "items dell successfully", Toast.LENGTH_LONG).show();
+
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        //       menu.findItem(R.id.action_favorite).setVisible(true);
+        return super.onPrepareOptionsMenu(menu);
 
     }
 
