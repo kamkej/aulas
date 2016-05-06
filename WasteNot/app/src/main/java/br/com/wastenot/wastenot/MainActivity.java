@@ -23,6 +23,7 @@ import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -77,15 +78,76 @@ public class MainActivity extends AppCompatActivity
 
 
     }
-
-    protected void getCards(){
+    protected   List<ItemListView> updateCardList(){
+        int img =0;
         card = String.valueOf(edts.getText());
         cardsList = db.getCard(card);
         for (Cards cd : cardsList) {
-            itens.add(new ItemListView(cd.getName(), R.drawable.whish));
-        }
 
-        adapter = new AdapterListView(this, itens);
+            switch (cd.getColorIdentity())
+            {
+                case "U":
+                    img = R.drawable.u;
+                    break;
+                case "R":
+                    img = R.drawable.r;
+                    break;
+                case "G":
+                    img = R.drawable.g;
+                    break;
+                case "B":
+                    img = R.drawable.b;
+                    break;
+                case "W":
+                    img = R.drawable.w;
+                    break;
+                case "U,B":
+                    img = R.drawable.ub;
+                    break;
+                case "B,G":
+                    img = R.drawable.bg;
+                    break;
+                case "R,G":
+                    img = R.drawable.rg;
+                    break;
+                case "W,B":
+                    img = R.drawable.wb;
+                    break;
+                case "U,R":
+                    img = R.drawable.ur;
+                    break;
+                case "G,U":
+                    img = R.drawable.gu;
+                    break;
+                case "W,U":
+                    img = R.drawable.wu;
+                    break;
+                case "R,W":
+                    img = R.drawable.rw;
+                    break;
+                case "W,R":
+                    img = R.drawable.rw;
+                    break;
+                case "B,R":
+                    img = R.drawable.br;
+                    break;
+                case "G,W":
+                    img = R.drawable.gw;
+                    break;
+                default:
+                    img = R.drawable.ic_home;
+            }
+
+
+
+            itens.add(new ItemListView(cd.getName(), img));
+        }
+        return itens;
+
+    }
+
+    protected void getCards(){
+        adapter = new AdapterListView(this, updateCardList());
         list.setAdapter(adapter);
     }
 
@@ -178,6 +240,8 @@ public class MainActivity extends AppCompatActivity
                 db.updateCard(idc,"0","1");
             }
             cardsSelect.removeAll(cardsSelect);
+            adapter.notifyDataSetChanged();
+            adapter.updateList(updateCardList());
             getCards();
             have.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
             have.setVisible(false);
@@ -191,6 +255,8 @@ public class MainActivity extends AppCompatActivity
                 db.updateCard(idc,"1","0");
             }
             cardsSelect.removeAll(cardsSelect);
+            adapter.notifyDataSetChanged();
+            adapter.updateList(updateCardList());
             getCards();
             have.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
             have.setVisible(false);
@@ -226,6 +292,9 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_wanted_list) {
             Intent intent = (new Intent(this,wantedList.class));
+            startActivity(intent);
+        } else if (id == R.id.nav_home){
+            Intent intent = (new Intent(this,MainActivity.class));
             startActivity(intent);
         }
 

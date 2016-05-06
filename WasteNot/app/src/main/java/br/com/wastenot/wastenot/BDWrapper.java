@@ -142,7 +142,7 @@ public class BDWrapper extends SQLiteOpenHelper {
     }
     public  List<Cards> getCard(String  name){
         List<Cards> cardsList = new ArrayList<Cards>();
-        String selectQuery = "SELECT * FROM "+ TABLE +" WHERE name like '%"+ name+"%'";
+        String selectQuery = "SELECT * FROM cards WHERE name like '%"+ name+"%' and haveList = 0 and whishlist = 0 ";
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery,null);
 

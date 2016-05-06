@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/menu/delitem.xml",
+        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/menu/delitem.xml"
+    },
+    {
         "merged": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/res/merged/debug/menu/main.xml",
         "source": "/home/julio/AndroidProject/aulas/WasteNot/app/src/main/res/menu/main.xml"
     },

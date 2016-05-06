@@ -48,13 +48,9 @@ public class wantedList extends AppCompatActivity implements NavigationView.OnNa
 
         list = (ListView) findViewById(R.id.listwanted);
         db = new BDWrapper(this);
-        cardsList = db.getWantedCard();
-        for (Cards cd : cardsList) {
-            itens.add(new ItemListView(cd.getName(), R.drawable.whish));
-        }
 
-        adapter = new AdapterListView(this, itens);
-        list.setAdapter(adapter);
+        getCards();
+
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -96,6 +92,78 @@ public class wantedList extends AppCompatActivity implements NavigationView.OnNa
 
 
     }
+
+    protected   List<ItemListView> updateCardList(){
+        cardsList = db.getWantedCard();
+        int img =0;
+        for (Cards cd : cardsList) {
+
+            switch (cd.getColorIdentity())
+            {
+                case "U":
+                    img = R.drawable.u;
+                    break;
+                case "R":
+                    img = R.drawable.r;
+                    break;
+                case "G":
+                    img = R.drawable.g;
+                    break;
+                case "B":
+                    img = R.drawable.b;
+                    break;
+                case "W":
+                    img = R.drawable.w;
+                    break;
+                case "U,B":
+                    img = R.drawable.ub;
+                    break;
+                case "B,G":
+                    img = R.drawable.bg;
+                    break;
+                case "R,G":
+                    img = R.drawable.rg;
+                    break;
+                case "W,B":
+                    img = R.drawable.wb;
+                    break;
+                case "U,R":
+                    img = R.drawable.ur;
+                    break;
+                case "G,U":
+                    img = R.drawable.gu;
+                    break;
+                case "W,U":
+                    img = R.drawable.wu;
+                    break;
+                case "R,W":
+                    img = R.drawable.rw;
+                    break;
+                case "W,R":
+                    img = R.drawable.rw;
+                    break;
+                case "B,R":
+                    img = R.drawable.br;
+                    break;
+                case "G,W":
+                    img = R.drawable.gw;
+                    break;
+                default:
+                    img = R.drawable.ic_home;
+            }
+
+
+
+            itens.add(new ItemListView(cd.getName(), img));
+        }
+        return itens;
+
+    }
+
+    protected void getCards(){
+        adapter = new AdapterListView(this, updateCardList());
+        list.setAdapter(adapter);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -121,6 +189,9 @@ public class wantedList extends AppCompatActivity implements NavigationView.OnNa
 
             dell.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
             dell.setVisible(false);
+             adapter.notifyDataSetChanged();
+             adapter.updateList(updateCardList());
+             getCards();
 
             Toast.makeText(this, "items dell successfully", Toast.LENGTH_LONG).show();
 
@@ -155,6 +226,9 @@ public class wantedList extends AppCompatActivity implements NavigationView.OnNa
             Intent intent = (new Intent(this,wantedList.class));
             startActivity(intent);
             finish();
+        }else if (id == R.id.nav_home){
+            Intent intent = (new Intent(this,MainActivity.class));
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

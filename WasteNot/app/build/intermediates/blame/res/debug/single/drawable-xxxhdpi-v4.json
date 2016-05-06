@@ -212,6 +212,10 @@
         "source": "/home/julio/AndroidProject/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-xxxhdpi/abc_ic_voice_search_api_material.png"
     },
     {
+        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/ic_home.png",
+        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_home.png"
+    },
+    {
         "merged": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_cut_material.png",
         "source": "/home/julio/AndroidProject/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-xxxhdpi/abc_ic_menu_cut_material.png"
     },

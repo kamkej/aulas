@@ -21,6 +21,12 @@ public class AdapterListView extends BaseAdapter {
         this.itens = itens;
         mInflater= LayoutInflater.from(context);
     }
+    public void updateList(List<ItemListView> itensUpdate){
+        itens.clear();
+        itens = itensUpdate;
+        notifyDataSetChanged();
+
+    }
 
     @Override
     public int getCount() {
