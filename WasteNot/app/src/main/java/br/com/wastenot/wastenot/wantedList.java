@@ -154,7 +154,7 @@ public class wantedList extends AppCompatActivity implements NavigationView.OnNa
 
 
 
-            itens.add(new ItemListView(cd.getName(), img));
+            itens.add(new ItemListView(cd.getName(), img,0));
         }
         return itens;
 

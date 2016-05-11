@@ -6,15 +6,17 @@ package br.com.wastenot.wastenot;
 public class ItemListView {
     private String texto;
     private int iconeRid;
+    private int iconeType;
 
     public ItemListView(){
-        this("", -1);
+        this("", -1,-1);
     }
 
 
-    public ItemListView(String texto, int iconeRid) {
+    public ItemListView(String texto, int iconeRid,int iconeType) {
         this.texto = texto;
         this.iconeRid = iconeRid;
+        this.iconeType = iconeType;
     }
 
     public String getTexto() {
@@ -31,5 +33,13 @@ public class ItemListView {
 
     public void setIconeRid(int iconeRid) {
         this.iconeRid = iconeRid;
+    }
+
+    public int getIconeType() {
+        return iconeType;
+    }
+
+    public void setIconeType(int iconeType) {
+        this.iconeType = iconeType;
     }
 }

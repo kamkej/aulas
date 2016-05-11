@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity
     }
     protected   List<ItemListView> updateCardList(){
         int img =0;
+        int icon = 0;
         card = String.valueOf(edts.getText());
         cardsList = db.getCard(card);
         for (Cards cd : cardsList) {
@@ -137,10 +138,16 @@ public class MainActivity extends AppCompatActivity
                 default:
                     img = R.drawable.ic_home;
             }
+            if(cd.getWhishlist().equals('1')){
+                icon = R.drawable.whish;
+            } else if(cd.getHavelist().equals('1')){
+                icon = R.drawable.havelist;
+            }
 
 
 
-            itens.add(new ItemListView(cd.getName(), img));
+
+            itens.add(new ItemListView(cd.getName(), img,icon));
         }
         return itens;
 

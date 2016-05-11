@@ -154,7 +154,7 @@ public class HaveListActivity extends AppCompatActivity implements NavigationVie
             }
 
 
-            itens.add(new ItemListView(cd.getName(), img));
+            itens.add(new ItemListView(cd.getName(), img,0));
         }
         return itens;
 

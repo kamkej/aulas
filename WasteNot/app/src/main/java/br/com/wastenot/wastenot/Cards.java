@@ -39,12 +39,15 @@ public class Cards implements Serializable {
     private String releaseDate;
     private String starter;
     private String setsCode;
+    private String whishlist;
+    private String havelist;
 
 
 
     public Cards() {
 
     }
+
 
     public String getId() {
         return id;
@@ -292,6 +295,22 @@ public class Cards implements Serializable {
 
     public void setStarter(String starter) {
         this.starter = starter;
+    }
+
+    public String getWhishlist() {
+        return whishlist;
+    }
+
+    public void setWhishlist(String whishlist) {
+        this.whishlist = whishlist;
+    }
+
+    public String getHavelist() {
+        return havelist;
+    }
+
+    public void setHavelist(String havelist) {
+        this.havelist = havelist;
     }
 }
 

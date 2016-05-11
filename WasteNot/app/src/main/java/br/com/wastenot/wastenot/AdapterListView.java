@@ -51,6 +51,7 @@ public class AdapterListView extends BaseAdapter {
             itemHolder = new ItemSuporte();
             itemHolder.txtTitle = ((TextView) view.findViewById(R.id.itemtext));
             itemHolder.imgIcon = ((ImageView) view.findViewById(R.id.itemimgview));
+            itemHolder.imgType = ((ImageView) view.findViewById(R.id.type));
             view.setTag(itemHolder);
         }else {
             itemHolder = (ItemSuporte) view.getTag();
@@ -58,10 +59,12 @@ public class AdapterListView extends BaseAdapter {
         ItemListView item = itens.get(position);
         itemHolder.txtTitle.setText(item.getTexto());
        itemHolder.imgIcon.setImageResource(item.getIconeRid());
+        itemHolder.imgType.setImageResource(item.getIconeType());
         return view;
     }
     private class ItemSuporte{
         ImageView imgIcon;
         TextView txtTitle;
+        ImageView imgType;
     }
 }
