@@ -9,7 +9,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,7 +24,7 @@ public class wantedList extends AppCompatActivity implements NavigationView.OnNa
     BDWrapper db;
     ListView list;
     List<Cards> cardsList;
-    MenuItem dell;
+    MenuItem dell,have;
     List<String> cardsSelect = new ArrayList<String>();
     List<ItemListView> itens = new ArrayList<ItemListView>();
     AdapterListView adapter;
@@ -80,7 +79,8 @@ public class wantedList extends AppCompatActivity implements NavigationView.OnNa
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 dell.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
                 dell.setVisible(true);
-
+                have.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+                have.setVisible(true);
 
                 cardsSelect.add(cardsList.get(position).getId());
 
@@ -167,8 +167,9 @@ public class wantedList extends AppCompatActivity implements NavigationView.OnNa
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.delitem, menu);
+        getMenuInflater().inflate(R.menu.wishmenu, menu);
         dell = menu.findItem(R.id.action_dell);
+        have = menu.findItem(R.id.action_have);
 
         return true;
     }
@@ -182,20 +183,39 @@ public class wantedList extends AppCompatActivity implements NavigationView.OnNa
         //noinspection SimplifiableIfStatement
          if(id == R.id.action_dell){
             for (String idc  : cardsSelect) {
-                Log.d("id", idc);
                 db.updateCard(idc,"0","0");
             }
             cardsSelect.removeAll(cardsSelect);
 
             dell.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
             dell.setVisible(false);
+
              adapter.notifyDataSetChanged();
              adapter.updateList(updateCardList());
+             have.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+             have.setVisible(false);
              getCards();
 
             Toast.makeText(this, "items dell successfully", Toast.LENGTH_LONG).show();
 
-        }
+        }else if(id == R.id.action_have){
+             for (String idc  : cardsSelect) {
+                 db.updateCard(idc,"1","0");
+             }
+             cardsSelect.removeAll(cardsSelect);
+
+             dell.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+             dell.setVisible(false);
+             have.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+             have.setVisible(false);
+
+             adapter.notifyDataSetChanged();
+             adapter.updateList(updateCardList());
+             getCards();
+
+             Toast.makeText(this, "items add to Have List successfully", Toast.LENGTH_LONG).show();
+
+         }
 
         return super.onOptionsItemSelected(item);
     }

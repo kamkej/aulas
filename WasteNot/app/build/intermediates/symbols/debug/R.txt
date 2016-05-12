@@ -887,6 +887,7 @@ int layout support_simple_spinner_dropdown_item 0x7f040040
 int menu activity_main_drawer 0x7f0e0000
 int menu delitem 0x7f0e0001
 int menu main 0x7f0e0002
+int menu wishmenu 0x7f0e0003
 int mipmap ic_launcher 0x7f030000
 int string abc_action_bar_home_description 0x7f060000
 int string abc_action_bar_home_description_format 0x7f060001

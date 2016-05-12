@@ -28,6 +28,10 @@
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/menu/activity_main_drawer.xml"
     },
     {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/menu/wishmenu.xml",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/menu/wishmenu.xml"
+    },
+    {
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/menu/main.xml",
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/menu/main.xml"
     },
