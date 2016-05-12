@@ -95,7 +95,11 @@ public class CardDetail extends AppCompatActivity {
         artist.setText(cards.getArtist());
         yaer.setText(cards.getReleaseDate());
         number.setText(cards.getNumber());
-        pt.setText(cards.getPower()+"/"+cards.getToughness());
+        if(cards.getPower().equalsIgnoreCase("")){
+            pt.setText("");
+        }else {
+            pt.setText(cards.getPower() + "/" + cards.getToughness());
+        }
 
         new LoadImage().execute("http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=" + cards.getMultiverseid() + "&type=card");
 

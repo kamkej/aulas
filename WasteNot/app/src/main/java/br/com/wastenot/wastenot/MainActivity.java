@@ -138,13 +138,14 @@ public class MainActivity extends AppCompatActivity
                 default:
                     img = R.drawable.ic_home;
             }
-            if(cd.getWhishlist().equals('1')){
-                icon = R.drawable.whish;
-            } else if(cd.getHavelist().equals('1')){
-                icon = R.drawable.havelist;
+            if(cd.getWhishlist().equalsIgnoreCase("1")){
+                icon = R.drawable.ic_wanted_list_black;
+            } else if(cd.getHavelist().equalsIgnoreCase("1")){
+                icon = R.drawable.ic_have_black;
+
+            }else{
+                icon = 0;
             }
-
-
 
 
             itens.add(new ItemListView(cd.getName(), img,icon));

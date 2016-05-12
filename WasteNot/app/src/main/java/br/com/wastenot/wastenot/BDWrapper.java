@@ -185,6 +185,9 @@ public class BDWrapper extends SQLiteOpenHelper {
                 card.setReserved(cursor.getString(28));
                 card.setReleaseDate(cursor.getString(29));
                 card.setStarter(cursor.getString(30));
+                card.setWhishlist(cursor.getString(32));
+                card.setHavelist(cursor.getString(33));
+
 
 
 
