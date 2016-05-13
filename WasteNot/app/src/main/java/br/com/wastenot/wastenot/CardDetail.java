@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.text.Layout;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -34,7 +35,7 @@ import static br.com.wastenot.wastenot.R.*;
 
 
 public class CardDetail extends AppCompatActivity {
-    ImageView imgCard;
+    ImageButton imgCard;
     TextView textViewLoad;
     private ProgressBar mProgress;
     /**
@@ -84,7 +85,7 @@ public class CardDetail extends AppCompatActivity {
 
 
 
-        imgCard = (ImageView) findViewById(id.imgcard);
+        imgCard = (ImageButton) findViewById(id.imgcard);
 
 
         title.setText(cards.getName());
@@ -172,13 +173,24 @@ public class CardDetail extends AppCompatActivity {
             return bitmap;
         }
 
-        protected void onPostExecute(Bitmap bitmap) {
+        protected void onPostExecute(final Bitmap bitmap) {
             if (bitmap != null) {
                 imgCard.setImageBitmap(bitmap);
                 mProgress.setVisibility(View.INVISIBLE);
                 textViewLoad.setVisibility(View.INVISIBLE);
+
+                imgCard.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = (new Intent(getApplicationContext(), ImgDetail.class));
+                        intent.putExtra("img", bitmap);
+                        startActivity(intent);
+
+                    }
+                });
+
+
             } else {
-                Log.d("bit", "ok");
                 Toast.makeText(CardDetail.this, "Image Does Not exist or Network Error", Toast.LENGTH_SHORT).show();
                 mProgress.setVisibility(View.INVISIBLE);
                 textViewLoad.setVisibility(View.INVISIBLE);

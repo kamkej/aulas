@@ -12,6 +12,10 @@
         "source": "/home/julio/AndroidProject/aulas/WasteNot/app/src/main/res/menu/main.xml"
     },
     {
+        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/menu/wishmenu.xml",
+        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/menu/wishmenu.xml"
+    },
+    {
         "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/menu/delitem.xml",
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/menu/delitem.xml"
     },

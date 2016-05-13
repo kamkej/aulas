@@ -20,13 +20,12 @@
         tools:context="br.com.wastenot.wastenot.CardDetail"
         android:id="@+id/layoutid"
         >
-
-        <ImageView
+        <ImageButton
             android:layout_width="130dp"
             android:layout_height="160dp"
             android:id="@+id/imgcard"
             android:layout_below="@+id/progressBar"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"/>
         <ProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

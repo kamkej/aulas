@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity
     List<Cards> cardsList;
     List<String> cardsSelect = new ArrayList<String>();
     List<ItemListView> itens = new ArrayList<ItemListView>();
-    AdapterListView adapter;
+    AdapterListView adapter = null;
 
 
     @Override
@@ -165,6 +165,11 @@ public class MainActivity extends AppCompatActivity
         have.setVisible(false);
         wanted.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
         wanted.setVisible(false);
+        if(adapter!=null){
+            adapter.notifyDataSetChanged();
+            adapter.updateList(updateCardList());
+        }
+
         getCards();
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

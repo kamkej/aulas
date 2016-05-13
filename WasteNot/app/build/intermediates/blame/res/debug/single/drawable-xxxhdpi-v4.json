@@ -96,6 +96,10 @@
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
+        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/ic_wanted_list_black.png",
+        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_wanted_list_black.png"
+    },
+    {
         "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_checkbox_unchecked_mtrl.png",
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-xxxhdpi/abc_btn_checkbox_unchecked_mtrl.png"
     },
@@ -226,6 +230,10 @@
     {
         "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_checkbox_checked_mtrl.png",
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-xxxhdpi/abc_btn_checkbox_checked_mtrl.png"
+    },
+    {
+        "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/ic_have_black.png",
+        "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_have_black.png"
     },
     {
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_star_black_16dp.png",
