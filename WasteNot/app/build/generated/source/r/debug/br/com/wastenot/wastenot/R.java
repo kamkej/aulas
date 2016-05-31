@@ -2422,7 +2422,7 @@ containing a value of this type.
         public static final int disableHome=0x7f0d000e;
         public static final int drawer_layout=0x7f0d0079;
         public static final int edit_query=0x7f0d005e;
-        public static final int edtSearch=0x7f0d0080;
+        public static final int edtSearch=0x7f0d0081;
         public static final int end=0x7f0d0021;
         public static final int end_padder=0x7f0d009c;
         public static final int enterAlways=0x7f0d0015;
@@ -2430,7 +2430,7 @@ containing a value of this type.
         public static final int exitUntilCollapsed=0x7f0d0017;
         public static final int expand_activities_button=0x7f0d0040;
         public static final int expanded_menu=0x7f0d0053;
-        public static final int fab=0x7f0d0081;
+        public static final int fab01=0x7f0d007e;
         public static final int fill=0x7f0d002e;
         public static final int fill_horizontal=0x7f0d002f;
         public static final int fill_vertical=0x7f0d0022;
@@ -2440,7 +2440,7 @@ containing a value of this type.
         public static final int icon=0x7f0d0044;
         public static final int ifRoom=0x7f0d0037;
         public static final int image=0x7f0d0041;
-        public static final int imageButton=0x7f0d007f;
+        public static final int imageButton=0x7f0d0080;
         public static final int imageView=0x7f0d008e;
         public static final int imgDetail=0x7f0d007b;
         public static final int imgcard=0x7f0d006d;
@@ -2453,7 +2453,7 @@ containing a value of this type.
         public static final int left=0x7f0d0023;
         public static final int line1=0x7f0d0095;
         public static final int line3=0x7f0d0099;
-        public static final int list=0x7f0d007e;
+        public static final int list=0x7f0d007f;
         public static final int listMode=0x7f0d000b;
         public static final int list_item=0x7f0d0043;
         public static final int listwanted=0x7f0d0082;
@@ -2694,9 +2694,10 @@ containing a value of this type.
         public static final int title_activity_have_list=0x7f06003f;
         public static final int title_activity_main=0x7f060040;
         public static final int title_activity_my_deck=0x7f060041;
-        public static final int title_activity_novocla=0x7f060042;
-        public static final int title_activity_wanted_list=0x7f060043;
-        public static final int title_activity_whish_list=0x7f060044;
+        public static final int title_activity_mydeck=0x7f060042;
+        public static final int title_activity_novocla=0x7f060043;
+        public static final int title_activity_wanted_list=0x7f060044;
+        public static final int title_activity_whish_list=0x7f060045;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f090088;

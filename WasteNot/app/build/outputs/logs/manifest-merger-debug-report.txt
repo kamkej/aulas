@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:2:1-53:12
+ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:2:1-51:12
 	package
 		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:3:5-39
 		INJECTED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml
@@ -18,7 +18,7 @@ ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidMa
 	android:name
 		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:7:5-51:19
+ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:7:5-49:19
 MERGED from [com.android.support:appcompat-v7:23.2.0] /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:23.2.0] /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.2.0] /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/AndroidManifest.xml:7:5-20
@@ -109,9 +109,9 @@ ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidMa
 	android:name
 		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:43:13-39
 activity#br.com.wastenot.wastenot.ImgDetail
-ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:46:9-49:54
+ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:46:9-48:55
 	android:theme
-		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:49:13-52
+		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:48:13-52
 	android:name
 		ADDED from /home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:47:13-38
 uses-sdk
