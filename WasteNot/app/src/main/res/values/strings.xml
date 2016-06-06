@@ -18,6 +18,7 @@
     <string name="title_activity_novocla">novocla</string>
     <string name="title_activity_whish_list">WhishListActivity</string>
     <string name="title_activity_wanted_list">wantedList</string>
+    <string name="title_activity_mydeck">Mydeck</string>
 
 
 </resources>
