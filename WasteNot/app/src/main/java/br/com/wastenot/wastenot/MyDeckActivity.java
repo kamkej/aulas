@@ -25,9 +25,9 @@ import java.util.List;
 public class MyDeckActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     BDWrapper db;
     ListView list;
-    AdapterListView adapter;
+    AdapterDeckView adapter;
     List<Deck> deckList;
-    List<ItemListView> itens = new ArrayList<ItemListView>();
+    List<ItemDeckView> itens = new ArrayList<ItemDeckView>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,16 +110,16 @@ public class MyDeckActivity extends AppCompatActivity implements NavigationView.
         b.show();
     }
     protected void getCards(){
-        adapter = new AdapterListView(this, updateDeckList());
+        adapter = new AdapterDeckView(this, updateDeckList());
         list.setAdapter(adapter);
     }
-    protected List<ItemListView> updateDeckList(){
+    protected List<ItemDeckView> updateDeckList(){
         deckList = db.getAllDecks();
-        int img =0;
+        int img = img = R.drawable.ic_home;;
         for (Deck dc : deckList) {
 
 
-            itens.add(new ItemListView(dc.getDeckName(), img,dc.getQtd()));
+            itens.add(new ItemDeckView(dc.getDeckName(), img,String.valueOf(dc.getQtd())));
         }
         return itens;
 
