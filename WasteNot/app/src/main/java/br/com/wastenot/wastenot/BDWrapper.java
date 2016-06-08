@@ -397,6 +397,12 @@ public class BDWrapper extends SQLiteOpenHelper {
 
 
     }
+    public void addDecks(String name){
+        SQLiteDatabase db = this.getReadableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("deck_name",name);
+        db.insert("decks",null,values);
+    }
 
 }
 

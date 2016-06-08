@@ -436,6 +436,10 @@
         "source": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/custom_dialog.xml",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/layout/custom_dialog.xml"
+    },
+    {
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/design_bottom_sheet_dialog.xml",
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/layout/design_bottom_sheet_dialog.xml"
     },
@@ -526,6 +530,10 @@
     {
         "merged": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
         "source": "/home/julio/AndroidProject/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/app_bar_deck.xml",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/layout/app_bar_deck.xml"
     },
     {
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",

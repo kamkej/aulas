@@ -1,5 +1,7 @@
 package br.com.wastenot.wastenot;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -10,10 +12,14 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 
 public class MyDeckActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    BDWrapper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +32,7 @@ public class MyDeckActivity extends AppCompatActivity implements NavigationView.
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Add Cart", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                showChangeLangDialog();
             }
         });
 
@@ -39,7 +44,7 @@ public class MyDeckActivity extends AppCompatActivity implements NavigationView.
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
+        db = new BDWrapper(this);
 
     }
 
@@ -70,5 +75,28 @@ public class MyDeckActivity extends AppCompatActivity implements NavigationView.
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    public void showChangeLangDialog() {
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.custom_dialog, null);
+        dialogBuilder.setView(dialogView);
+
+        final EditText edt = (EditText) dialogView.findViewById(R.id.edt_deck);
+
+        dialogBuilder.setTitle("Custom dialog");
+        dialogBuilder.setMessage("Enter text below");
+        dialogBuilder.setPositiveButton("Done", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                db.addDecks(edt.getText().toString());
+            }
+        });
+        dialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                //pass
+            }
+        });
+        AlertDialog b = dialogBuilder.create();
+        b.show();
     }
 }
