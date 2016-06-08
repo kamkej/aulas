@@ -403,6 +403,26 @@ public class BDWrapper extends SQLiteOpenHelper {
         values.put("deck_name",name);
         db.insert("decks",null,values);
     }
+    public List<Deck> getAllDecks() {
+        List<Deck> deckList = new ArrayList<Deck>();
+        String selectQuery = "select deck_name,sum(deck_qtd) from decks group by deck_name;";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        if(cursor.moveToFirst()){
+            do{
+                Deck deck = new Deck();
+
+                deck.setDeckName(cursor.getString(0));
+                deck.setQtd(cursor.getInt(1));
+
+                deckList.add(deck);
+
+            }while (cursor.moveToNext());
+        }
+        return  deckList;
+
+    }
 
 }
 

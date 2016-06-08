@@ -17,9 +17,17 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MyDeckActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     BDWrapper db;
+    ListView list;
+    AdapterListView adapter;
+    List<Deck> deckList;
+    List<ItemListView> itens = new ArrayList<ItemListView>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +52,9 @@ public class MyDeckActivity extends AppCompatActivity implements NavigationView.
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        list = (ListView) findViewById(R.id.list);
         db = new BDWrapper(this);
+        getCards();
 
     }
 
@@ -84,8 +94,8 @@ public class MyDeckActivity extends AppCompatActivity implements NavigationView.
 
         final EditText edt = (EditText) dialogView.findViewById(R.id.edt_deck);
 
-        dialogBuilder.setTitle("Custom dialog");
-        dialogBuilder.setMessage("Enter text below");
+        dialogBuilder.setTitle("New Deck");
+        dialogBuilder.setMessage("Enter Deck Name  below");
         dialogBuilder.setPositiveButton("Done", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
                 db.addDecks(edt.getText().toString());
@@ -98,5 +108,20 @@ public class MyDeckActivity extends AppCompatActivity implements NavigationView.
         });
         AlertDialog b = dialogBuilder.create();
         b.show();
+    }
+    protected void getCards(){
+        adapter = new AdapterListView(this, updateDeckList());
+        list.setAdapter(adapter);
+    }
+    protected List<ItemListView> updateDeckList(){
+        deckList = db.getAllDecks();
+        int img =0;
+        for (Deck dc : deckList) {
+
+
+            itens.add(new ItemListView(dc.getDeckName(), img,dc.getQtd()));
+        }
+        return itens;
+
     }
 }
