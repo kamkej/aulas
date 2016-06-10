@@ -99,6 +99,9 @@ public class MyDeckActivity extends AppCompatActivity implements NavigationView.
         dialogBuilder.setPositiveButton("Done", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
                 db.addDecks(edt.getText().toString());
+                adapter.notifyDataSetChanged();
+                adapter.updateList(updateDeckList());
+                getCards();
             }
         });
         dialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

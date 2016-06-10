@@ -9,6 +9,8 @@
         android:id="@+id/itemimgview"
         android:layout_width="24dp"
         android:layout_height="24dp"
+        android:layout_weight="1"
+
 
         />
     <TextView
@@ -18,14 +20,20 @@
         android:layout_marginLeft="5sp"
         android:gravity="center_vertical"
         android:textColor="#333"
+        android:layout_weight="10"
+
 
         />
     <TextView
         android:id="@+id/txtqtd"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginRight="5sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textColor="#333"
+        android:layout_weight="1"
+        android:textAlignment="textEnd"
+
+
+
        />
         
 </LinearLayout>

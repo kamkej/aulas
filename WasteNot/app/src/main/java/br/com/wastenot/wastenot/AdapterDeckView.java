@@ -47,7 +47,7 @@ public class AdapterDeckView extends BaseAdapter {
     public View getView(int position, View view, ViewGroup parent) {
         ItemSuporte itemHolder;
         if(view == null){
-            view= mInflater.inflate(R.layout.item_list,null);
+            view= mInflater.inflate(R.layout.item_list_deck,null);
             itemHolder = new ItemSuporte();
             itemHolder.txtTitle = ((TextView) view.findViewById(R.id.itemtext));
             itemHolder.imgIcon = ((ImageView) view.findViewById(R.id.itemimgview));
@@ -58,7 +58,7 @@ public class AdapterDeckView extends BaseAdapter {
         }
         ItemDeckView item = itens.get(position);
         itemHolder.txtTitle.setText(item.getTexto());
-       itemHolder.imgIcon.setImageResource(item.getIconeRid());
+        itemHolder.imgIcon.setImageResource(item.getIconeRid());
         itemHolder.qtd.setText(item.getQtd());
         return view;
     }
