@@ -52,6 +52,8 @@
         <activity
             android:name="br.com.wastenot.wastenot.ImgDetail"
             android:theme="@style/Theme.UserDialog" />
+        <activity android:name="br.com.wastenot.wastenot.DeckDetail" >
+        </activity>
     </application>
 
 </manifest>

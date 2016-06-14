@@ -430,5 +430,9 @@
     {
         "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_paste_material.png",
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-mdpi/abc_ic_menu_paste_material.png"
+    },
+    {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_edit.png",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-mdpi/ic_edit.png"
     }
 ]

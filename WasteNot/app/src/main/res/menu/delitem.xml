@@ -7,6 +7,7 @@
         android:icon="@android:drawable/ic_delete"
         android:title="dell"
         app:showAsAction='never'
+        android:visible="false"
         />
 
 </menu>

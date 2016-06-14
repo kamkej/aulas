@@ -16,6 +16,10 @@
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/menu/delitem.xml"
     },
     {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/menu/decks.xml",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/menu/decks.xml"
+    },
+    {
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/menu/activity_main_drawer.xml",
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/menu/activity_main_drawer.xml"
     },

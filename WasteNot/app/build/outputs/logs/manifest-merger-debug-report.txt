@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:2:1-51:12
+ADDED from /home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:2:1-53:12
 	package
 		ADDED from /home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:3:5-39
 		INJECTED from /home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml
@@ -18,7 +18,7 @@ ADDED from /home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/Android
 	android:name
 		ADDED from /home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:7:5-49:19
+ADDED from /home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:7:5-51:19
 MERGED from [com.android.support:appcompat-v7:23.2.0] /home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:23.2.0] /home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.2.0] /home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/AndroidManifest.xml:7:5-20
@@ -114,6 +114,10 @@ ADDED from /home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/Android
 		ADDED from /home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:48:13-52
 	android:name
 		ADDED from /home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:47:13-38
+activity#br.com.wastenot.wastenot.DeckDetail
+ADDED from /home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:49:9-50:20
+	android:name
+		ADDED from /home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml:49:19-45
 uses-sdk
 INJECTED from /home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.2.0] /home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/AndroidManifest.xml:21:5-23:78

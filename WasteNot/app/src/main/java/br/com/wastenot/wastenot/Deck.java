@@ -1,13 +1,14 @@
 package br.com.wastenot.wastenot;
 
+import java.io.Serializable;
+
 /**
  * Created by ssl on 6/8/16.
  */
-public class Deck {
+public class Deck implements Serializable {
     private int id;
     private String deckName;
     private int qtd;
-    private String cardId;
 
     public int getId() {
         return id;
@@ -31,13 +32,5 @@ public class Deck {
 
     public void setQtd(int qtd) {
         this.qtd = qtd;
-    }
-
-    public String getCardId() {
-        return cardId;
-    }
-
-    public void setCardId(String cardId) {
-        this.cardId = cardId;
     }
 }

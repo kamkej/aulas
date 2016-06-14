@@ -148,6 +148,10 @@
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/abc_btn_checkbox_checked_mtrl.xml"
     },
     {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_edit.xml",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_edit.xml"
+    },
+    {
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_home.xml",
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_home.xml"
     },

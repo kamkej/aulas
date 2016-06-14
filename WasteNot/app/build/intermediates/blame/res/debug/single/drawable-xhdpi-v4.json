@@ -324,6 +324,10 @@
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-xhdpi/abc_btn_radio_on_mtrl.png"
     },
     {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_edit.png",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_edit.png"
+    },
+    {
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_copy_material.png",
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-xhdpi/abc_ic_menu_copy_material.png"
     },

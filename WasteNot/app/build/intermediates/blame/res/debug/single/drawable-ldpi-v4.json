@@ -132,6 +132,10 @@
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_menu_cut_material.png"
     },
     {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_edit.png",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-ldpi/ic_edit.png"
+    },
+    {
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/abc_ic_voice_search_api_material.png",
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-ldpi/abc_ic_voice_search_api_material.png"
     },

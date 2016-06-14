@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.text.TextUtils;
 import android.util.Log;
 
 import java.io.FileOutputStream;
@@ -14,6 +15,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.sql.SQLDataException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -201,7 +203,7 @@ public class BDWrapper extends SQLiteOpenHelper {
         List<Cards> cardsList = new ArrayList<Cards>();
         String selectQuery = "SELECT * FROM  cards WHERE  haveList = '1'";
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery(selectQuery,null);
+        Cursor cursor = db.rawQuery(selectQuery, null);
 
         if(cursor.moveToFirst()){
             do{
@@ -251,11 +253,38 @@ public class BDWrapper extends SQLiteOpenHelper {
         }
         return  cardsList;
     }
+    public  List<Cards> getCardOfDeck(String[] id){
+        List<Cards> cardsList = new ArrayList<Cards>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        ArrayList<String> ids = new ArrayList<String>();
+        Cursor idCard = db.query("cards_deck", null, "deck_id=?", id, null, null, null);
+        if(idCard.moveToFirst()) {
+            do {
+               ids.add(idCard.getString(1));
+            }while (idCard.moveToNext());
+        }
+        String[] args =  ids.toArray(new String[ids.size()]);
+        Cursor cursor = db.query("cards", null, "id IN(" + TextUtils.join(",", Collections.nCopies(args.length, "?")) + ")", args, null, null, null);
+
+        if(cursor.moveToFirst()) {
+            do {
+                Cards card = new Cards();
+
+                card.setId(cursor.getString(0));
+                card.setLayout(cursor.getString(1));
+                card.setName(cursor.getString(2));
+                card.setColorIdentity(cursor.getString(7));
+                cardsList.add(card);
+            } while (cursor.moveToNext());
+        }
+        return  cardsList;
+    }
+
     public  List<Cards> getWantedCard(){
         List<Cards> cardsList = new ArrayList<Cards>();
         String selectQuery = "SELECT * FROM  cards WHERE  whishlist = '1'";
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery(selectQuery,null);
+        Cursor cursor = db.rawQuery(selectQuery, null);
 
         if(cursor.moveToFirst()){
             do{
@@ -312,6 +341,7 @@ public class BDWrapper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put("whishlist",wish);
         values.put("havelist",have);
+
 
         return  db.update(TABLE,values,"id = '"+id+"'",null)>0;
     }
@@ -403,18 +433,29 @@ public class BDWrapper extends SQLiteOpenHelper {
         values.put("deck_name",name);
         db.insert("decks",null,values);
     }
+    public boolean updateDecks(String id,String name ) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("deck_name", name);
+        return db.update("decks", values, "id_deck=?",new String[] {id} ) > 0;
+    }
+    public boolean dellDeck(String id){
+        SQLiteDatabase db = this.getReadableDatabase();
+        ContentValues args = new ContentValues();
+        return  db.delete("decks","id_deck=?", new String[]{id})>0;
+    }
     public List<Deck> getAllDecks() {
         List<Deck> deckList = new ArrayList<Deck>();
-        String selectQuery = "select deck_name,sum(deck_qtd) from decks group by deck_name;";
+        String selectQuery = "select d.id_deck,d.deck_name, count(c.id)from decks d left join cards_deck cd on cd.deck_id=d.id_deck left join cards c on cd.card_id=c.id group by d.id_deck;";
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
 
         if(cursor.moveToFirst()){
             do{
                 Deck deck = new Deck();
-
-                deck.setDeckName(cursor.getString(0));
-                deck.setQtd(cursor.getInt(1));
+                deck.setId(cursor.getInt(0));
+                deck.setDeckName(cursor.getString(1));
+                deck.setQtd(cursor.getInt(2));
 
                 deckList.add(deck);
 
