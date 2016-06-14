@@ -1,8 +1,10 @@
 package br.com.wastenot.wastenot;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -26,6 +28,17 @@ public class DeckDetail extends AppCompatActivity {
          deck = (Deck) intent.getSerializableExtra("deck");
         TextView title = (TextView) findViewById(R.id.txtDeckTitle);
         title.setText(deck.getDeckName());
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabAddCart);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = (new Intent(getApplicationContext(),addCartActivity.class));
+                intent.putExtra("deckid", deck.getId());
+                startActivity(intent);
+            }
+        });
+
         list = (ListView) findViewById(R.id.listDeck);
         db = new BDWrapper(this);
         getCards();

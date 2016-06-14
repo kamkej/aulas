@@ -10,9 +10,7 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_weight="1"
-
         android:scaleType="fitStart"
-
         />
     <TextView
         android:id="@+id/itemtext"
@@ -23,8 +21,6 @@
         android:textColor="#333"
         android:layout_weight="10"
         android:textAlignment="center"
-
-
         />
     <TextView
         android:id="@+id/txtqtd"
@@ -34,8 +30,6 @@
         android:layout_weight="1"
         android:textAlignment="textEnd"
         android:layout_marginLeft="5sp"
-
-
 
        />
         

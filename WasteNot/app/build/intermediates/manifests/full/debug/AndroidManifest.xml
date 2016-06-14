@@ -52,8 +52,10 @@
         <activity
             android:name="br.com.wastenot.wastenot.ImgDetail"
             android:theme="@style/Theme.UserDialog" />
-        <activity android:name="br.com.wastenot.wastenot.DeckDetail" >
-        </activity>
+        <activity
+            android:name="br.com.wastenot.wastenot.addCartActivity"
+            android:theme="@style/Theme.UserDialog" />
+        <activity android:name="br.com.wastenot.wastenot.DeckDetail" />
     </application>
 
 </manifest>
