@@ -34,7 +34,7 @@ public class DeckDetail extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = (new Intent(getApplicationContext(),addCartActivity.class));
-                intent.putExtra("deckid", deck.getId());
+                intent.putExtra("deckid", String.valueOf(deck.getId()));
                 startActivity(intent);
             }
         });

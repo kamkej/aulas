@@ -38,7 +38,7 @@ public class addCartActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         deckId =  intent.getStringExtra("deckid");
-        Toast.makeText(this,deckId,Toast.LENGTH_LONG).show();
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabAddCart);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
