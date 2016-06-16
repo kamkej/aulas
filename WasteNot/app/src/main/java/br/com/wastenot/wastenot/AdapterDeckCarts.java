@@ -1,13 +1,16 @@
 package br.com.wastenot.wastenot;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,16 +19,24 @@ import java.util.List;
 public class AdapterDeckCarts extends BaseAdapter {
     private LayoutInflater mInflater;
     private List<ItemDeckView> itens;
+    public List<Long> selectItem = new ArrayList<Long>();
+    private Long id = Long.valueOf(-1);
 
     public AdapterDeckCarts(Context context, List<ItemDeckView> itens){
         this.itens = itens;
-        mInflater= LayoutInflater.from(context);
+        mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
-    public void updateList(List<ItemDeckView> itensUpdate){
+    public void updateList(){
         itens.clear();
-        itens = itensUpdate;
-        notifyDataSetChanged();
+   //     this.itens = itensUpdate;
+     //   notifyDataSetChanged();
 
+    }
+    public void updateList(Context context, List<ItemDeckView> itens,Long id){
+        itens.clear();
+        this.itens = itens;
+        this.id = id;
+        mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
@@ -45,13 +56,14 @@ public class AdapterDeckCarts extends BaseAdapter {
 
     @Override
     public View getView(int position, View view, ViewGroup parent) {
-        ItemSuporte itemHolder;
+        final ItemSuporte itemHolder;
         if(view == null){
             view= mInflater.inflate(R.layout.item_list_carts,null);
             itemHolder = new ItemSuporte();
             itemHolder.txtTitle = ((TextView) view.findViewById(R.id.itemtext));
             itemHolder.imgIcon = ((ImageView) view.findViewById(R.id.itemimgview));
             itemHolder.qtd = ((TextView) view.findViewById(R.id.txtqtd));
+            itemHolder.ln = (LinearLayout) view.findViewById(R.id.listCart);
             view.setTag(itemHolder);
         }else {
             itemHolder = (ItemSuporte) view.getTag();
@@ -60,11 +72,21 @@ public class AdapterDeckCarts extends BaseAdapter {
         itemHolder.txtTitle.setText(item.getTexto());
         itemHolder.imgIcon.setImageResource(item.getIconeRid());
         itemHolder.qtd.setText(item.getQtd());
+        if(getItemId(position)==id){
+            itemHolder.ln.setBackgroundColor(Color.GRAY);
+        }
+
+
+
+
         return view;
     }
     private class ItemSuporte{
         ImageView imgIcon;
         TextView txtTitle;
         TextView qtd;
+        LinearLayout ln;
     }
+
+
 }
