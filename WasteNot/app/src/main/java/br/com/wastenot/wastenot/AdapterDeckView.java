@@ -27,6 +27,16 @@ public class AdapterDeckView extends BaseAdapter {
         notifyDataSetChanged();
 
     }
+    public void clear() {
+        itens.clear();
+        notifyDataSetChanged();
+    }
+
+    // Add a list of items
+    public void addAll(List<ItemDeckView> list) {
+        itens.addAll(list);
+        notifyDataSetChanged();
+    }
 
     @Override
     public int getCount() {

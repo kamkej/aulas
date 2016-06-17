@@ -50,7 +50,11 @@ public class addCartActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), cardsSelect.toString() + "," + deckId, Toast.LENGTH_LONG).show();
+                for (String cards : cardsSelect) {
+                   db.addCardOnDeck(Integer.parseInt(deckId),cards);
+                }
+
+                Toast.makeText(getApplicationContext(), "Qtd"+cardsSelect.size()+" Carts add Sucessfull", Toast.LENGTH_LONG).show();
             }
         });
         list.setChoiceMode(list.CHOICE_MODE_MULTIPLE);
@@ -85,7 +89,7 @@ public class addCartActivity extends AppCompatActivity {
                 } else {*/
                     Cards Cards = cardsList.get(position);
                     Intent intent = (new Intent(getApplicationContext(), CardDetail.class));
-                    intent.putExtra("deck", Cards);
+                    intent.putExtra("cards", Cards);
                     startActivity(intent);
             //    }
 
@@ -102,8 +106,9 @@ public class addCartActivity extends AppCompatActivity {
                 cardsSelect.add(String.valueOf(cardsList.get(position).getId()));
                 //   view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
              //  Toast.makeText(getApplicationContext(),String.valueOf(adapter.getItemId(position)), Toast.LENGTH_LONG).show();
-                adapter.updateList();
-                adapter.updateList(getApplicationContext(),updateCardList(),id);
+              //  adapter.updateList();
+               // adapter.updateList(getApplicationContext(),updateCardList(),id);
+
 
               //  view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
                // Toast.makeText(getApplicationContext(), "Qtd"+cardsSelect.size(), Toast.LENGTH_LONG).show();

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -58,8 +59,26 @@ public class DeckDetail extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 cardsList.get(position).getId();
-                showChangeLangDialog(cardsList.get(position).getId());
+                if(cardsList.get(position).getQtd().equalsIgnoreCase("1")){
+                    showDelete(cardsList.get(position).getId());
+                }else{
+                    showChangeLangDialog(cardsList.get(position).getId());
+                }
+
+
                 return true;
+            }
+        });
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Cards Cards = cardsList.get(position);
+                Intent intent = (new Intent(getApplicationContext(), CardDetail.class));
+                intent.putExtra("cards", Cards);
+                startActivity(intent);
             }
         });
 
@@ -72,13 +91,42 @@ public class DeckDetail extends AppCompatActivity {
         dialogBuilder.setView(dialogView);
 
         final EditText edt = (EditText) dialogView.findViewById(R.id.edt_deck);
+        edt.setInputType(InputType.TYPE_NUMBER_FLAG_SIGNED);
 
         dialogBuilder.setTitle("Delete Carts");
         dialogBuilder.setMessage("How many carts?");
         dialogBuilder.setPositiveButton("Done", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
-                    db.dellCardOfDeck(deck.getId(),idcard,Integer.parseInt(edt.getText().toString()));
-                   Toast.makeText(getApplicationContext(),edt.getText().toString()+" Cards deleted",Toast.LENGTH_LONG).show();
+                db.dellCardOfDeck(deck.getId(), idcard, Integer.parseInt(edt.getText().toString()));
+                adapter.clear();
+
+                getCards();
+                Toast.makeText(getApplicationContext(), " Cards deleted", Toast.LENGTH_LONG).show();
+            }
+        });
+        dialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                //pass
+            }
+        });
+        AlertDialog b = dialogBuilder.create();
+        b.show();
+    }
+    public void showDelete(final String idcard) {
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.delete_dialog, null);
+        dialogBuilder.setView(dialogView);
+
+        dialogBuilder.setTitle("Delete Carts");
+        dialogBuilder.setMessage("Would Like delete this card?");
+        dialogBuilder.setPositiveButton("Done", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                db.dellCardOfDeck(deck.getId(), idcard, 1);
+                adapter.clear();
+
+                getCards();
+                Toast.makeText(getApplicationContext()," Card deleted",Toast.LENGTH_LONG).show();
             }
         });
         dialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

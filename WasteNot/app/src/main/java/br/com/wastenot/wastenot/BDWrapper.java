@@ -481,10 +481,18 @@ public class BDWrapper extends SQLiteOpenHelper {
         return  db.delete("decks", "id_deck=?", new String[]{id})>0;
     }
     public void dellCardOfDeck(int iddeck,String idcard,int qtd){
-        String sql = "delete from cards_deck where deck_id="+iddeck+" and card_id="+idcard+" limit "+qtd+";";
+        String sql = "delete from cards_deck where rowid in(select rowid from cards_deck where deck_id="+iddeck+" and card_id='"+idcard+"' limit "+qtd+");";
         SQLiteDatabase db = this.getReadableDatabase();
          db.execSQL(sql);
     }
+    public void addCardOnDeck(int deckid,String cardid){
+        SQLiteDatabase db = this.getReadableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("deck_id",deckid);
+        values.put("card_id",cardid);
+        db.insert("cards_deck",null,values);
+    }
+
     public List<Deck> getAllDecks() {
         List<Deck> deckList = new ArrayList<Deck>();
         String selectQuery = "select d.id_deck,d.deck_name, count(c.id)from decks d left join cards_deck cd on cd.deck_id=d.id_deck left join cards c on cd.card_id=c.id group by d.id_deck;";
