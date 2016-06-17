@@ -2,6 +2,7 @@ package br.com.wastenot.wastenot;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -13,10 +14,13 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.graphics.Color.*;
 
 public class addCartActivity extends AppCompatActivity {
     BDWrapper db;
@@ -27,6 +31,7 @@ public class addCartActivity extends AppCompatActivity {
     List<String> cardsSelect = new ArrayList<String>();
     List<ItemDeckView> itens = new ArrayList<ItemDeckView>();
     AdapterDeckCarts adapter = null;
+    private static int save = -1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,8 +98,22 @@ public class addCartActivity extends AppCompatActivity {
 
                 cardsSelect.add(String.valueOf(cardsList.get(position).getId()));
 
-                view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
-                Toast.makeText(getApplicationContext(), "Qtd"+cardsSelect.size(), Toast.LENGTH_LONG).show();
+
+              //  view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
+               // Toast.makeText(getApplicationContext(), "Qtd"+cardsSelect.size(), Toast.LENGTH_LONG).show();
+
+                View v = list.getChildAt(position - list.getFirstVisiblePosition());
+
+                TextView qtd = (TextView) v.findViewById(R.id.txtqtd);
+                qtd.setText("1");
+
+             //   v.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
+//                TextView qtd = (TextView) view.findViewById(R.id.txtqtd);
+//                TextView title = (TextView)view.findViewById(R.id.itemtext);
+//                qtd.setText("1");
+//                title.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
+
+
 
                 return true;
             }
