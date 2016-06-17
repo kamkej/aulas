@@ -7,12 +7,14 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,18 +50,19 @@ public class addCartActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), cardsSelect.toString()+","+deckId, Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), cardsSelect.toString() + "," + deckId, Toast.LENGTH_LONG).show();
             }
         });
+        list.setChoiceMode(list.CHOICE_MODE_MULTIPLE);
+
     }
 
     public void search(final View view) {
         if(adapter!=null){
-            adapter.notifyDataSetChanged();
-            adapter.updateList(updateCardList());
+            adapter.updateList();
         }
         getCards();
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+       /* list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -88,7 +91,7 @@ public class addCartActivity extends AppCompatActivity {
 
 
             }
-        });
+        });*/
 
         list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
@@ -97,7 +100,11 @@ public class addCartActivity extends AppCompatActivity {
 
 
                 cardsSelect.add(String.valueOf(cardsList.get(position).getId()));
+                //   view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
+             //  Toast.makeText(getApplicationContext(),String.valueOf(adapter.getItemId(position)), Toast.LENGTH_LONG).show();
+                adapter.updateList(getApplicationContext(),itens,id);
 
+<<<<<<< HEAD
 
               //  view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
                // Toast.makeText(getApplicationContext(), "Qtd"+cardsSelect.size(), Toast.LENGTH_LONG).show();
@@ -114,6 +121,8 @@ public class addCartActivity extends AppCompatActivity {
 //                title.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
 
 
+=======
+>>>>>>> 43778978c7ce26547fb7a1b87d11d121349c91f4
 
                 return true;
             }

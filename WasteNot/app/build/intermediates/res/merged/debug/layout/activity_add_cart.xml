@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="br.com.wastenot.wastenot.addCartActivity">
+    tools:context="br.com.wastenot.wastenot.addCartActivity"
+    >
 
 
     <LinearLayout
@@ -43,9 +44,8 @@
         android:divider="#FFECEC"
         android:dividerHeight="2sp"
         android:listSelector="@drawable/listviewcolors"
-        android:focusableInTouchMode="true"
-        android:focusable="true"
-        android:choiceMode="multipleChoice"
+        android:focusable="false"
+        android:choiceMode="multipleChoiceModal"
         android:layout_below="@+id/linearLayout">
     </ListView>
 
