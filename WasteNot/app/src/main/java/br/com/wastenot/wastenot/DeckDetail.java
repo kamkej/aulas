@@ -1,12 +1,21 @@
 package br.com.wastenot.wastenot;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,10 +24,11 @@ public class DeckDetail extends AppCompatActivity {
 
     BDWrapper db;
     ListView list;
-    AdapterListView adapter;
-    List<ItemListView> itens = new ArrayList<ItemListView>();
+    AdapterDeckView adapter;
+    List<ItemDeckView> itens = new ArrayList<ItemDeckView>();
     List<Cards> cardsList;
     Deck deck;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,14 +53,51 @@ public class DeckDetail extends AppCompatActivity {
         db = new BDWrapper(this);
         getCards();
 
+        list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                cardsList.get(position).getId();
+                showChangeLangDialog(cardsList.get(position).getId());
+                return true;
+            }
+        });
+
     }
+
+    public void showChangeLangDialog(final String idcard) {
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.custom_dialog, null);
+        dialogBuilder.setView(dialogView);
+
+        final EditText edt = (EditText) dialogView.findViewById(R.id.edt_deck);
+
+        dialogBuilder.setTitle("Delete Carts");
+        dialogBuilder.setMessage("How many carts?");
+        dialogBuilder.setPositiveButton("Done", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                    db.dellCardOfDeck(deck.getId(),idcard,Integer.parseInt(edt.getText().toString()));
+                   Toast.makeText(getApplicationContext(),edt.getText().toString()+" Cards deleted",Toast.LENGTH_LONG).show();
+            }
+        });
+        dialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                //pass
+            }
+        });
+        AlertDialog b = dialogBuilder.create();
+        b.show();
+    }
+
+
     protected void getCards(){
-        adapter = new AdapterListView(this, updateCardList());
+        adapter = new AdapterDeckView(this, updateCardList());
         list.setAdapter(adapter);
     }
-    protected List<ItemListView> updateCardList(){
+    protected List<ItemDeckView> updateCardList(){
 
-        cardsList = db.getCardOfDeck(new String[]{String.valueOf(deck.getId())});
+        cardsList = db.getCardOfDeck(String.valueOf(deck.getId()));
         int img =0;
         for (Cards cd : cardsList) {
 
@@ -109,7 +156,7 @@ public class DeckDetail extends AppCompatActivity {
             }
 
 
-            itens.add(new ItemListView(cd.getName(), img,0));
+            itens.add(new ItemDeckView(cd.getName(), img,cd.getQtd()));
         }
         return itens;
 

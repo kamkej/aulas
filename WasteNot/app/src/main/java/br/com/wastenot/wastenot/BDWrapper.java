@@ -253,18 +253,18 @@ public class BDWrapper extends SQLiteOpenHelper {
         }
         return  cardsList;
     }
-    public  List<Cards> getCardOfDeck(String[] id){
+    public  List<Cards> getCardOfDeck(String id){
         List<Cards> cardsList = new ArrayList<Cards>();
         SQLiteDatabase db = this.getReadableDatabase();
-        ArrayList<String> ids = new ArrayList<String>();
+      /*  ArrayList<String> ids = new ArrayList<String>();
         Cursor idCard = db.query("cards_deck", null, "deck_id=?", id, null, null, null);
         if(idCard.moveToFirst()) {
             do {
                ids.add(idCard.getString(1));
             }while (idCard.moveToNext());
-        }
-        String[] args =  ids.toArray(new String[ids.size()]);
-        Cursor cursor = db.query("cards", null, "id IN(" + TextUtils.join(",", Collections.nCopies(args.length, "?")) + ")", args, null, null, null);
+        }*/
+        String sql = "select * from cards a join (select card_id,count(card_id)as qtd from cards_deck where deck_id="+id+" group by card_id) b on a.id=b.card_id;";
+        Cursor cursor = db.rawQuery(sql, null);
 
         if(cursor.moveToFirst()) {
             do {
@@ -273,7 +273,39 @@ public class BDWrapper extends SQLiteOpenHelper {
                 card.setId(cursor.getString(0));
                 card.setLayout(cursor.getString(1));
                 card.setName(cursor.getString(2));
+                card.setNames(cursor.getString(3));
+                card.setManaCost(cursor.getString(4));
+                try {
+                    card.setCmc(Float.parseFloat(String.valueOf(cursor.getString(5))));
+                }catch(NumberFormatException e){
+                    card.setCmc(5);
+                }
+                card.setColor(cursor.getString(6));
                 card.setColorIdentity(cursor.getString(7));
+                card.setType(cursor.getString(8));
+                card.setSupertypes(cursor.getString(9));
+                card.setTypes(cursor.getString(10));
+                card.setSubtypes(cursor.getString(11));
+                card.setRarity(cursor.getString(12));
+                card.setText(cursor.getString(13));
+                card.setFlavor(cursor.getString(14));
+                card.setArtist(cursor.getString(15));
+                card.setNumber(cursor.getString(16));
+                card.setPower(cursor.getString(17));
+                card.setToughness(cursor.getString(18));
+                card.setLoyalty(cursor.getString(19));
+                card.setMultiverseid(cursor.getString(20));
+                card.setVariations(cursor.getString(21));
+                card.setImageName(cursor.getString(22));
+                card.setWatermark(cursor.getString(23));
+                card.setBorder(cursor.getString(24));
+                card.setTimeshifted(cursor.getString(25));
+                card.setHand(cursor.getString(26));
+                card.setLife(cursor.getString(27));
+                card.setReserved(cursor.getString(28));
+                card.setReleaseDate(cursor.getString(29));
+                card.setStarter(cursor.getString(30));
+                card.setQtd(cursor.getString(35));
                 cardsList.add(card);
             } while (cursor.moveToNext());
         }
@@ -390,6 +422,10 @@ public class BDWrapper extends SQLiteOpenHelper {
                 card.setReserved(cursor.getString(28));
                 card.setReleaseDate(cursor.getString(29));
                 card.setStarter(cursor.getString(30));
+                card.setWhishlist(cursor.getString(32));
+                card.setHavelist(cursor.getString(33));
+
+
 
 
 
@@ -442,7 +478,12 @@ public class BDWrapper extends SQLiteOpenHelper {
     public boolean dellDeck(String id){
         SQLiteDatabase db = this.getReadableDatabase();
         ContentValues args = new ContentValues();
-        return  db.delete("decks","id_deck=?", new String[]{id})>0;
+        return  db.delete("decks", "id_deck=?", new String[]{id})>0;
+    }
+    public void dellCardOfDeck(int iddeck,String idcard,int qtd){
+        String sql = "delete from cards_deck where deck_id="+iddeck+" and card_id="+idcard+" limit "+qtd+";";
+        SQLiteDatabase db = this.getReadableDatabase();
+         db.execSQL(sql);
     }
     public List<Deck> getAllDecks() {
         List<Deck> deckList = new ArrayList<Deck>();

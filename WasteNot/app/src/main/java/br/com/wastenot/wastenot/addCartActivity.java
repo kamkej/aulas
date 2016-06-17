@@ -62,12 +62,12 @@ public class addCartActivity extends AppCompatActivity {
             adapter.updateList();
         }
         getCards();
-       /* list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+       list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                if (cardsSelect.contains(String.valueOf(cardsList.get(position).getId()))) {
+               /* if (cardsSelect.contains(String.valueOf(cardsList.get(position).getId()))) {
 
                     cardsSelect.remove(cardsSelect.indexOf(String.valueOf(cardsList.get(position).getId())));
 
@@ -82,16 +82,16 @@ public class addCartActivity extends AppCompatActivity {
 
                     cardsSelect.add(String.valueOf(cardsList.get(position).getId()));
                     view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
-                } else {
+                } else {*/
                     Cards Cards = cardsList.get(position);
                     Intent intent = (new Intent(getApplicationContext(), CardDetail.class));
                     intent.putExtra("deck", Cards);
                     startActivity(intent);
-                }
+            //    }
 
 
             }
-        });*/
+        });
 
         list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 

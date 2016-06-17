@@ -41,6 +41,7 @@ public class Cards implements Serializable {
     private String setsCode;
     private String whishlist;
     private String havelist;
+    private String qtd;
 
 
 
@@ -311,6 +312,14 @@ public class Cards implements Serializable {
 
     public void setHavelist(String havelist) {
         this.havelist = havelist;
+    }
+
+    public String getQtd() {
+        return qtd;
+    }
+
+    public void setQtd(String qtd) {
+        this.qtd = qtd;
     }
 }
 
