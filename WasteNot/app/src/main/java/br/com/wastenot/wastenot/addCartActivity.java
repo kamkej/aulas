@@ -102,17 +102,18 @@ public class addCartActivity extends AppCompatActivity {
                 cardsSelect.add(String.valueOf(cardsList.get(position).getId()));
                 //   view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
              //  Toast.makeText(getApplicationContext(),String.valueOf(adapter.getItemId(position)), Toast.LENGTH_LONG).show();
-                adapter.updateList(getApplicationContext(),itens,id);
-
-<<<<<<< HEAD
+                adapter.updateList();
+                adapter.updateList(getApplicationContext(),updateCardList(),id);
 
               //  view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
                // Toast.makeText(getApplicationContext(), "Qtd"+cardsSelect.size(), Toast.LENGTH_LONG).show();
+/*
 
                 View v = list.getChildAt(position - list.getFirstVisiblePosition());
 
                 TextView qtd = (TextView) v.findViewById(R.id.txtqtd);
                 qtd.setText("1");
+*/
 
              //   v.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
 //                TextView qtd = (TextView) view.findViewById(R.id.txtqtd);
@@ -121,8 +122,6 @@ public class addCartActivity extends AppCompatActivity {
 //                title.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
 
 
-=======
->>>>>>> 43778978c7ce26547fb7a1b87d11d121349c91f4
 
                 return true;
             }

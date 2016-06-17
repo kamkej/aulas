@@ -33,10 +33,13 @@ public class AdapterDeckCarts extends BaseAdapter {
 
     }
     public void updateList(Context context, List<ItemDeckView> itens,Long id){
-        itens.clear();
+
+
         this.itens = itens;
         this.id = id;
+
         mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
     }
 
     @Override
