@@ -3,7 +3,7 @@ package br.com.wastenot.wastenot;
 import java.io.Serializable;
 
 /**
- * Created by ssl on 6/8/16.
+ * Created by julio on 6/8/16.
  */
 public class Deck implements Serializable {
     private int id;
