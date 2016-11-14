@@ -18,18 +18,23 @@
     api-level="23"
     density="xhdpi"
     format="7"
-    timestamp="7207202305376"
+    timestamp="32428528098816"
     token="1915947105977649858" >
 
     <task
         name="javac"
+<<<<<<< HEAD
         duration="411" />
 >>>>>>> f21fea0d33457ed0192e07c0b6c0d7b60858b6c6
+=======
+        duration="212" />
+>>>>>>> 24ef6db3817c93aeccebcb5e9ea1c0c202698782
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
+<<<<<<< HEAD
 <<<<<<< HEAD
         duration="304" />
     <task
@@ -41,11 +46,18 @@
         name="verifier"
         duration="14" />
 >>>>>>> f21fea0d33457ed0192e07c0b6c0d7b60858b6c6
+=======
+        duration="6" />
+    <task
+        name="verifier"
+        duration="2" />
+>>>>>>> 24ef6db3817c93aeccebcb5e9ea1c0c202698782
 
     <artifact
         location="/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     <build
         timestamp="12333563777401"
@@ -53,6 +65,9 @@
 =======
     <build timestamp="7207202305376" >
 >>>>>>> f21fea0d33457ed0192e07c0b6c0d7b60858b6c6
+=======
+    <build timestamp="32428528098816" >
+>>>>>>> 24ef6db3817c93aeccebcb5e9ea1c0c202698782
         <artifact
             location="/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />

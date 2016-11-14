@@ -361,10 +361,10 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_have_list">HaveListActivity</string>
     <string name="title_activity_main">Waste Not</string>
-    <string name="title_activity_my_deck">MyDeckActivity</string>
+    <string name="title_activity_my_deck">My Deck</string>
     <string name="title_activity_mydeck">Mydeck</string>
     <string name="title_activity_novocla">novocla</string>
-    <string name="title_activity_wanted_list">wantedList</string>
+    <string name="title_activity_wanted_list">My Wanted List</string>
     <string name="title_activity_whish_list">WhishListActivity</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
@@ -379,6 +379,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
 
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
