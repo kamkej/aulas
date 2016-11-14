@@ -1,6 +1,7 @@
 [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "outputFile": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
 =======
         "outputFile": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/values/values.xml",
@@ -12656,6 +12657,8 @@
         ]
     },
     {
+=======
+>>>>>>> f21fea0d33457ed0192e07c0b6c0d7b60858b6c6
         "outputFile": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/values/values.xml",
 >>>>>>> b00ddb8be1fb19a59850151071c4c99360b8df8d
         "map": [
@@ -16778,9 +16781,9 @@
                     "position": {
                         "startLine": 1,
                         "startColumn": 4,
-                        "startOffset": 75,
+                        "startOffset": 16,
                         "endColumn": 87,
-                        "endOffset": 158
+                        "endOffset": 99
                     }
                 }
             },
@@ -16797,9 +16800,9 @@
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 163,
+                        "startOffset": 104,
                         "endColumn": 89,
-                        "endOffset": 248
+                        "endOffset": 189
                     }
                 }
             },
@@ -16816,9 +16819,9 @@
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 347,
+                        "startOffset": 288,
                         "endColumn": 87,
-                        "endOffset": 430
+                        "endOffset": 371
                     }
                 }
             },
@@ -16835,9 +16838,9 @@
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 521,
+                        "startOffset": 462,
                         "endColumn": 83,
-                        "endOffset": 600
+                        "endOffset": 541
                     }
                 }
             },
@@ -16854,9 +16857,9 @@
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 435,
+                        "startOffset": 376,
                         "endColumn": 85,
-                        "endOffset": 516
+                        "endOffset": 457
                     }
                 }
             },
@@ -16873,9 +16876,9 @@
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 253,
+                        "startOffset": 194,
                         "endColumn": 93,
-                        "endOffset": 342
+                        "endOffset": 283
                     }
                 }
             },

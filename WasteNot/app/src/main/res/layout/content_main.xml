@@ -29,7 +29,8 @@
             android:id="@+id/edtSearch"
             android:background="@drawable/roundeditext"
             android:minHeight="40dp"
-            android:layout_weight="0.95" />
+            android:layout_weight="0.95" 
+            android:hint="Insert Card"/>
 
         <ImageButton
             android:layout_width="wrap_content"

@@ -7,7 +7,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.text.TextUtils;
 import android.util.Log;
 
 import java.io.FileOutputStream;
@@ -15,7 +14,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.sql.SQLDataException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**

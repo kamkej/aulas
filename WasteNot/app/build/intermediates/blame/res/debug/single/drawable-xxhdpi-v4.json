@@ -1,6 +1,7 @@
 [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_radio_on_mtrl.png",
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-xxhdpi/abc_btn_radio_on_mtrl.png"
@@ -139,6 +140,8 @@
     },
     {
 >>>>>>> b00ddb8be1fb19a59850151071c4c99360b8df8d
+=======
+>>>>>>> f21fea0d33457ed0192e07c0b6c0d7b60858b6c6
         "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
     },
@@ -147,6 +150,7 @@
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-xxhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png",
@@ -249,6 +253,8 @@
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-xxhdpi/abc_ic_ab_back_material.png"
     },
     {
+=======
+>>>>>>> f21fea0d33457ed0192e07c0b6c0d7b60858b6c6
         "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_have_black.png",
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_have_black.png"
     },
@@ -282,6 +288,13 @@
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-xxhdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png"
     },
     {
+<<<<<<< HEAD
+=======
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_wanted_list.png",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_wanted_list.png"
+    },
+    {
+>>>>>>> f21fea0d33457ed0192e07c0b6c0d7b60858b6c6
         "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png",
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
     },
@@ -318,6 +331,14 @@
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
+<<<<<<< HEAD
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png"
+=======
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_home.png",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_home.png"
+    },
+    {
         "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png",
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png"
     },
@@ -326,6 +347,32 @@
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-xxhdpi-v4/abc_list_focused_holo.9.png"
     },
     {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_wanted_list_black.png",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_wanted_list_black.png"
+    },
+    {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_search_api_mtrl_alpha.png",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-xxhdpi-v4/abc_ic_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_edit.png",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_edit.png"
+    },
+    {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_full_open_on_phone.png",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/res/drawable-xxhdpi/common_full_open_on_phone.png"
+>>>>>>> f21fea0d33457ed0192e07c0b6c0d7b60858b6c6
+    },
+    {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_my_deck.png",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_my_deck.png"
+    },
+    {
+<<<<<<< HEAD
         "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_search_api_mtrl_alpha.png",
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-xxhdpi-v4/abc_ic_search_api_mtrl_alpha.png"
     },
@@ -356,6 +403,34 @@
     {
         "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_light.9.png",
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_light.9.png"
+=======
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-xxhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-xxhdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_light.9.png",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_have.png",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_have.png"
+>>>>>>> f21fea0d33457ed0192e07c0b6c0d7b60858b6c6
     },
     {
         "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png",

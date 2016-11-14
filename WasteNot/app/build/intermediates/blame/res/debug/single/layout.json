@@ -49,6 +49,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_activity_chooser_view_list_item.xml"
     },
@@ -63,6 +64,14 @@
         "merged": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
         "source": "/home/ssl/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/res/layout/design_layout_snackbar_include.xml"
 >>>>>>> b00ddb8be1fb19a59850151071c4c99360b8df8d
+=======
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/item_list.xml",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/layout/item_list.xml"
+>>>>>>> f21fea0d33457ed0192e07c0b6c0d7b60858b6c6
     },
     {
         "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
@@ -223,16 +232,26 @@
     {
         "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/notification_media_cancel_action.xml"
+<<<<<<< HEAD
+    },
+    {
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/layout/activity_main.xml"
+=======
+>>>>>>> f21fea0d33457ed0192e07c0b6c0d7b60858b6c6
     },
     {
         "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/layout/activity_main.xml"
     },
     {
+<<<<<<< HEAD
+=======
         "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_action_bar_view_list_nav_layout.xml"
     },
     {
+>>>>>>> f21fea0d33457ed0192e07c0b6c0d7b60858b6c6
         "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/select_dialog_singlechoice_material.xml"
     },
@@ -285,6 +304,13 @@
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/layout/app_bar_main.xml"
     },
     {
+<<<<<<< HEAD
+=======
+        "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/delete_dialog.xml",
+        "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/src/main/res/layout/delete_dialog.xml"
+    },
+    {
+>>>>>>> f21fea0d33457ed0192e07c0b6c0d7b60858b6c6
         "merged": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
         "source": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/res/layout/abc_list_menu_item_radio.xml"
     },

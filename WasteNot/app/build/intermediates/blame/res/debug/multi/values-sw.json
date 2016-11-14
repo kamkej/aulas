@@ -1,6 +1,10 @@
 [
     {
+<<<<<<< HEAD
         "outputFile": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw/values-sw.xml",
+=======
+        "outputFile": "/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/intermediates/res/merged/debug/values-sw/values-sw.xml",
+>>>>>>> f21fea0d33457ed0192e07c0b6c0d7b60858b6c6
         "map": [
             {
                 "to": {

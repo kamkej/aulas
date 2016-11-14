@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
+<<<<<<< HEAD
     abi="x86"
     api-level="21"
     density="xxxhdpi"
@@ -12,23 +13,46 @@
     <task
         name="javac"
         duration="2155" />
+=======
+    abi="armeabi-v7a,armeabi"
+    api-level="23"
+    density="xhdpi"
+    format="7"
+    timestamp="7207202305376"
+    token="1915947105977649858" >
+
+    <task
+        name="javac"
+        duration="411" />
+>>>>>>> f21fea0d33457ed0192e07c0b6c0d7b60858b6c6
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
+<<<<<<< HEAD
         duration="304" />
     <task
         name="verifier"
         duration="13" />
+=======
+        duration="154" />
+    <task
+        name="verifier"
+        duration="14" />
+>>>>>>> f21fea0d33457ed0192e07c0b6c0d7b60858b6c6
 
     <artifact
         location="/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
+<<<<<<< HEAD
     <build
         timestamp="12333563777401"
         verifier="FULL_BUILD_REQUESTED" >
+=======
+    <build timestamp="7207202305376" >
+>>>>>>> f21fea0d33457ed0192e07c0b6c0d7b60858b6c6
         <artifact
             location="/home/julio/AndroidStudioProjects/aulas/WasteNot/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
