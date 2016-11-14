@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.view.LayoutInflater;
@@ -36,6 +37,8 @@ public class DeckDetail extends AppCompatActivity {
          deck = (Deck) intent.getSerializableExtra("deck");
         TextView title = (TextView) findViewById(R.id.txtDeckTitle);
         title.setText(deck.getDeckName());
+
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabAddCart);
         fab.setOnClickListener(new View.OnClickListener() {

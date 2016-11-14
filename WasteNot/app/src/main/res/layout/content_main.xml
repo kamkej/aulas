@@ -30,17 +30,21 @@
             android:background="@drawable/roundeditext"
             android:minHeight="40dp"
             android:layout_weight="0.95" 
-            android:hint="Insert Card"/>
+            android:hint="Insert Card"
+            android:paddingStart="6dp"
+            android:inputType="textFilter"/>
 
         <ImageButton
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
             android:id="@+id/imageButton"
-            android:src="@android:drawable/ic_menu_search"
+            android:src="@drawable/ic_search_buttom"
 
             android:background="#80ffffff"
             android:onClick="search"
-            />
+
+            android:clickable="false"
+            android:layout_marginLeft="10dp" />
 
     </LinearLayout>
 
@@ -48,8 +52,8 @@
     <ListView
         android:paddingTop="10dp"
         android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:divider="#FFECEC"
         android:dividerHeight="2sp"
         android:layout_alignParentTop="@+id/imageButton"

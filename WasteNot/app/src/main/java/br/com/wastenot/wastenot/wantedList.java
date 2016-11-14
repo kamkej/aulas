@@ -149,7 +149,7 @@ public class wantedList extends AppCompatActivity implements NavigationView.OnNa
                     img = R.drawable.gw;
                     break;
                 default:
-                    img = R.drawable.ic_home;
+                    img = R.drawable.c;
             }
 
 

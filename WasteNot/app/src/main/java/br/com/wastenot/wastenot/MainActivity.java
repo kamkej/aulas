@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity
                     img = R.drawable.gw;
                     break;
                 default:
-                    img = R.drawable.ic_home;
+                    img = R.drawable.c;
             }
             if(cd.getWhishlist().equalsIgnoreCase("1")){
                 icon = R.drawable.ic_wanted_list_black;
@@ -237,7 +237,7 @@ public class MainActivity extends AppCompatActivity
                 Log.d("id", idc);
                 db.updateCard(idc,"0","1");
             }
-            cardsSelect.removeAll(cardsSelect);
+
             adapter.notifyDataSetChanged();
             adapter.updateList(updateCardList());
             getCards();
@@ -245,14 +245,19 @@ public class MainActivity extends AppCompatActivity
             have.setVisible(false);
             wanted.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
             wanted.setVisible(false);
-            Toast.makeText(this,"items added successfully",Toast.LENGTH_LONG).show();
+            if(cardsSelect.size()>1) {
+                Toast.makeText(this, "items were successfully added to my cards list", Toast.LENGTH_LONG).show();
+            }else {
+                Toast.makeText(this, "One item was successfully added to my cards list", Toast.LENGTH_LONG).show();
+            }
+            cardsSelect.removeAll(cardsSelect);
 
         }else if(id==R.id.action_wanted){
             for (String idc  : cardsSelect) {
                 Log.d("id", idc);
                 db.updateCard(idc,"1","0");
             }
-            cardsSelect.removeAll(cardsSelect);
+
             adapter.notifyDataSetChanged();
             adapter.updateList(updateCardList());
             getCards();
@@ -260,8 +265,12 @@ public class MainActivity extends AppCompatActivity
             have.setVisible(false);
             wanted.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
             wanted.setVisible(false);
-            Toast.makeText(this,"items added successfully",Toast.LENGTH_LONG).show();
-
+            if(cardsSelect.size()>1) {
+            Toast.makeText(this,"items were successfully added to my wanted list",Toast.LENGTH_LONG).show();
+            }else {
+                Toast.makeText(this, "One item was successfully added to my wanted list", Toast.LENGTH_LONG).show();
+            }
+            cardsSelect.removeAll(cardsSelect);
         }
 
         return super.onOptionsItemSelected(item);
