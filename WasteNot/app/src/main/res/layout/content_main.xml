@@ -32,7 +32,8 @@
             android:layout_weight="0.95" 
             android:hint="Insert Card"
             android:paddingStart="6dp"
-            android:inputType="textFilter"/>
+            android:inputType="textFilter"
+            android:maxLines="1"/>
 
         <ImageButton
             android:layout_width="wrap_content"

@@ -19,7 +19,7 @@ public class addCartActivity extends AppCompatActivity {
     BDWrapper db;
     ListView list;
     EditText edts;
-    String card,deckId;
+    String card,deckId,deckName;
     List<Cards> cardsList;
     List<String> cardsSelect = new ArrayList<String>();
     List<ItemDeckView> itens = new ArrayList<ItemDeckView>();
@@ -36,6 +36,7 @@ public class addCartActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         deckId =  intent.getStringExtra("deckid");
+        deckName = intent.getStringExtra("deckName");
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabAddCart);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -44,8 +45,12 @@ public class addCartActivity extends AppCompatActivity {
                 for (String cards : cardsSelect) {
                    db.addCardOnDeck(Integer.parseInt(deckId),cards);
                 }
+                if(cardsSelect.size()>1) {
+                    Toast.makeText(getApplicationContext(), "cards were successfully added to " + deckName + " deck", Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(getApplicationContext(), "One card was successfully added to " + deckName + " deck", Toast.LENGTH_LONG).show();
 
-                Toast.makeText(getApplicationContext(), "Qtd"+cardsSelect.size()+" Carts add Sucessfull", Toast.LENGTH_LONG).show();
+                }
             }
         });
         list.setChoiceMode(list.CHOICE_MODE_MULTIPLE);
@@ -182,7 +187,7 @@ public class addCartActivity extends AppCompatActivity {
                     img = R.drawable.gw;
                     break;
                 default:
-                    img = R.drawable.ic_home;
+                    img = R.drawable.c;
             }
            /* if(cd.getWhishlist().equalsIgnoreCase("1")){
                 icon = R.drawable.ic_wanted_list_black;

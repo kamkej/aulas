@@ -91,6 +91,7 @@ public class MyDeckActivity extends AppCompatActivity implements NavigationView.
                     view.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.itemselect));
                 } else {
                     Deck deck = deckList.get(position);
+
                     Intent intent = (new Intent(getApplicationContext(), DeckDetail.class));
                     intent.putExtra("deck", deck);
                     startActivity(intent);
@@ -203,13 +204,17 @@ public class MyDeckActivity extends AppCompatActivity implements NavigationView.
         final EditText edt = (EditText) dialogView.findViewById(R.id.edt_deck);
 
         dialogBuilder.setTitle("New Deck");
-        dialogBuilder.setMessage("Enter Deck Name  below");
+        dialogBuilder.setMessage("Enter a  name for your deck");
         dialogBuilder.setPositiveButton("Done", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
-                db.addDecks(edt.getText().toString());
-                adapter.notifyDataSetChanged();
-                adapter.updateList(updateDeckList());
-                getDesks();
+                if(!edt.getText().toString().isEmpty()) {
+                    db.addDecks(edt.getText().toString());
+                    adapter.notifyDataSetChanged();
+                    adapter.updateList(updateDeckList());
+                    getDesks();
+                }else {
+                    Toast.makeText(getApplicationContext(), "Type a name!", Toast.LENGTH_LONG).show();
+                }
             }
         });
         dialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -228,22 +233,26 @@ public class MyDeckActivity extends AppCompatActivity implements NavigationView.
 
         final EditText edt = (EditText) dialogView.findViewById(R.id.edt_deck);
 
-        dialogBuilder.setTitle("New Deck Name");
-        dialogBuilder.setMessage("Enter New Deck Name  below");
+        dialogBuilder.setTitle("change Deck Name");
+        dialogBuilder.setMessage("Enter a new name for your deck");
         dialogBuilder.setPositiveButton("Done", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
-                Log.d("cards",decksSelect.get(0).toString());
+                if(!edt.getText().toString().isEmpty()) {
+                    Log.d("cards", decksSelect.get(0).toString());
 
-                db.updateDecks(decksSelect.get(0).toString(), edt.getText().toString());
+                    db.updateDecks(decksSelect.get(0).toString(), edt.getText().toString());
 
-                decksSelect.removeAll(decksSelect);
-                adapter.notifyDataSetChanged();
-                adapter.updateList(updateDeckList());
-                getDesks();
-                dell.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
-                dell.setVisible(false);
-                edit.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
-                edit.setVisible(false);
+                    decksSelect.removeAll(decksSelect);
+                    adapter.notifyDataSetChanged();
+                    adapter.updateList(updateDeckList());
+                    getDesks();
+                    dell.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+                    dell.setVisible(false);
+                    edit.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+                    edit.setVisible(false);
+                }else {
+                    Toast.makeText(getApplicationContext(), "Type a name!", Toast.LENGTH_LONG).show();
+                }
             }
         });
         dialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

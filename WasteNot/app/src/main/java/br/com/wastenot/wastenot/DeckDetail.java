@@ -46,6 +46,7 @@ public class DeckDetail extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = (new Intent(getApplicationContext(),addCartActivity.class));
                 intent.putExtra("deckid", String.valueOf(deck.getId()));
+                intent.putExtra("deckName",String.valueOf(deck.getDeckName()));
                 startActivity(intent);
             }
         });
@@ -91,10 +92,10 @@ public class DeckDetail extends AppCompatActivity {
         dialogBuilder.setView(dialogView);
 
         final EditText edt = (EditText) dialogView.findViewById(R.id.edt_deck);
-        edt.setInputType(InputType.TYPE_NUMBER_FLAG_SIGNED);
+        edt.setInputType(InputType.TYPE_CLASS_NUMBER);
 
-        dialogBuilder.setTitle("Delete Carts");
-        dialogBuilder.setMessage("How many carts?");
+        dialogBuilder.setTitle("Delete selected cards?");
+        dialogBuilder.setMessage("How many cards should be deleted?");
         dialogBuilder.setPositiveButton("Done", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
                 db.dellCardOfDeck(deck.getId(), idcard, Integer.parseInt(edt.getText().toString()));

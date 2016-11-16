@@ -27,7 +27,8 @@
             android:paddingStart="6dp"
             android:layout_marginLeft="15dp"
             android:layout_gravity="center_horizontal"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:maxLines="1"/>
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -66,6 +67,7 @@
             android:layout_marginRight="@dimen/fab_margin"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true" />
+
 
 
 </RelativeLayout>

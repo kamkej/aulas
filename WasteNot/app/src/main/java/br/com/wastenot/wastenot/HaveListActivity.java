@@ -184,16 +184,19 @@ public class HaveListActivity extends AppCompatActivity implements NavigationVie
                 Log.d("id", idc);
                 db.updateCard(idc,"0","0");
             }
-            cardsSelect.removeAll(cardsSelect);
+
 
             dell.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
             dell.setVisible(false);
             adapter.notifyDataSetChanged();
             adapter.updateList(updateCardList());
             getCards();
-
-            Toast.makeText(this, "items dell successfully", Toast.LENGTH_LONG).show();
-
+            if(cardsSelect.size()>1) {
+                Toast.makeText(this, "items were successfully deleted from my cards list", Toast.LENGTH_LONG).show();
+            }else {
+                Toast.makeText(this, "One item was successfully deleted from my cards list", Toast.LENGTH_LONG).show();
+            }
+            cardsSelect.removeAll(cardsSelect);
         }
 
         return super.onOptionsItemSelected(item);

@@ -185,7 +185,7 @@ public class wantedList extends AppCompatActivity implements NavigationView.OnNa
             for (String idc  : cardsSelect) {
                 db.updateCard(idc,"0","0");
             }
-            cardsSelect.removeAll(cardsSelect);
+
 
             dell.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
             dell.setVisible(false);
@@ -196,13 +196,19 @@ public class wantedList extends AppCompatActivity implements NavigationView.OnNa
              have.setVisible(false);
              getCards();
 
-            Toast.makeText(this, "items dell successfully", Toast.LENGTH_LONG).show();
+             if(cardsSelect.size()>1) {
+                 Toast.makeText(this, "items were successfully deleted from my Wanted list", Toast.LENGTH_LONG).show();
+             }else {
+                 Toast.makeText(this, "One item was successfully deleted from my Wanted list", Toast.LENGTH_LONG).show();
+             }
+             cardsSelect.removeAll(cardsSelect);
+
 
         }else if(id == R.id.action_have){
              for (String idc  : cardsSelect) {
                  db.updateCard(idc,"1","0");
              }
-             cardsSelect.removeAll(cardsSelect);
+
 
              dell.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
              dell.setVisible(false);
@@ -213,7 +219,12 @@ public class wantedList extends AppCompatActivity implements NavigationView.OnNa
              adapter.updateList(updateCardList());
              getCards();
 
-             Toast.makeText(this, "items add to Have List successfully", Toast.LENGTH_LONG).show();
+             if(cardsSelect.size()>1) {
+                 Toast.makeText(this, "items were successfully moved to my cards list", Toast.LENGTH_LONG).show();
+             }else {
+                 Toast.makeText(this, "One item was successfully moved to my cards list", Toast.LENGTH_LONG).show();
+             }
+             cardsSelect.removeAll(cardsSelect);
 
          }
 
